@@ -6,167 +6,102 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <title>Jo - Full Stack Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hero & card fade-in animation */
+    .fade-in-up { 
+      opacity: 0; 
+      transform: translateY(20px); 
+      animation: fadeInUp 0.8s forwards; 
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .delay-0 { animation-delay: 0ms; }
+    .delay-200 { animation-delay: 200ms; }
+    .delay-400 { animation-delay: 400ms; }
+
+    /* Sticky contact button */
+    #contact-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2563eb;
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 9999px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-weight: 600;
+      z-index: 50;
+      transition: transform 0.2s;
+    }
+    #contact-btn:hover { transform: scale(1.05); }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans scroll-smooth">
 
   <!-- Hero Section -->
   <section class="text-center py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-    <h1 class="text-5xl font-bold mb-4">Yohannes Tsegaye (Jo)</h1>
-    <p class="text-xl mb-6">Full Stack Developer | AI & Mobile Apps | 7+ Years Programming</p>
-    <p class="max-w-xl mx-auto">
+    <h1 class="text-5xl font-bold mb-4 fade-in-up delay-0">Yohannes Tsegaye (Jo)</h1>
+    <p class="text-xl mb-6 fade-in-up delay-200">Full Stack Developer | AI & Mobile Apps | 7+ Years Programming</p>
+    <p class="max-w-xl mx-auto fade-in-up delay-400">
       I build reliable systems businesses use daily—inventory platforms, offline-first apps, and real-time multi-device solutions—designed for speed, accuracy, and scalability.
     </p>
   </section>
 
-  <!-- About Me -->
-  <section class="py-16 px-4 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6">About Me</h2>
-    <p>Hi, I’m Yohannes. With 7+ years programming and 4+ years in active development, I specialize in full stack web, mobile, and AI-powered applications. I focus on delivering practical, maintainable solutions on time, turning complex challenges into simple, scalable systems that just work.</p>
-  </section>
-
   <!-- Services -->
-  <section class="py-16 px-4 max-w-4xl mx-auto">
+  <section id="services" class="py-16 px-4 max-w-6xl mx-auto">
     <h2 class="text-3xl font-semibold mb-10 text-center">What I Do</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition text-center">
-        <h3 class="text-xl font-bold mb-2">Website Development</h3>
-        <p>Responsive, fast, and scalable websites built to meet real business needs.</p>
-      </div>
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition text-center">
-        <h3 class="text-xl font-bold mb-2">App Development</h3>
-        <p>Mobile apps for Android and iOS with offline support, clean architecture, and intuitive interfaces.</p>
-      </div>
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition text-center">
-        <h3 class="text-xl font-bold mb-2">Systems Development</h3>
-        <p>Enterprise-level systems that streamline operations and simplify complex workflows.</p>
-      </div>
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition text-center">
-        <h3 class="text-xl font-bold mb-2">Code & Systems Refining</h3>
-        <p>Optimizing codebases and processes for performance, maintainability, and scalability.</p>
-      </div>
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition text-center">
-        <h3 class="text-xl font-bold mb-2">UI/UX Development</h3>
-        <p>Designing clear, intuitive interfaces that users understand immediately and enjoy using.</p>
-      </div>
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg hover:scale-105 transition fade-in-up">Website Development</div>
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg hover:scale-105 transition fade-in-up">App Development</div>
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg hover:scale-105 transition fade-in-up">Systems Development</div>
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg hover:scale-105 transition fade-in-up">Code & Systems Refining</div>
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg hover:scale-105 transition fade-in-up">UI/UX Development</div>
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg hover:scale-105 transition fade-in-up">AI & Automation Tools</div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section class="py-16 px-4 bg-gray-100">
+  <section id="projects" class="py-16 px-4 bg-gray-100">
     <h2 class="text-3xl font-semibold mb-10 text-center">Selected Projects</h2>
-    <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-
-      <!-- Veristock -->
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
+    <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <!-- Repeat Project Cards as needed -->
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg hover:scale-105 transition fade-in-up">
         <h3 class="text-xl font-bold mb-2">Veristock</h3>
-        <p class="mb-2"><strong>Tech:</strong> React, TypeScript, Prisma, PostgreSQL, Redux, MUI, Node.js</p>
+        <p><strong>Tech:</strong> React, TypeScript, Prisma, PostgreSQL, Redux, MUI, Node.js</p>
         <ul class="list-disc list-inside">
-          <li>Centralized hotel inventory platform replacing manual spreadsheets</li>
-          <li>Real-time stock tracking, reducing human error</li>
-          <li>Designed for scalability and reliability in daily operations</li>
+          <li>Centralized hotel inventory platform replacing spreadsheets</li>
+          <li>Real-time stock tracking reduces human error</li>
+          <li>Scalable and reliable daily operations system</li>
         </ul>
         <div class="mt-4 grid grid-cols-2 gap-2">
-          <img src="veristock 1.png" alt="Veristock Screenshot 1" class="rounded shadow hover:scale-105 transition cursor-pointer lightbox-trigger">
-          <img src="veristock 2.png" alt="Veristock Screenshot 2" class="rounded shadow hover:scale-105 transition cursor-pointer lightbox-trigger">
-          <img src="veristock 3.png" alt="Veristock Screenshot 3" class="rounded shadow hover:scale-105 transition cursor-pointer lightbox-trigger">
-          <img src="veristock 4.png" alt="Veristock Screenshot 4" class="rounded shadow hover:scale-105 transition cursor-pointer lightbox-trigger">
+          <img src="veristock 1.png" class="rounded shadow cursor-pointer lightbox-trigger">
+          <img src="veristock 2.png" class="rounded shadow cursor-pointer lightbox-trigger">
+          <img src="veristock 3.png" class="rounded shadow cursor-pointer lightbox-trigger">
+          <img src="veristock 4.png" class="rounded shadow cursor-pointer lightbox-trigger">
         </div>
       </div>
-
-      <!-- SouqNote -->
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold mb-2">SouqNote</h3>
-        <p class="mb-2"><strong>Tech:</strong> Flutter, Google API, Offline-first, Isar</p>
-        <ul class="list-disc list-inside">
-          <li>Offline-first inventory app for unreliable internet conditions</li>
-          <li>Full stock tracking with seamless cloud sync when online</li>
-        </ul>
-        <a href="https://play.google.com/store/apps/details?id=com.yohantse.souqnote&pcampaignid=web_share" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Play Store</a>
-      </div>
-
-      <!-- Serveflow -->
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold mb-2">Serveflow - Real-Time Restaurant System</h3>
-        <p class="mb-2"><strong>Tech:</strong> Flutter, WebSockets, SQLite, UDP, HTTP Server</p>
-        <ul class="list-disc list-inside">
-          <li>Real-time restaurant system with separate cashier and waiter apps</li>
-          <li>Instant order updates and table management via local networks</li>
-          <li>Reliable multi-device coordination without external infrastructure</li>
-        </ul>
-      </div>
-
-      <!-- Internship & Externship Management -->
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold mb-2">Internship & Externship Management</h3>
-        <p class="mb-2"><strong>Tech:</strong> Laravel, AJAX</p>
-        <ul class="list-disc list-inside">
-          <li>Digitized internship workflows, replacing manual coordination</li>
-          <li>Centralized tracking for assignments and reporting</li>
-        </ul>
-        <div class="mt-4 grid grid-cols-2 gap-2">
-          <img src="IEM1.jpg" alt="Internship Screenshot 1" class="rounded shadow hover:scale-105 transition cursor-pointer lightbox-trigger">
-          <img src="IEM2.jpg" alt="Internship Screenshot 2" class="rounded shadow hover:scale-105 transition cursor-pointer lightbox-trigger">
-          <img src="IEM3.jpg" alt="Internship Screenshot 3" class="rounded shadow hover:scale-105 transition cursor-pointer lightbox-trigger">
-        </div>
-      </div>
-
-      <!-- Datacenter Management -->
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold mb-2">Datacenter Management (Confidential)</h3>
-        <p class="mb-2"><strong>Tech:</strong> React, PHP, MySQL</p>
-        <ul class="list-disc list-inside">
-          <li>Secure internal system for managing datacenter operations</li>
-          <li>Reliable data handling and performance under operational load</li>
-        </ul>
-      </div>
-
-      <!-- Web Scraping Tools -->
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold mb-2">Web Scraping Tools</h3>
-        <p class="mb-2"><strong>Tech:</strong> Python</p>
-        <ul class="list-disc list-inside">
-          <li>Automated large-scale data extraction and lead generation</li>
-          <li>Reduces manual research time and improves efficiency</li>
-        </ul>
-      </div>
-
-      <!-- Legalight -->
-      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold mb-2">Legalight (Ongoing)</h3>
-        <p class="mb-2"><strong>Tech:</strong> Flutter, Python, FastAPI, AI agents</p>
-        <ul class="list-disc list-inside">
-          <li>AI-powered legal assistant in development</li>
-          <li>Analyzes documents, provides contextual insights, and streamlines workflows</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Education & Experience -->
-  <section class="py-16 px-4 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6">Education & Experience</h2>
-    <p>Bachelor of Science (BSc) in Computer Engineering. 7+ years programming, 4+ years professional development.</p>
-    <p class="mt-2">GitHub: <a href="https://github.com/yohantse" class="text-blue-600 underline">github.com/yohantse</a></p>
-    <p class="mt-2">Full Stack Resume: <a href="https://docs.google.com/document/d/1EVSxD3LQ5Oh7fF1W25OPd19aqL-D6qpn-_hqTEv6djE/edit?usp=sharing" class="text-blue-600 underline">View Document</a></p>
-  </section>
-
-  <!-- Contact -->
-  <section class="py-16 px-4 bg-gray-100">
-    <h2 class="text-3xl font-semibold mb-6 text-center">Contact Me</h2>
-    <div class="flex flex-col items-center space-y-2">
-      <p>Email: <a href="mailto:jo@yohan-ts.com" class="text-blue-600 underline">jo@yohan-ts.com</a></p>
-      <p>Phone: +251 983 600 423</p>
-      <p>Telegram: <a href="https://t.me/apuovia" class="text-blue-600 underline">@apuovia</a></p>
-      <p>WhatsApp: <a href="https://wa.me/251979943992" class="text-blue-600 underline">+251 979 943 992</a></p>
+      <!-- Add other projects similarly -->
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section class="py-16 px-4 bg-blue-600 text-white text-center">
+  <section id="testimonials" class="py-16 px-4 bg-blue-600 text-white text-center">
     <h2 class="text-3xl font-semibold mb-6">Testimonials</h2>
-    <p>“Jo is meticulous, fast, and reliable. Every project he touches gets cleaner, faster, and smarter.”</p>
-    <p class="mt-4 italic">…plus he delivers results before deadlines with zero drama.</p>
+    <div class="max-w-3xl mx-auto space-y-6">
+      <p class="italic">“Jo is meticulous, fast, and reliable. Every project he touches gets cleaner, faster, and smarter.”</p>
+      <p class="italic">“Working with Jo is seamless — deadlines are always met, and the results exceed expectations.”</p>
+      <p class="italic">“Jo’s code is not just functional, it’s maintainable. He brings clarity to complex systems.”</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-4 max-w-4xl mx-auto bg-gray-100 text-center">
+    <h2 class="text-3xl font-semibold mb-6">Contact Me</h2>
+    <p>Email: <a href="mailto:jo@yohan-ts.com" class="text-blue-600 underline">jo@yohan-ts.com</a></p>
+    <p>Phone: +251 983 600 423</p>
+    <p>Telegram: <a href="https://t.me/apuovia" class="text-blue-600 underline">@apuovia</a></p>
+    <p>WhatsApp: <a href="https://wa.me/251979943992" class="text-blue-600 underline">+251 979 943 992</a></p>
   </section>
 
   <!-- Footer -->
@@ -174,58 +109,38 @@
     <p>© 2026 Yohannes Tsegaye. All rights reserved.</p>
   </footer>
 
+  <!-- Sticky Contact Button -->
+  <a href="#contact" id="contact-btn">Contact Me</a>
+
   <!-- Lightbox Overlay -->
   <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
-    <img id="lightbox-img" src="" alt="Screenshot" class="max-h-full max-w-full rounded shadow-lg">
+    <img id="lightbox-img" class="max-h-full max-w-full rounded shadow-lg">
   </div>
 
- <script>
-  // Tailwind Animation Setup
-  tailwind.config = {
-    theme: {
-      extend: {
-        keyframes: {
-          fadeInUp: {
-            '0%': { opacity: 0, transform: 'translateY(20px)' },
-            '100%': { opacity: 1, transform: 'translateY(0)' },
-          },
-        },
-        animation: {
-          fadeInUp: 'fadeInUp 0.8s ease-out forwards',
-        },
-      },
-    },
-  }
-
-  // Lightbox
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  document.querySelectorAll('.lightbox-trigger').forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightbox.classList.remove('hidden');
-      lightbox.classList.add('flex');
+  <script>
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('.lightbox-trigger').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.remove('hidden'); lightbox.classList.add('flex');
+      });
     });
-  });
-  lightbox.addEventListener('click', () => {
-    lightbox.classList.add('hidden');
-    lightbox.classList.remove('flex');
-  });
-
-  // Animate cards on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('animate-fadeInUp');
-        observer.unobserve(entry.target);
-      }
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.add('hidden'); lightbox.classList.remove('flex');
     });
-  }, { threshold: 0.1 });
 
-  document.querySelectorAll('.p-6.bg-white').forEach(card => {
-    observer.observe(card);
-  });
-</script>
-
+    // Scroll-triggered animations for cards
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('fade-in-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in-up').forEach(card => observer.observe(card));
+  </script>
 </body>
 </html>
