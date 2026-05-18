@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Tewodros Belay International Hotel</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #000;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-black/40 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div>
+        <h1 class="text-xl font-bold">Tewodros Belay</h1>
+        <p class="text-xs text-zinc-400 uppercase tracking-[0.3em]">
+          International Hotel
+        </p>
+      </div>
+
+      <nav class="hidden md:flex gap-8 text-sm text-zinc-300">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#rooms" class="hover:text-white transition">Rooms</a>
+        <a href="#amenities" class="hover:text-white transition">Amenities</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold">
+        Book Now
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section
+    class="relative h-screen flex items-center justify-center text-center overflow-hidden"
+    style="
+      background-image:
+      linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.85)),
+      url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1800&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    "
+  >
+
+    <div class="max-w-4xl px-6">
+
+      <p class="uppercase tracking-[0.5em] text-sm text-zinc-300 mb-4">
+        Addis Ababa • Ethiopia
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+        Experience Modern Ethiopian Hospitality
+      </h1>
+
+      <p class="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+        A luxury hotel experience blending elegant comfort,
+        business convenience, and contemporary Ethiopian design.
+      </p>
+
+      <div class="flex flex-wrap gap-4 justify-center">
+
+        <button class="bg-white text-black px-8 py-4 rounded-full font-semibold">
+          Explore Rooms
+        </button>
+
+        <button class="border border-white/30 px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition">
+          Virtual Tour
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14 items-center">
+
+    <div>
+
+      <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-4">
+        About The Hotel
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Designed for business, leisure, and unforgettable stays.
+      </h2>
+
+      <p class="text-zinc-400 leading-relaxed text-lg mb-6">
+        Located near CMC Square in Addis Ababa,
+        Tewodros Belay International Hotel combines modern luxury
+        with warm Ethiopian hospitality.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4 mt-10">
+
+        <div class="bg-zinc-900 rounded-3xl p-6 border border-white/5">
+          <h3 class="text-4xl font-bold">65+</h3>
+          <p class="text-zinc-400 mt-2">Luxury Rooms</p>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl p-6 border border-white/5">
+          <h3 class="text-4xl font-bold">10min</h3>
+          <p class="text-zinc-400 mt-2">From Airport</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div>
+
+      <img
+        src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop"
+        class="rounded-[2rem] shadow-2xl w-full h-[600px] object-cover"
+      />
+
+    </div>
+
+  </section>
+
+  <!-- Rooms -->
+  <section id="rooms" class="bg-zinc-950 py-24 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+
+        <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-4">
+          Accommodation
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-bold">
+          Premium Rooms & Suites
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Room -->
+        <div class="bg-black rounded-[2rem] overflow-hidden border border-white/5">
+
+          <img
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+            class="h-72 w-full object-cover"
+          />
+
+          <div class="p-8">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Deluxe King Room
+            </h3>
+
+            <p class="text-zinc-400 mb-6 leading-relaxed">
+              Elegant modern room with panoramic city views.
+            </p>
+
+            <button class="border border-white/20 px-5 py-3 rounded-full hover:bg-white hover:text-black transition">
+              View Details
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Room -->
+        <div class="bg-black rounded-[2rem] overflow-hidden border border-white/5">
+
+          <img
+            src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop"
+            class="h-72 w-full object-cover"
+          />
+
+          <div class="p-8">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Executive Suite
+            </h3>
+
+            <p class="text-zinc-400 mb-6 leading-relaxed">
+              Spacious luxury suite for business and VIP guests.
+            </p>
+
+            <button class="border border-white/20 px-5 py-3 rounded-full hover:bg-white hover:text-black transition">
+              View Details
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Room -->
+        <div class="bg-black rounded-[2rem] overflow-hidden border border-white/5">
+
+          <img
+            src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200&auto=format&fit=crop"
+            class="h-72 w-full object-cover"
+          />
+
+          <div class="p-8">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Family Room
+            </h3>
+
+            <p class="text-zinc-400 mb-6 leading-relaxed">
+              Comfortable and stylish space for families and groups.
+            </p>
+
+            <button class="border border-white/20 px-5 py-3 rounded-full hover:bg-white hover:text-black transition">
+              View Details
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Amenities -->
+  <section id="amenities" class="max-w-7xl mx-auto py-24 px-6">
+
+    <div class="text-center mb-16">
+
+      <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-4">
+        Amenities
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Everything Guests Need
+      </h2>
+
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+      <div class="bg-zinc-900 rounded-3xl p-8 text-center">
+        <div class="text-3xl mb-4">✦</div>
+        <p>Airport Shuttle</p>
+      </div>
+
+      <div class="bg-zinc-900 rounded-3xl p-8 text-center">
+        <div class="text-3xl mb-4">✦</div>
+        <p>Luxury Rooms</p>
+      </div>
+
+      <div class="bg-zinc-900 rounded-3xl p-8 text-center">
+        <div class="text-3xl mb-4">✦</div>
+        <p>Conference Hall</p>
+      </div>
+
+      <div class="bg-zinc-900 rounded-3xl p-8 text-center">
+        <div class="text-3xl mb-4">✦</div>
+        <p>Restaurant & Cafe</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section
+    class="relative py-32 px-6 text-center"
+    style="
+      background-image:
+      linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    "
+  >
+
+    <div class="max-w-4xl mx-auto">
+
+      <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-4">
+        Dining & Events
+      </p>
+
+      <h2 class="text-5xl font-black mb-6 leading-tight">
+        Fine dining and elegant event experiences.
+      </h2>
+
+      <p class="text-zinc-300 text-lg leading-relaxed mb-10">
+        Host business meetings, weddings, conferences,
+        and celebrations in a sophisticated environment.
+      </p>
+
+      <button class="bg-white text-black px-8 py-4 rounded-full font-semibold">
+        Explore Facilities
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-7xl mx-auto py-24 px-6">
+
+    <div class="bg-zinc-950 rounded-[3rem] p-10 md:p-16 grid md:grid-cols-2 gap-12">
+
+      <div>
+
+        <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-4">
+          Contact
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Ready to modernize your online presence?
+        </h2>
+
+        <p class="text-zinc-400 leading-relaxed text-lg mb-8">
+          A premium modern demo concept for Tewodros Belay International Hotel.
+        </p>
+
+        <div class="space-y-4 text-zinc-300">
+          <p>📍 Addis Ababa, Ethiopia</p>
+          <p>📞 +251 11 668 0145</p>
+          <p>✉️ info@tewodrosbelayhotel.com</p>
+        </div>
+
+      </div>
+
+      <div class="bg-black rounded-[2rem] p-8">
+
+        <h3 class="text-2xl font-bold mb-6">
+          Request Information
+        </h3>
+
+        <div class="space-y-4">
+
+          <input
+            type="text"
+            placeholder="Full Name"
+            class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-5 py-4 outline-none"
+          />
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-5 py-4 outline-none"
+          />
+
+          <textarea
+            placeholder="Message"
+            rows="5"
+            class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-5 py-4 outline-none"
+          ></textarea>
+
+          <button class="w-full bg-white text-black py-4 rounded-2xl font-semibold">
+            Send Message
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-8 px-6 text-center text-zinc-500 text-sm">
+    Demo website concept created by Yohannes Tsegaye • yohan-ts.com
+  </footer>
+
+</body>
+</html>
