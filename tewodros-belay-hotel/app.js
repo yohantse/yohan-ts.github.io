@@ -121,21 +121,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const roomData = {
     'deluxe': {
       title: 'Deluxe Room',
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop',
+      image: '08783a8ca6ca6fec953fca3562982d2d79c96af5.jpeg',
       price: '$120 / Night',
       desc: 'Our Deluxe Room offers a contemporary design infused with classic elegance. Featuring a plush king-size bed, a modern workspace, and stunning panoramic views of the Addis Ababa skyline. Relax in luxury with premium linen, high-speed fiber-optic Wi-Fi, and a spa-inspired rain shower.',
       amenities: ['City View Skyline', 'King Bed (Ultra Comfort)', 'High-speed Fiber Wi-Fi', 'Flat-screen Smart TV', 'In-room Minibar', '24-hour Room Service']
     },
     'executive': {
       title: 'Executive Suite',
-      image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop',
+      image: '08783a8ca6ca6fec953fca3562982d2d79c96af5.jpeg',
       price: '$220 / Night',
       desc: 'Designed for discerning travelers, the Executive Suite features a separate living area perfect for hosting guests or conducting business. Enjoy exclusive VIP access, high-end finishing, custom espresso machines, and high-touch concierge services. Experience the gold standard of Ethiopian comfort.',
       amenities: ['Separate Living Room Area', 'VIP Executive Lounge Access', 'Espresso Machine', 'Luxury Robe & Slippers', 'Deep Soaking Bath Tub', 'Complimentary Airport Transfer']
     },
     'family': {
       title: 'Family Room',
-      image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200&auto=format&fit=crop',
+      image: '08783a8ca6ca6fec953fca3562982d2d79c96af5.jpeg',
       price: '$180 / Night',
       desc: 'Spacious and welcoming, our Family Room is designed to provide maximum comfort for families or groups. Features two queen beds, custom child-friendly configurations, and layout options that keep everyone together while maintaining privacy. Your perfect home-away-from-home.',
       amenities: ['Two Queen Beds', 'Connecting Room Options', 'Kids Welcome Package', 'Spacious Work/Dining Area', 'In-room Safety Deposit Box', 'Buffet Breakfast Included']

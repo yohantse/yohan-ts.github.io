@@ -119,28 +119,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const roomData = {
     'single': {
       title: 'Cozy Single Room',
-      image: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=1200&auto=format&fit=crop',
+      image: 'topten/Guest-room.webp',
       price: '$70 / Night',
       desc: 'Perfect for the independent traveler or busy executive. Our Cozy Single Room offers a space optimized for rest and productivity. Features a premium single bed, a writing desk, fast fiber Wi-Fi, satellite TV, and a private modern bathroom with complimentary slippers.',
       amenities: ['Work Desk & Chair', 'Comfort Single Bed', 'Gigabit Wi-Fi Connection', 'Satellite Smart TV', 'In-room Safety Deposit Box', 'Complimentary Slippers']
     },
     'twin': {
       title: 'Superior Twin Room',
-      image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1200&auto=format&fit=crop',
+      image: 'topten/room1.webp',
       price: '$95 / Night',
       desc: 'Generously designed with double single beds, the Superior Twin Room is perfect for colleagues, travel partners, or small families. Enveloped in warm tones, the room features large windows showing garden views, coffee making tools, and daily housekeeping.',
       amenities: ['Two Comfort Twin Beds', 'Garden Window View', 'In-room Coffee & Tea facilities', 'High-speed Wi-Fi', 'Personal Safety Safe', 'Individual Bath Amenities']
     },
     'double': {
       title: 'Executive Double Room',
-      image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?q=80&w=1200&auto=format&fit=crop',
+      image: 'topten/Guest-room.webp',
       price: '$110 / Night',
       desc: 'Experience upgraded boutique comfort. The Executive Double Room offers a spacious king bed, deep textures, and an integrated relaxation chair. Ideal for business travelers seeking extra room to unwind after a productive day in Addis Ababa.',
       amenities: ['Comfort King Bed', 'Lounge Sitting Area', 'Writing Desk / Workspace', 'Flat-screen Cable TV', 'In-room Minibar setup', 'Premium Toiletries']
     },
     'suite': {
       title: 'Top Ten Ambassador Suite',
-      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop',
+      image: 'topten/room1.webp',
       price: '$160 / Night',
       desc: 'Our flagship accommodation. The Top Ten Ambassador Suite is a masterclass in modern comfort. It features a private master bedroom with a king bed, a separate visual lounge for meetings or leisure, a VIP dining counter, and a scenic balcony overlooking Asmara Road.',
       amenities: ['Separate Master Bedroom', 'Prestige Living Room Lounge', 'Private Balcony Area', 'Complimentary Airport Transfer', 'Espresso Maker', '24-hour Executive Concierge']
