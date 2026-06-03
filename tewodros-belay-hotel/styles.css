@@ -376,7 +376,7 @@ p {
 /* Hero Section */
 .hero-section {
   position: relative;
-  min-h: 100vh;
+  min-width: 100vh;
   height: 100vh;
   display: flex;
   align-items: center;
