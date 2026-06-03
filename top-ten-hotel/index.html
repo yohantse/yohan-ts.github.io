@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Top Ten Hotel Addis Ababa | Premium Boutique Hotel in Yeka/Bole</title>
+  <meta name="description" content="Welcome to the redesigned Top Ten Hotel in Addis Ababa. Experience sophisticated comfort, modern business boardrooms, gourmet dining, and spa services on Asmara Road, Yeka/Bole." />
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header id="main-header" class="header-main">
+    <div class="nav-container">
+      
+      <!-- Brand Logo / Title -->
+      <a href="#home" class="logo-block" id="nav-brand-logo">
+        <div class="logo-badge">10</div>
+        <div class="logo-text">
+          <h2>TOP TEN HOTEL</h2>
+          <p>Addis Ababa</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav id="desktop-nav">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#rooms" class="nav-link">Rooms</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#amenities" class="nav-link">Amenities</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA Book Button -->
+      <div class="header-cta">
+        <a href="#rooms" class="btn-primary" id="header-book-btn">BOOK NOW</a>
+      </div>
+
+      <!-- Hamburger Menu Button (Mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-controls="desktop-nav" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section id="home" class="hero-section">
+      <!-- Background zoom image -->
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop');"></div>
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-content">
+        <div class="hero-title-block">
+          <div class="subtitle-wrapper">
+            <span class="subtitle-line"></span>
+            <span class="section-subtitle">A New Era of Comfort</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Sophisticated Living<br>
+            in Addis Ababa
+          </h1>
+          
+          <p class="hero-desc">
+            Nestled on Asmara Road in the dynamic Yeka/Bole district, Top Ten Hotel combines high-end boutique accommodation with modern business and wellness amenities.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#rooms" class="btn-primary">View Rooms</a>
+            <a href="#about" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Sticky Booking Bar -->
+        <form class="booking-bar glass-panel" id="main-booking-form">
+          <div class="booking-item">
+            <label for="checkin">Check-In</label>
+            <input type="date" id="checkin" name="checkin" required />
+          </div>
+          
+          <div class="booking-item">
+            <label for="checkout">Check-Out</label>
+            <input type="date" id="checkout" name="checkout" required />
+          </div>
+          
+          <div class="booking-item">
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests">
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5+">5+ Guests</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="booking-submit" id="check-availability-btn">Check Availability</button>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         ABOUT SECTION
+         ========================================================================== -->
+    <section id="about" class="about-section">
+      <div class="section-container about-grid">
+        
+        <div class="about-info">
+          <div class="subtitle-wrapper">
+            <span class="subtitle-line"></span>
+            <span class="section-subtitle">Boutique Hospitality</span>
+          </div>
+          
+          <h2 class="section-title text-dark-primary">
+            A Premium Escape in<br>
+            the Capital's Center
+          </h2>
+          
+          <p class="about-info-text">
+            Featuring 28 custom-designed suites and rooms, Top Ten Hotel is engineered to provide business travelers and holiday seekers with quiet comfort, rapid connectivity, and high-quality guest services.
+          </p>
+          
+          <p class="about-info-text">
+            Located just 15 minutes away from Bole International Airport, our boutique property offers instant access to commercial centers, diplomatic embassies, and local attractions, all while providing a peaceful sanctuary to unwind.
+          </p>
+          
+          <a href="#rooms" class="btn-primary">View Accommodation</a>
+        </div>
+
+        <div class="about-image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1200&auto=format&fit=crop"
+            alt="Top Ten Hotel Room Lounge Area"
+            class="about-image"
+          />
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         ROOMS & SUITES SECTION
+         ========================================================================== -->
+    <section id="rooms" class="rooms-section">
+      <div class="section-container">
+        
+        <div class="rooms-header">
+          <div>
+            <div class="subtitle-wrapper">
+              <span class="subtitle-line"></span>
+              <span class="section-subtitle">Boutique Suites</span>
+            </div>
+            <h2 class="section-title">Cozy Rooms & Luxury Suites</h2>
+          </div>
+          
+          <a href="#contact" class="btn-secondary">Request Long-Term Rates</a>
+        </div>
+
+        <!-- Room Cards Grid -->
+        <div class="rooms-grid">
+          
+          <!-- Cozy Single -->
+          <div class="room-card" id="room-card-single">
+            <div class="room-img-container">
+              <img
+                src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=1200&auto=format&fit=crop"
+                alt="Cozy Single Room"
+                class="room-img"
+              />
+              <span class="room-price-badge">From $70/Night</span>
+            </div>
+            
+            <div class="room-body">
+              <h3 class="room-title">Cozy Single Room</h3>
+              <p class="room-desc">
+                Efficiently designed for single travelers. Featuring a comfortable single bed, a working desk, high-speed Wi-Fi, and private bathroom amenities.
+              </p>
+              
+              <ul class="room-features">
+                <li><span>✦</span> 28 m²</li>
+                <li><span>✦</span> Single Bed</li>
+                <li><span>✦</span> Fiber Wi-Fi</li>
+              </ul>
+              
+              <button class="btn-bronze room-btn view-detail-btn" data-room-id="single" id="btn-details-single">
+                View Details & Book
+              </button>
+            </div>
+          </div>
+
+          <!-- Superior Twin -->
+          <div class="room-card" id="room-card-twin">
+            <div class="room-img-container">
+              <img
+                src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1200&auto=format&fit=crop"
+                alt="Superior Twin Room"
+                class="room-img"
+              />
+              <span class="room-price-badge">From $95/Night</span>
+            </div>
+            
+            <div class="room-body">
+              <h3 class="room-title">Superior Twin Room</h3>
+              <p class="room-desc">
+                Ideal for travel partners. Includes two komfort twin beds, custom coffee setups, garden views, and a dedicated workspace.
+              </p>
+              
+              <ul class="room-features">
+                <li><span>✦</span> 38 m²</li>
+                <li><span>✦</span> Twin Beds</li>
+                <li><span>✦</span> Garden View</li>
+              </ul>
+              
+              <button class="btn-bronze room-btn view-detail-btn" data-room-id="twin" id="btn-details-twin">
+                View Details & Book
+              </button>
+            </div>
+          </div>
+
+          <!-- Executive Double -->
+          <div class="room-card" id="room-card-double">
+            <div class="room-img-container">
+              <img
+                src="https://images.unsplash.com/photo-1591088398332-8a7791972843?q=80&w=1200&auto=format&fit=crop"
+                alt="Executive Double Room"
+                class="room-img"
+              />
+              <span class="room-price-badge">From $110/Night</span>
+            </div>
+            
+            <div class="room-body">
+              <h3 class="room-title">Executive Double Room</h3>
+              <p class="room-desc">
+                Spacious room featuring a comfortable king-size bed, a lounge reading corner, premium toiletries, and advanced workspace setups.
+              </p>
+              
+              <ul class="room-features">
+                <li><span>✦</span> 45 m²</li>
+                <li><span>✦</span> King Bed</li>
+                <li><span>✦</span> Lounge Corner</li>
+              </ul>
+              
+              <button class="btn-bronze room-btn view-detail-btn" data-room-id="double" id="btn-details-double">
+                View Details & Book
+              </button>
+            </div>
+          </div>
+
+          <!-- Ambassador Suite -->
+          <div class="room-card" id="room-card-suite">
+            <div class="room-img-container">
+              <img
+                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop"
+                alt="Top Ten Ambassador Suite"
+                class="room-img"
+              />
+              <span class="room-price-badge">From $160/Night</span>
+            </div>
+            
+            <div class="room-body">
+              <h3 class="room-title">Top Ten Ambassador Suite</h3>
+              <p class="room-desc">
+                Our absolute best. Features a master bedroom, a separate corporate living lounge, custom espresso machine, private balcony, and complimentary VIP shuttle.
+              </p>
+              
+              <ul class="room-features">
+                <li><span>✦</span> 68 m²</li>
+                <li><span>✦</span> Separate Lounge</li>
+                <li><span>✦</span> Private Balcony</li>
+              </ul>
+              
+              <button class="btn-bronze room-btn view-detail-btn" data-room-id="suite" id="btn-details-suite">
+                View Details & Book
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SERVICES & EXPERIENCES SECTION
+         ========================================================================== -->
+    <section id="services" class="services-section">
+      <div class="section-container">
+        
+        <div class="subtitle-wrapper">
+          <span class="subtitle-line"></span>
+          <span class="section-subtitle">Prestige Offerings</span>
+        </div>
+        
+        <h2 class="section-title">Services & Spaces</h2>
+        <p class="services-intro">
+          Top Ten Hotel houses high-quality dining, modern meeting facilities, and customized wellness spaces designed for corporate success and physical rejuvenation.
+        </p>
+
+        <div class="services-list">
+          
+          <!-- Meeting Halls -->
+          <div class="service-item">
+            <div class="service-img-side">
+              <span class="service-badge">Meetings & Events</span>
+              <img
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop"
+                alt="Executive Boardroom Venue"
+              />
+            </div>
+            <div class="service-content-side">
+              <h3 class="service-title">Abyssinia Boardroom</h3>
+              <p class="service-desc">
+                Host with absolute confidence. Our executive conference hall is designed for business presentations, seminars, and diplomatic discussions, hosting up to 50 guests. Equipped with smart presentation screens, modular configurations, and custom catering options.
+              </p>
+              <ul class="service-highlights">
+                <li>Accommodates up to 50 delegates</li>
+                <li>High-definition projector and audio</li>
+                <li>Custom business buffet catering</li>
+                <li>Fast, dedicated meeting Wi-Fi</li>
+              </ul>
+              <button class="btn-primary service-inquire-btn" data-service-name="Abyssinia Boardroom">
+                Inquire For Venue
+              </button>
+            </div>
+          </div>
+
+          <!-- Restaurant & Dining -->
+          <div class="service-item">
+            <div class="service-img-side">
+              <span class="service-badge">Gastronomy</span>
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"
+                alt="Top Ten Bistro Restaurant"
+              />
+            </div>
+            <div class="service-content-side">
+              <h3 class="service-title">Top Ten Bistro & Lounge</h3>
+              <p class="service-desc">
+                Enjoy excellent dining at the Top Ten Bistro. Our executive chef blends international specialties with traditional Ethiopian dishes, providing a delicious experience. Offers a fresh daily buffet breakfast, full-service lunch and dinner, and an attached premium beverage bar.
+              </p>
+              <ul class="service-highlights">
+                <li>Continental & Traditional Breakfast</li>
+                <li>A La Carte Lunch & Dinner</li>
+                <li>Premium cocktail and wine lists</li>
+                <li>24-hour in-room room service</li>
+              </ul>
+              <button class="btn-primary service-inquire-btn" data-service-name="Top Ten Bistro & Lounge">
+                Reserve a Table
+              </button>
+            </div>
+          </div>
+
+          <!-- Spa & Fitness -->
+          <div class="service-item">
+            <div class="service-img-side">
+              <span class="service-badge">Wellness</span>
+              <img
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop"
+                alt="Wellness Gym Fitness Center"
+              />
+            </div>
+            <div class="service-content-side">
+              <h3 class="service-title">Amber Spa & Gym</h3>
+              <p class="service-desc">
+                Prioritize your physical well-being. Our fitness center features premium strength and cardio machinery. Unwind afterwards in our tranquil spa chambers, which offer customized therapeutic massages, authentic steam baths, and hot sauna sessions.
+              </p>
+              <ul class="service-highlights">
+                <li>Modern cardio & strength machines</li>
+                <li>Private massage treatment rooms</li>
+                <li>Authentic steam & sauna setups</li>
+                <li>Trained fitness instructors</li>
+              </ul>
+              <button class="btn-primary service-inquire-btn" data-service-name="Amber Spa & Gym">
+                Book a Session
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         AMENITIES SECTION
+         ========================================================================== -->
+    <section id="amenities" class="amenities-section">
+      <div class="section-container">
+        
+        <div class="subtitle-wrapper" style="justify-content: center;">
+          <span class="subtitle-line"></span>
+          <span class="section-subtitle">Comfort & Convenience</span>
+          <span class="subtitle-line"></span>
+        </div>
+        
+        <h2 class="section-title text-dark-primary">Boutique Guest Conveniences</h2>
+        <p class="amenities-intro">
+          Top Ten Hotel provides custom-tailored amenities to guarantee a seamless stay in the capital.
+        </p>
+
+        <div class="amenities-grid">
+          
+          <div class="amenity-card">
+            <span class="amenity-icon">📶</span>
+            <h3 class="amenity-name">Free Fiber Wi-Fi</h3>
+            <p class="amenity-desc">Instant gigabit wireless connection across all rooms, dining, and lobbies.</p>
+          </div>
+          
+          <div class="amenity-card">
+            <span class="amenity-icon">✈️</span>
+            <h3 class="amenity-name">Airport Shuttle</h3>
+            <p class="amenity-desc">Complimentary Bole International Airport pick-up and drop-off on request.</p>
+          </div>
+          
+          <div class="amenity-card">
+            <span class="amenity-icon">🏧</span>
+            <h3 class="amenity-name">On-site ATM</h3>
+            <p class="amenity-desc">Quick cash withdraws and currency exchange support right inside the lobby.</p>
+          </div>
+          
+          <div class="amenity-card">
+            <span class="amenity-icon">🛎️</span>
+            <h3 class="amenity-name">24h Room Service</h3>
+            <p class="amenity-desc">Gourmet meals and dedicated concierge support at any hour of the day.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         GALLERY SECTION
+         ========================================================================== -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-container">
+        
+        <div class="subtitle-wrapper">
+          <span class="subtitle-line"></span>
+          <span class="section-subtitle">Visual Tour</span>
+        </div>
+        
+        <h2 class="section-title">Explore Our Hotel</h2>
+        
+        <!-- Gallery Slider Wrapper -->
+        <div class="gallery-slider-container">
+          <div class="gallery-track">
+            
+            <div class="gallery-slide">
+              <img
+                src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop"
+                alt="Hotel Lobby Reception Desk Area"
+              />
+              <div class="gallery-caption">
+                <h3>Prestige Lobby & Reception</h3>
+                <p>Welcome to friendly boutique hospitality</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <img
+                src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=1200&auto=format&fit=crop"
+                alt="Boutique Room Twin Beds Layout"
+              />
+              <div class="gallery-caption">
+                <h3>Executive Suites</h3>
+                <p>Tailored for absolute rest and work comfort</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <img
+                src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop"
+                alt="Buffet Dining Table Set"
+              />
+              <div class="gallery-caption">
+                <h3>Top Ten Dining Hall</h3>
+                <p>Enjoy rich cuisines prepared daily</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider Buttons -->
+          <button class="gallery-btn gallery-btn-prev" aria-label="Previous image">&#10094;</button>
+          <button class="gallery-btn gallery-btn-next" aria-label="Next image">&#10095;</button>
+        </div>
+
+        <!-- Slider Dots Navigation -->
+        <div class="gallery-dots"></div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         CONTACT & INQUIRY SECTION
+         ========================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="section-container contact-grid">
+        
+        <div class="contact-info">
+          <div class="subtitle-wrapper">
+            <span class="subtitle-line"></span>
+            <span class="section-subtitle">Get in Touch</span>
+          </div>
+          
+          <h3>Reach Out Today</h3>
+          <p class="contact-desc">
+            Have questions about room booking options, airport transfers, or corporate boardroom rentals? Contact our guest services desk at any time.
+          </p>
+
+          <div class="contact-details">
+            
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <p class="contact-label">Location</p>
+                <p class="contact-value">Asmara Road, Yeka/Bole Area, Addis Ababa, Ethiopia</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <p class="contact-label">Telephone</p>
+                <p class="contact-value">+251 11 667 0180</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <p class="contact-label">Email Support</p>
+                <p class="contact-value">info@toptenhoteladdis.com</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Dynamic Form Panel -->
+        <div class="contact-form-panel glass-panel">
+          <h3>Send a Message</h3>
+          
+          <form id="hotel-contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Full Name" class="form-input" required id="contact-name" />
+            </div>
+            
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" class="form-input" required id="contact-email" />
+            </div>
+            
+            <div class="form-group">
+              <textarea placeholder="How can we assist you?" class="form-textarea" required id="contact-message"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-bronze" id="contact-submit-btn">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         INTERACTIVE MAP EMBED
+         ========================================================================== -->
+    <section class="map-section" id="location-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.4851239843657!2d38.8047413!3d9.012931499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85002235948f%3A0xea242c74d0e95db!2sAsmara%20Rd%2C%20Addis%20Ababa!5e0!3m2!1sen!2set!4v1700000000000!5m2!1sen!2set" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Top Ten Hotel Location Map">
+      </iframe>
+    </section>
+  </main>
+
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer-main">
+    <div class="footer-grid">
+      
+      <div class="footer-col">
+        <div class="footer-logo">
+          <div class="footer-logo-badge">10</div>
+          <div class="footer-logo-text">
+            <h3>TOP TEN HOTEL</h3>
+            <p>Addis Ababa</p>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Redefining premium boutique comfort in Addis Ababa. Experience tailored rooms, boardroom amenities, and a relaxing spa.
+        </p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Our Hotel</a></li>
+          <li><a href="#rooms">Rooms & Suites</a></li>
+          <li><a href="#services">Services & Venues</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Guest Services</h4>
+        <ul class="footer-links">
+          <li><a href="#contact">Airport Shuttles</a></li>
+          <li><a href="#contact">Bistro Reservations</a></li>
+          <li><a href="#contact">Meeting Rooms</a></li>
+          <li><a href="#contact">Privacy Policy</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p class="footer-desc" style="margin-bottom: 12px; color: var(--text-light);">
+          Asmara Road, Yeka/Bole Area, Addis Ababa, Ethiopia
+        </p>
+        <p class="footer-desc" style="margin-bottom: 8px;">
+          T: +251 11 667 0180
+        </p>
+        <p class="footer-desc">
+          E: info@toptenhoteladdis.com
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Top Ten Hotel Addis Ababa. All rights reserved.</p>
+      <p>Boutique Hospitality Experience</p>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================================================
+       DYNAMIC ROOM DETAIL MODAL SYSTEM
+       ========================================================================== -->
+  <div id="room-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close details modal">&times;</button>
+      
+      <div class="modal-hero">
+        <img id="modal-image" src="" alt="" />
+      </div>
+      
+      <div class="modal-body">
+        <div class="modal-header">
+          <h2 id="modal-title" class="modal-room-title">Room Title</h2>
+          <div class="modal-room-meta">
+            <span>Rate: <strong id="modal-price" class="bronze-text">$70 / Night</strong></span>
+          </div>
+        </div>
+
+        <p id="modal-desc" class="modal-desc">
+          Room detailed description goes here dynamically.
+        </p>
+
+        <h3 class="modal-amenities-title">Room Amenities & Features</h3>
+        <ul id="modal-amenities" class="modal-amenities-list">
+          <!-- Populated dynamically via JS -->
+        </ul>
+
+        <!-- Modal Booking / Inquiry Form -->
+        <h3 class="modal-form-title">Inquire / Book Room</h3>
+        <form id="modal-booking-form">
+          <input type="hidden" id="modal-room-type" name="room_type" value="" />
+          
+          <div class="modal-grid-2">
+            <div class="form-group">
+              <input type="text" id="modal-booking-name" placeholder="Your Full Name" class="form-input" required />
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="modal-booking-email" placeholder="Email Address" class="form-input" required />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <input type="tel" id="modal-booking-phone" placeholder="Telephone Number" class="form-input" required />
+          </div>
+          
+          <button type="submit" class="btn-primary" style="width: 100%; border: none;" id="modal-submit-btn">
+            Send Reservation Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       TOAST NOTIFICATION COMPONENT
+       ========================================================================== -->
+  <div id="booking-toast" class="toast-notification" role="status">
+    <span class="toast-icon">✓</span>
+    <div class="toast-message">
+      <h4 id="toast-title">Success</h4>
+      <p id="toast-message-text">Your inquiry has been successfully sent.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript file -->
+  <script src="app.js"></script>
+
+</body>
+</html>
