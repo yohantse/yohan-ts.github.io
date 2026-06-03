@@ -3,611 +3,724 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Tewodros Belay International Hotel</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
+  
+  <title>Tewodros Belay International Hotel | Luxury Stay in Addis Ababa</title>
+  <meta name="description" content="Experience world-class comfort, elegant rooms, premium suites, and the warmth of Ethiopian hospitality at Tewodros Belay International Hotel in the heart of Addis Ababa." />
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    *{
-      font-family: 'Inter', sans-serif;
-    }
-
-    h1,h2,h3,h4{
-      font-family: 'Cormorant Garamond', serif;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      background:#0b0606;
-      overflow-x:hidden;
-    }
-
-    .hero-overlay{
-  background:
-  linear-gradient(
-    to right,
-    rgba(0,0,0,0.88),
-    rgba(0,0,0,0.55)
-  );
-}
-
-    .glass{
-      backdrop-filter: blur(18px);
-      background: rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.08);
-    }
-
-    .gold{
-      color:#d4a54c;
-    }
-
-    .gold-bg{
-      background:#d4a54c;
-    }
-
-    .maroon-bg{
-      background:#4d0000;
-    }
-
-    .card-hover{
-      transition:0.35s ease;
-    }
-
-    .card-hover:hover{
-      transform:translateY(-10px);
-    }
-
-    .hero-title{
-      line-height:0.95;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
-<body class="text-white">
+<body>
 
-  <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 w-full z-50 glass">
-
-    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-
-      <div class="flex items-center gap-4">
-
-        <!-- LOGO -->
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header id="main-header" class="header-main">
+    <div class="nav-container">
+      
+      <!-- Brand Logo / Title -->
+      <a href="#home" class="logo-block" id="nav-brand-logo">
         <img
           src="1779119177839.png"
-          alt="Tewodros Belay Hotel Logo"
-          class="w-16 h-16 object-contain"
+          alt="Tewodros Belay Hotel Crest Logo"
+          class="logo-img"
         />
-
-        <div>
-          <h2 class="text-2xl font-bold tracking-wide">
-            TEWODROS BELAY
-          </h2>
-
-          <p class="uppercase tracking-[0.4em] text-xs text-zinc-300">
-            International Hotel
-          </p>
+        <div class="logo-text">
+          <h2>TEWODROS BELAY</h2>
+          <p>International Hotel</p>
         </div>
-
-      </div>
-
-      <nav class="hidden lg:flex gap-10 text-sm font-medium text-zinc-200">
-
-        <a href="#home" class="hover:text-[#d4a54c] transition">
-          Home
-        </a>
-
-        <a href="#about" class="hover:text-[#d4a54c] transition">
-          About
-        </a>
-
-        <a href="#rooms" class="hover:text-[#d4a54c] transition">
-          Rooms
-        </a>
-
-        <a href="#amenities" class="hover:text-[#d4a54c] transition">
-          Amenities
-        </a>
-
-        <a href="#gallery" class="hover:text-[#d4a54c] transition">
-          Gallery
-        </a>
-
-        <a href="#contact" class="hover:text-[#d4a54c] transition">
-          Contact
-        </a>
-
-      </nav>
-
-      <a
-        href="#contact"
-        class="hidden md:flex bg-[#6e0000] border border-[#d4a54c] px-7 py-3 rounded-xl hover:bg-[#850000] transition font-semibold"
-      >
-        BOOK NOW
       </a>
 
-    </div>
+      <!-- Desktop Navigation Menu -->
+      <nav id="desktop-nav">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#rooms" class="nav-link">Rooms</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#amenities" class="nav-link">Amenities</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
+      <!-- CTA Book Button -->
+      <div class="header-cta">
+        <a href="#rooms" class="btn-primary" id="header-book-btn">BOOK NOW</a>
+      </div>
+
+      <!-- Hamburger Menu Button (Mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-controls="desktop-nav" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section
-    id="home"
-    class="relative min-h-screen flex items-center"
-  >
-
-    <!-- BACKGROUND -->
-<div
-  class="absolute inset-0 bg-cover bg-center"
-  style="
-    background-image:url('08783a8ca6ca6fec953fca3562982d2d79c96af5.jpeg');
-  "
-></div>
-
-    <div class="absolute inset-0 hero-overlay"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32">
-
-      <div class="max-w-4xl">
-
-        <div class="flex items-center gap-4 mb-8">
-
-          <div class="w-16 h-[1px] bg-[#d4a54c]"></div>
-
-          <p class="uppercase tracking-[0.3em] text-sm gold">
-            Welcome To
-          </p>
-
-        </div>
-
-        <h1 class="text-6xl md:text-8xl font-semibold hero-title mb-8">
-
-          Tewodros Belay<br>
-          International Hotel
-
-        </h1>
-
-        <p class="text-xl md:text-2xl text-zinc-300 leading-relaxed max-w-3xl mb-12">
-
-          Experience world-class comfort, elegant luxury,
-          exceptional service, and the warmth of Ethiopian hospitality.
-
-        </p>
-
-        <div class="flex flex-wrap gap-5 mb-20">
-
-          <a
-            href="#rooms"
-            class="bg-[#6e0000] hover:bg-[#850000] px-10 py-5 rounded-xl text-lg font-semibold transition border border-[#d4a54c]"
-          >
-            BOOK YOUR STAY
-          </a>
-
-          <a
-            href="#about"
-            class="border border-white/30 px-10 py-5 rounded-xl text-lg font-semibold hover:bg-white hover:text-black transition"
-          >
-            EXPLORE HOTEL
-          </a>
-
-        </div>
-
-      </div>
-
-      <!-- BOOKING BAR -->
-      <div class="glass rounded-3xl p-5 grid md:grid-cols-4 gap-5 max-w-6xl">
-
-        <div class="bg-black/20 rounded-2xl p-5">
-
-          <p class="text-sm text-zinc-400 mb-2">
-            CHECK-IN
-          </p>
-
-          <p class="text-lg font-semibold">
-            Select Date
-          </p>
-
-        </div>
-
-        <div class="bg-black/20 rounded-2xl p-5">
-
-          <p class="text-sm text-zinc-400 mb-2">
-            CHECK-OUT
-          </p>
-
-          <p class="text-lg font-semibold">
-            Select Date
-          </p>
-
-        </div>
-
-        <div class="bg-black/20 rounded-2xl p-5">
-
-          <p class="text-sm text-zinc-400 mb-2">
-            GUESTS
-          </p>
-
-          <p class="text-lg font-semibold">
-            1 Guest
-          </p>
-
-        </div>
-
-        <button class="gold-bg text-black rounded-2xl font-bold text-lg hover:scale-[1.02] transition">
-
-          CHECK AVAILABILITY
-
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section
-    id="about"
-    class="bg-[#f8f4ef] text-black py-28 px-6"
-  >
-
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-
-      <div>
-
-        <div class="flex items-center gap-4 mb-6">
-
-          <div class="w-16 h-[1px] bg-[#d4a54c]"></div>
-
-          <p class="uppercase tracking-[0.3em] text-sm gold">
-            About Us
-          </p>
-
-        </div>
-
-        <h2 class="text-5xl md:text-6xl leading-tight mb-8">
-
-          A Tradition Of Excellence
-          In Hospitality
-
-        </h2>
-
-        <p class="text-zinc-700 text-lg leading-relaxed mb-6">
-
-          Located in the heart of Addis Ababa,
-          Tewodros Belay International Hotel offers
-          a perfect blend of luxury, comfort, and convenience.
-
-        </p>
-
-        <p class="text-zinc-700 text-lg leading-relaxed mb-10">
-
-          Whether you are traveling for business or leisure,
-          our dedicated team is here to make your stay unforgettable.
-
-        </p>
-
-        <a
-          href="#rooms"
-          class="inline-block bg-[#6e0000] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#850000] transition"
-        >
-          DISCOVER MORE
-        </a>
-
-      </div>
-
-      <div>
-
-        <img
-          src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop"
-          class="rounded-[2rem] shadow-2xl w-full h-[600px] object-cover"
-        />
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ROOMS -->
-  <section
-    id="rooms"
-    class="py-28 px-6 maroon-bg"
-  >
-
-    <div class="max-w-7xl mx-auto">
-
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-20">
-
-        <div>
-
-          <div class="flex items-center gap-4 mb-5">
-
-            <div class="w-16 h-[1px] bg-[#d4a54c]"></div>
-
-            <p class="uppercase tracking-[0.3em] text-sm gold">
-              Rooms & Suites
-            </p>
-
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section id="home" class="hero-section">
+      <!-- Background zoom image -->
+      <div class="hero-bg" style="background-image: url('08783a8ca6ca6fec953fca3562982d2d79c96af5.jpeg');"></div>
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-content">
+        <div class="hero-title-block">
+          <div class="subtitle-wrapper">
+            <span class="subtitle-line"></span>
+            <span class="section-subtitle">Welcome to Luxury</span>
           </div>
-
-          <h2 class="text-5xl md:text-6xl">
-
-            Stay In Comfort & Luxury
-
-          </h2>
-
-        </div>
-
-        <button class="border border-white/20 px-8 py-4 rounded-xl hover:bg-white hover:text-black transition">
-
-          VIEW ALL ROOMS
-
-        </button>
-
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-
-        <!-- ROOM -->
-        <div class="card-hover bg-black/30 border border-white/10 rounded-[2rem] overflow-hidden">
-
-          <img
-            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
-            class="h-72 w-full object-cover"
-          />
-
-          <div class="p-8">
-
-            <h3 class="text-3xl mb-4">
-              Deluxe Room
-            </h3>
-
-            <p class="text-zinc-300 leading-relaxed mb-8">
-
-              Modern comfort with city views
-              and premium amenities.
-
-            </p>
-
-            <button class="w-full bg-[#7d0000] py-4 rounded-xl font-semibold hover:bg-[#920000] transition">
-
-              VIEW DETAILS
-
-            </button>
-
-          </div>
-
-        </div>
-
-        <!-- ROOM -->
-        <div class="card-hover bg-black/30 border border-white/10 rounded-[2rem] overflow-hidden">
-
-          <img
-            src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop"
-            class="h-72 w-full object-cover"
-          />
-
-          <div class="p-8">
-
-            <h3 class="text-3xl mb-4">
-              Executive Suite
-            </h3>
-
-            <p class="text-zinc-300 leading-relaxed mb-8">
-
-              Spacious suite with separate
-              living area and VIP services.
-
-            </p>
-
-            <button class="w-full bg-[#7d0000] py-4 rounded-xl font-semibold hover:bg-[#920000] transition">
-
-              VIEW DETAILS
-
-            </button>
-
-          </div>
-
-        </div>
-
-        <!-- ROOM -->
-        <div class="card-hover bg-black/30 border border-white/10 rounded-[2rem] overflow-hidden">
-
-          <img
-            src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200&auto=format&fit=crop"
-            class="h-72 w-full object-cover"
-          />
-
-          <div class="p-8">
-
-            <h3 class="text-3xl mb-4">
-              Family Room
-            </h3>
-
-            <p class="text-zinc-300 leading-relaxed mb-8">
-
-              Perfect for families with ample
-              space and added comfort.
-
-            </p>
-
-            <button class="w-full bg-[#7d0000] py-4 rounded-xl font-semibold hover:bg-[#920000] transition">
-
-              VIEW DETAILS
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- AMENITIES -->
-  <section
-    id="amenities"
-    class="bg-[#f8f4ef] text-black py-24 px-6"
-  >
-
-    <div class="max-w-7xl mx-auto text-center">
-
-      <div class="flex justify-center items-center gap-4 mb-6">
-
-        <div class="w-16 h-[1px] bg-[#d4a54c]"></div>
-
-        <p class="uppercase tracking-[0.3em] text-sm gold">
-          Premium Amenities
-        </p>
-
-        <div class="w-16 h-[1px] bg-[#d4a54c]"></div>
-
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-16">
-
-        <div>
-          <div class="text-5xl mb-5">📶</div>
-          <p class="font-semibold text-lg">Free Wi-Fi</p>
-        </div>
-
-        <div>
-          <div class="text-5xl mb-5">✈️</div>
-          <p class="font-semibold text-lg">Airport Shuttle</p>
-        </div>
-
-        <div>
-          <div class="text-5xl mb-5">🍽️</div>
-          <p class="font-semibold text-lg">Restaurant & Bar</p>
-        </div>
-
-        <div>
-          <div class="text-5xl mb-5">🏋️</div>
-          <p class="font-semibold text-lg">Fitness Center</p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-  <section
-    id="contact"
-    class="py-28 px-6 bg-black"
-  >
-
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-
-      <div>
-
-        <div class="flex items-center gap-4 mb-6">
-
-          <div class="w-16 h-[1px] bg-[#d4a54c]"></div>
-
-          <p class="uppercase tracking-[0.3em] text-sm gold">
-            Contact Us
+          
+          <h1 class="hero-title">
+            Tewodros Belay<br>
+            International Hotel
+          </h1>
+          
+          <p class="hero-desc">
+            Experience world-class comfort, elegant luxury, exceptional service, and the exquisite warmth of Ethiopian hospitality in the heart of Addis Ababa.
           </p>
-
+          
+          <div class="hero-actions">
+            <a href="#rooms" class="btn-primary">Book Your Stay</a>
+            <a href="#about" class="btn-secondary">Explore Hotel</a>
+          </div>
         </div>
 
-        <h2 class="text-5xl md:text-6xl mb-8">
-
-          Need Assistance?
-
-        </h2>
-
-        <p class="text-zinc-400 text-lg leading-relaxed mb-10">
-
-          Our team is ready to help you plan
-          your perfect stay and answer any inquiries.
-
-        </p>
-
-        <div class="space-y-5 text-lg">
-
-          <p>📍 Addis Ababa, Ethiopia</p>
-
-          <p>📞 +251 11 668 0145</p>
-
-          <p>✉️ info@tewodrosbelayhotel.com</p>
-
-        </div>
-
-      </div>
-
-      <div class="glass rounded-[2rem] p-10">
-
-        <h3 class="text-4xl mb-8">
-
-          Send A Message
-
-        </h3>
-
-        <form class="space-y-5">
-
-          <input
-            type="text"
-            placeholder="Full Name"
-            class="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 outline-none"
-          />
-
-          <input
-            type="email"
-            placeholder="Email Address"
-            class="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 outline-none"
-          />
-
-          <textarea
-            rows="5"
-            placeholder="Message"
-            class="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 outline-none"
-          ></textarea>
-
-          <button
-            class="w-full gold-bg text-black py-5 rounded-xl font-bold hover:scale-[1.01] transition"
-          >
-
-            SEND MESSAGE
-
-          </button>
-
+        <!-- Sticky Booking Bar -->
+        <form class="booking-bar glass-panel" id="main-booking-form">
+          <div class="booking-item">
+            <label for="checkin">Check-In</label>
+            <input type="date" id="checkin" name="checkin" required />
+          </div>
+          
+          <div class="booking-item">
+            <label for="checkout">Check-Out</label>
+            <input type="date" id="checkout" name="checkout" required />
+          </div>
+          
+          <div class="booking-item">
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests">
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5+">5+ Guests</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="booking-submit" id="check-availability-btn">Check Availability</button>
         </form>
+      </div>
+    </section>
 
+
+    <!-- ==========================================================================
+         ABOUT SECTION
+         ========================================================================== -->
+    <section id="about" class="about-section">
+      <div class="section-container about-grid">
+        
+        <div class="about-info">
+          <div class="subtitle-wrapper">
+            <span class="subtitle-line"></span>
+            <span class="section-subtitle">Our Heritage</span>
+          </div>
+          
+          <h2 class="section-title text-dark-primary">
+            A Tradition of Excellence<br>
+            in Hospitality
+          </h2>
+          
+          <p class="about-info-text">
+            Situated elegantly in the vibrant heart of Addis Ababa, Tewodros Belay International Hotel provides a perfect convergence of luxury, comfort, and state-of-the-art business facilities.
+          </p>
+          
+          <p class="about-info-text">
+            Whether you are traveling for global diplomacy, corporate affairs, or a relaxing leisure getaway, our high-touch personalized services and warm Ethiopian hospitality will ensure your stay is absolutely unforgettable.
+          </p>
+          
+          <a href="#rooms" class="btn-primary">Discover Our Suites</a>
+        </div>
+
+        <div class="about-image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop"
+            alt="Tewodros Belay Hotel Exterior Poolside View"
+            class="about-image"
+          />
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         ROOMS & SUITES SECTION
+         ========================================================================== -->
+    <section id="rooms" class="rooms-section">
+      <div class="section-container">
+        
+        <div class="rooms-header">
+          <div>
+            <div class="subtitle-wrapper">
+              <span class="subtitle-line"></span>
+              <span class="section-subtitle">Accommodation</span>
+            </div>
+            <h2 class="section-title">Stay in Comfort & Luxury</h2>
+          </div>
+          
+          <a href="#contact" class="btn-secondary">Inquire For Long Stays</a>
+        </div>
+
+        <!-- Room Cards Grid -->
+        <div class="rooms-grid">
+          
+          <!-- Deluxe Room -->
+          <div class="room-card" id="room-card-deluxe">
+            <div class="room-img-container">
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+                alt="Deluxe Room Interior"
+                class="room-img"
+              />
+              <span class="room-price-badge">From $120/Night</span>
+            </div>
+            
+            <div class="room-body">
+              <h3 class="room-title">Deluxe Room</h3>
+              <p class="room-desc">
+                Modern comfort blending rich textures and city skyline views. Perfect for corporate travelers.
+              </p>
+              
+              <ul class="room-features">
+                <li><span>✦</span> 42 m²</li>
+                <li><span>✦</span> City View</li>
+                <li><span>✦</span> King Bed</li>
+              </ul>
+              
+              <button class="btn-gold room-btn view-detail-btn" data-room-id="deluxe" id="btn-details-deluxe">
+                View Details & Book
+              </button>
+            </div>
+          </div>
+
+          <!-- Executive Suite -->
+          <div class="room-card" id="room-card-executive">
+            <div class="room-img-container">
+              <img
+                src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop"
+                alt="Executive Suite Interior"
+                class="room-img"
+              />
+              <span class="room-price-badge">From $220/Night</span>
+            </div>
+            
+            <div class="room-body">
+              <h3 class="room-title">Executive Suite</h3>
+              <p class="room-desc">
+                Expansive suite featuring a separate living room, designer details, and premium VIP lounge privileges.
+              </p>
+              
+              <ul class="room-features">
+                <li><span>✦</span> 78 m²</li>
+                <li><span>✦</span> Panoramic View</li>
+                <li><span>✦</span> VIP Lounge</li>
+              </ul>
+              
+              <button class="btn-gold room-btn view-detail-btn" data-room-id="executive" id="btn-details-executive">
+                View Details & Book
+              </button>
+            </div>
+          </div>
+
+          <!-- Family Room -->
+          <div class="room-card" id="room-card-family">
+            <div class="room-img-container">
+              <img
+                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200&auto=format&fit=crop"
+                alt="Family Room Interior"
+                class="room-img"
+              />
+              <span class="room-price-badge">From $180/Night</span>
+            </div>
+            
+            <div class="room-body">
+              <h3 class="room-title">Family Room</h3>
+              <p class="room-desc">
+                Generously spacious layouts configured with double beds to ensure relaxing rest for families.
+              </p>
+              
+              <ul class="room-features">
+                <li><span>✦</span> 60 m²</li>
+                <li><span>✦</span> Garden View</li>
+                <li><span>✦</span> 2 Double Beds</li>
+              </ul>
+              
+              <button class="btn-gold room-btn view-detail-btn" data-room-id="family" id="btn-details-family">
+                View Details & Book
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SERVICES & EXPERIENCES SECTION
+         ========================================================================== -->
+    <section id="services" class="services-section">
+      <div class="section-container">
+        
+        <div class="subtitle-wrapper">
+          <span class="subtitle-line"></span>
+          <span class="section-subtitle">Exquisite Offerings</span>
+        </div>
+        
+        <h2 class="section-title">Services & Experiences</h2>
+        <p class="services-intro">
+          Immerse yourself in world-class wellness, prestige meeting venues, and tailor-made event organization curated by our dedicated hospitality specialists.
+        </p>
+
+        <div class="services-list">
+          
+          <!-- Spa & Wellness -->
+          <div class="service-item">
+            <div class="service-img-side">
+              <span class="service-badge">Rejuvenation</span>
+              <img
+                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop"
+                alt="Crown Spa Massage Room"
+              />
+            </div>
+            <div class="service-content-side">
+              <h3 class="service-title">The Crown Spa & Sanctuary</h3>
+              <p class="service-desc">
+                Indulge in absolute tranquility. The Crown Spa offers bespoke therapeutic massages, purifying steam and sauna chambers, and organic skincare therapies curated by master wellness practitioners.
+              </p>
+              <ul class="service-highlights">
+                <li>Therapeutic Massages</li>
+                <li>Sauna & Steam Bath</li>
+                <li>Organic Body Wraps</li>
+                <li>Couples Retreats</li>
+              </ul>
+              <button class="btn-primary service-inquire-btn" data-service-name="The Crown Spa & Sanctuary">
+                Book a Session
+              </button>
+            </div>
+          </div>
+
+          <!-- Meeting Halls -->
+          <div class="service-item">
+            <div class="service-img-side">
+              <span class="service-badge">Corporate & Diplomacy</span>
+              <img
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop"
+                alt="Meeting Hall Conference Venue Layout"
+              />
+            </div>
+            <div class="service-content-side">
+              <h3 class="service-title">Abyssinia Conference Halls</h3>
+              <p class="service-desc">
+                Host with prestige. Our high-capacity modular boardrooms and grand halls are optimized for diplomatic summits, corporate symposiums, and private board meetings, equipped with premium acoustics and custom AV packages.
+              </p>
+              <ul class="service-highlights">
+                <li>Modular Stage Seating</li>
+                <li>Bespoke Corporate Buffets</li>
+                <li>Smart Projector Systems</li>
+                <li>Dedicated IT AV Support</li>
+              </ul>
+              <button class="btn-primary service-inquire-btn" data-service-name="Abyssinia Conference Halls">
+                Inquire For Venue
+              </button>
+            </div>
+          </div>
+
+          <!-- Special Events -->
+          <div class="service-item">
+            <div class="service-img-side">
+              <span class="service-badge">Celebrations</span>
+              <img
+                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop"
+                alt="Grand Banquet Event Ball Setup"
+              />
+            </div>
+            <div class="service-content-side">
+              <h3 class="service-title">Banquets & Special Events</h3>
+              <p class="service-desc">
+                Crafting memorable celebrations. From magical wedding banquets to elite corporate galas, our team coordinates layout decorations, flower arrangements, tailor-made culinary packages, and absolute attention to detail.
+              </p>
+              <ul class="service-highlights">
+                <li>Up to 500 Guests</li>
+                <li>Gourmet Catering Selections</li>
+                <li>State-of-the-Art Uplighting</li>
+                <li>Red Carpet Welcome</li>
+              </ul>
+              <button class="btn-primary service-inquire-btn" data-service-name="Banquets & Special Events">
+                Plan Your Event
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         AMENITIES SECTION
+         ========================================================================== -->
+    <section id="amenities" class="amenities-section">
+      <div class="section-container">
+        
+        <div class="subtitle-wrapper" style="justify-content: center;">
+          <span class="subtitle-line"></span>
+          <span class="section-subtitle">World-class Services</span>
+          <span class="subtitle-line"></span>
+        </div>
+        
+        <h2 class="section-title text-dark-primary">Premium Guest Experience</h2>
+        <p class="amenities-intro">
+          We offer curated amenities designed to provide comfort, safety, and a sophisticated touch to your premium stay in Addis Ababa.
+        </p>
+
+        <div class="amenities-grid">
+          
+          <div class="amenity-card">
+            <span class="amenity-icon">📶</span>
+            <h3 class="amenity-name">Ultra Wi-Fi</h3>
+            <p class="amenity-desc">Complimentary gigabit fiber connection across all suites and lounges.</p>
+          </div>
+          
+          <div class="amenity-card">
+            <span class="amenity-icon">✈️</span>
+            <h3 class="amenity-name">Airport Shuttle</h3>
+            <p class="amenity-desc">Dedicated premium shuttle service connecting directly to Bole International Airport.</p>
+          </div>
+          
+          <div class="amenity-card">
+            <span class="amenity-icon">🍽️</span>
+            <h3 class="amenity-name">Fine Dining</h3>
+            <p class="amenity-desc">Exquisite culinary options blending international cuisine with traditional Ethiopian flavors.</p>
+          </div>
+          
+          <div class="amenity-card">
+            <span class="amenity-icon">🏋️</span>
+            <h3 class="amenity-name">Wellness Gym</h3>
+            <p class="amenity-desc">Fully equipped professional fitness center featuring modern workout apparatus.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         GALLERY SECTION
+         ========================================================================== -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-container">
+        
+        <div class="subtitle-wrapper">
+          <span class="subtitle-line"></span>
+          <span class="section-subtitle">Visual Tour</span>
+        </div>
+        
+        <h2 class="section-title">Explore the Grandeur</h2>
+        
+        <!-- Gallery Slider Wrapper -->
+        <div class="gallery-slider-container">
+          <div class="gallery-track">
+            
+            <div class="gallery-slide">
+              <img
+                src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?q=80&w=1200&auto=format&fit=crop"
+                alt="Hotel Lobby Reception Desk"
+              />
+              <div class="gallery-caption">
+                <h3>Grand Lobby Reception</h3>
+                <p>Welcome to unmatched sophistication</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <img
+                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1200&auto=format&fit=crop"
+                alt="Luxury King Bed Suite Room Layout"
+              />
+              <div class="gallery-caption">
+                <h3>Executive Penthouse Suite</h3>
+                <p>Meticulously styled for your ultimate comfort</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <img
+                src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1200&auto=format&fit=crop"
+                alt="Luminous Outdoor Infinity Pool"
+              />
+              <div class="gallery-caption">
+                <h3>Outdoor Infinity Pool</h3>
+                <p>Tranquil oasis in the heart of Addis Ababa</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop"
+                alt="Gourmet Restaurant Table Setting"
+              />
+              <div class="gallery-caption">
+                <h3>The Crown Restaurant</h3>
+                <p>Impeccably prepared fine dining selections</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider Buttons -->
+          <button class="gallery-btn gallery-btn-prev" aria-label="Previous image">&#10094;</button>
+          <button class="gallery-btn gallery-btn-next" aria-label="Next image">&#10095;</button>
+        </div>
+
+        <!-- Slider Dots Navigation -->
+        <div class="gallery-dots"></div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         CONTACT & INQUIRY SECTION
+         ========================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="section-container contact-grid">
+        
+        <div class="contact-info">
+          <div class="subtitle-wrapper">
+            <span class="subtitle-line"></span>
+            <span class="section-subtitle">Reach Out</span>
+          </div>
+          
+          <h3>Need Assistance?</h3>
+          <p class="contact-desc">
+            Whether you want to pre-book event spaces, coordinate airport pickups, or arrange unique requests, our concierge desk is available 24/7.
+          </p>
+
+          <div class="contact-details">
+            
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <p class="contact-label">Location</p>
+                <p class="contact-value">Bole Road, Addis Ababa, Ethiopia</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <p class="contact-label">Telephone</p>
+                <p class="contact-value">+251 11 668 0145</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <p class="contact-label">Email Support</p>
+                <p class="contact-value">info@tewodrosbelayhotel.com</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Dynamic Form Panel -->
+        <div class="contact-form-panel glass-panel">
+          <h3>Send a Message</h3>
+          
+          <form id="hotel-contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Full Name" class="form-input" required id="contact-name" />
+            </div>
+            
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" class="form-input" required id="contact-email" />
+            </div>
+            
+            <div class="form-group">
+              <textarea placeholder="How can we assist you?" class="form-textarea" required id="contact-message"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-gold" id="contact-submit-btn">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         INTERACTIVE MAP EMBED
+         ========================================================================== -->
+    <section class="map-section" id="location-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.6651239843657!2d38.7847413!3d9.002931499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85002235948f%3A0xea242c74d0e95db!2sBole%20Rd%2C%20Addis%20Ababa!5e0!3m2!1sen!2set!4v1700000000000!5m2!1sen!2set" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Tewodros Belay Hotel Location Map">
+      </iframe>
+    </section>
+  </main>
+
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer-main">
+    <div class="footer-grid">
+      
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="1779119177839.png" alt="Hotel Crest Logo Footer" />
+          <div class="footer-logo-text">
+            <h3>TEWODROS BELAY</h3>
+            <p>International Hotel</p>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Redefining luxury and service in Addis Ababa. Experience high-end living wrapped in local hospitality.
+        </p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Discover</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Our Heritage</a></li>
+          <li><a href="#rooms">Rooms & Suites</a></li>
+          <li><a href="#services">Services & Venues</a></li>
+          <li><a href="#amenities">Wellness Amenities</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Guest Services</h4>
+        <ul class="footer-links">
+          <li><a href="#contact">Airport Pickups</a></li>
+          <li><a href="#contact">Fine Dining Reservations</a></li>
+          <li><a href="#contact">Meeting Rooms</a></li>
+          <li><a href="#contact">Privacy Policy</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p class="footer-desc" style="margin-bottom: 12px; color: var(--text-light);">
+          Bole Road, Addis Ababa, Ethiopia
+        </p>
+        <p class="footer-desc" style="margin-bottom: 8px;">
+          T: +251 11 668 0145
+        </p>
+        <p class="footer-desc">
+          E: info@tewodrosbelayhotel.com
+        </p>
       </div>
 
     </div>
 
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-white/10 py-10 text-center text-zinc-500">
-
-    <p class="mb-3">
-
-      © 2026 Tewodros Belay International Hotel
-
-    </p>
-
-    <p class="text-sm">
-
-      Luxury Hospitality Experience
-
-    </p>
-
+    <div class="footer-bottom">
+      <p>© 2026 Tewodros Belay International Hotel. All rights reserved.</p>
+      <p>Luxury Hospitality Experience</p>
+    </div>
   </footer>
+
+
+  <!-- ==========================================================================
+       DYNAMIC ROOM DETAIL MODAL SYSTEM
+       ========================================================================== -->
+  <div id="room-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close details modal">&times;</button>
+      
+      <div class="modal-hero">
+        <img id="modal-image" src="" alt="" />
+      </div>
+      
+      <div class="modal-body">
+        <div class="modal-header">
+          <h2 id="modal-title" class="modal-room-title">Room Title</h2>
+          <div class="modal-room-meta">
+            <span>Price: <strong id="modal-price" class="gold-text">$120 / Night</strong></span>
+          </div>
+        </div>
+
+        <p id="modal-desc" class="modal-desc">
+          Room detailed description goes here dynamically.
+        </p>
+
+        <h3 class="modal-amenities-title">Room Amenities & Features</h3>
+        <ul id="modal-amenities" class="modal-amenities-list">
+          <!-- Populated dynamically via JS -->
+        </ul>
+
+        <!-- Modal Booking / Inquiry Form -->
+        <h3 class="modal-form-title">Request a Reservation</h3>
+        <form id="modal-booking-form">
+          <input type="hidden" id="modal-room-type" name="room_type" value="" />
+          
+          <div class="modal-grid-2">
+            <div class="form-group">
+              <input type="text" id="modal-booking-name" placeholder="Your Full Name" class="form-input" required />
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="modal-booking-email" placeholder="Email Address" class="form-input" required />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <input type="tel" id="modal-booking-phone" placeholder="Telephone Number (e.g. +251 911...)" class="form-input" required />
+          </div>
+          
+          <button type="submit" class="btn-primary" style="width: 100%; border: none;" id="modal-submit-btn">
+            Send Booking Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       TOAST NOTIFICATION COMPONENT
+       ========================================================================== -->
+  <div id="booking-toast" class="toast-notification" role="status">
+    <span class="toast-icon">✓</span>
+    <div class="toast-message">
+      <h4 id="toast-title">Success</h4>
+      <p id="toast-message-text">Your inquiry has been successfully sent.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript file -->
+  <script src="app.js"></script>
 
 </body>
 </html>
