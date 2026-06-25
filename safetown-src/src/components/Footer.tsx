@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
           <div className={styles.designed}>
             <p>
-              Powered by <a href="https://yohan-ts.com" target="_blank" rel="noopener noreferrer">fresh Designs</a>
+              Powered by <a href="https://yohan-ts.com" target="_blank" rel="noopener noreferrer">Yohannes T.</a>
             </p>
           </div>
         </div>
