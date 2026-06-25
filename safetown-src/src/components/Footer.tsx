@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -59,7 +60,16 @@ export default function Footer() {
           </div>
           <div className={styles.designed}>
             <p>
-              Powered by <a href="https://yohan-ts.com" target="_blank" rel="noopener noreferrer">Yohannes T.</a>
+              Powered by{" "}
+              <a href="https://yohan-ts.com" target="_blank" rel="noopener noreferrer" className={styles.designedLink}>
+                <Image
+                  src="/safetown/yohan-logo.png"
+                  alt="Yohannes Tsegaye"
+                  width={80}
+                  height={28}
+                  className={styles.designedLogo}
+                />
+              </a>
             </p>
           </div>
         </div>
