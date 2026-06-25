@@ -11,9 +11,13 @@ export default function Footer() {
           {/* Logo / Brand Info */}
           <div className={styles.brandCol}>
             <a href="#home" className={styles.logo}>
-              <span>SAFE</span>
-              <span className={styles.logoAccent}>TOWN</span>
-              <span className={styles.logoSub}>ELECTROMECHANICAL</span>
+              <Image
+                src="/safetown/logo.png"
+                alt="Safe Town Electromechanical"
+                width={180}
+                height={62}
+                className={styles.logoImage}
+              />
             </a>
             <p className={styles.desc}>
               Compliance-oriented, turnkey engineering and electro-mechanical installations for commercial, residential, and industrial facilities in Ethiopia.

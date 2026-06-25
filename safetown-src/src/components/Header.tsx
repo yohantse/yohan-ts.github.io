@@ -32,8 +32,8 @@ export default function Header() {
             <Image
               src="/safetown/logo.png"
               alt="Safe Town Electromechanical"
-              width={160}
-              height={55}
+              width={180}
+              height={62}
               className={styles.logoImage}
               priority
             />
@@ -98,8 +98,8 @@ export default function Header() {
           <Image
             src="/safetown/logo.png"
             alt="Safe Town Electromechanical"
-            width={140}
-            height={48}
+            width={150}
+            height={52}
             className={styles.logoImage}
           />
         </div>

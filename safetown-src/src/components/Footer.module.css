@@ -20,26 +20,19 @@
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-  display: block;
+  display: inline-block;
+  margin-bottom: 1.5rem;
 }
 
-.logoAccent {
-  color: var(--accent);
+.logoImage {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity var(--transition-normal);
 }
 
-.logoSub {
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  display: block;
-  margin-top: -0.25rem;
+.logo:hover .logoImage {
+  opacity: 0.85;
 }
 
 .desc {
