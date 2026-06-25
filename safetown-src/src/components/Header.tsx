@@ -30,7 +30,7 @@ export default function Header() {
         <div className={`container ${styles.navContainer}`}>
           <a href="#home" className={styles.logo} onClick={closeDrawer}>
             <Image
-              src="/logo.png"
+              src="/safetown/logo.png"
               alt="Safe Town Electromechanical"
               width={160}
               height={55}
@@ -96,7 +96,7 @@ export default function Header() {
       <div className={`${styles.drawer} ${isDrawerOpen ? styles.drawerOpen : ""}`}>
         <div className={styles.drawerLogo}>
           <Image
-            src="/logo.png"
+            src="/safetown/logo.png"
             alt="Safe Town Electromechanical"
             width={140}
             height={48}

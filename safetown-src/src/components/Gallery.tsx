@@ -3,14 +3,14 @@ import styles from "./Gallery.module.css";
 
 export default function Gallery() {
   const photos = [
-    { src: "/show_1.jpg", label: "Electrical Installation" },
-    { src: "/show_2.jpg", label: "Site Work" },
-    { src: "/show_3.jpg", label: "Mechanical Systems" },
-    { src: "/show_4.jpg", label: "Project Delivery" },
-    { src: "/show_5.jpg", label: "Panel Assembly" },
-    { src: "/show_6.jpg", label: "Industrial Build" },
-    { src: "/show_7.jpg", label: "On-site Engineering" },
-    { src: "/sow_8.jpg", label: "Completed Works" },
+    { src: "/safetown/show_1.jpg", label: "Electrical Installation" },
+    { src: "/safetown/show_2.jpg", label: "Site Work" },
+    { src: "/safetown/show_3.jpg", label: "Mechanical Systems" },
+    { src: "/safetown/show_4.jpg", label: "Project Delivery" },
+    { src: "/safetown/show_5.jpg", label: "Panel Assembly" },
+    { src: "/safetown/show_6.jpg", label: "Industrial Build" },
+    { src: "/safetown/show_7.jpg", label: "On-site Engineering" },
+    { src: "/safetown/sow_8.jpg", label: "Completed Works" },
   ];
 
   return (
