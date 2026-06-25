@@ -1,0 +1,121 @@
+.footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 4rem 0 2.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.brandCol {
+  max-width: 380px;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.logoAccent {
+  color: var(--accent);
+}
+
+.logoSub {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-top: -0.25rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.linksCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.linksTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.link {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.link:hover {
+  color: var(--primary);
+}
+
+.bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.designed {
+  color: var(--text-muted);
+}
+
+.designed a {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.designed a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
