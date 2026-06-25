@@ -1,604 +1,466 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-  <meta charset="UTF-8" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
-<meta name="description" content="Yohannes Tsegaye (Jo) is a Systems Engineer and Full Stack Developer specializing in AI systems, operational software, Flutter apps, backend infrastructure, and real-time business platforms.">  
-<meta property="og:title" content="Yohannes Tsegaye | Systems Engineer & AI Developer">  
-<meta property="og:description" content="Building operational software systems, AI-powered platforms, and scalable business infrastructure.">  
-<meta property="og:image" content="https://yohan-ts.com/preview.png">  
-<meta property="og:url" content="https://yohan-ts.com">  
-<meta property="og:type" content="website">    <title>Yohannes Tsegaye | Systems Engineer, AI & Full Stack Developer</title>    <script src="https://cdn.tailwindcss.com"></script>    <script type="application/ld+json">  
-{  
-  "@context": "https://schema.org",  
-  "@type": "Person",  
-  "name": "Yohannes Tsegaye",  
-  "alternateName": "Jo",  
-  "url": "https://yohan-ts.com",  
-  "jobTitle": "Systems Engineer & Full Stack Developer",  
-  "sameAs": [  
-    "https://github.com/yohantse"  
-  ]  
-}  
-</script>    <link rel="preconnect" href="https://fonts.googleapis.com">  
-<link rel="canonical" href="https://yohan-ts.com/">  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">    
-  <title>Yohannes Tsegaye</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Yohannes Tsegaye (Jo) builds custom software systems for businesses — inventory platforms, restaurant tools, mobile apps, and AI-powered workflows. Available for freelance projects.">
+  <meta property="og:title" content="Yohannes Tsegaye | Freelance Software Developer">
+  <meta property="og:description" content="Custom software systems for businesses — inventory platforms, restaurant tools, mobile apps, and AI-powered workflows.">
+  <meta property="og:image" content="https://yohan-ts.com/preview.png">
+  <meta property="og:url" content="https://yohan-ts.com">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://yohan-ts.com/">
+  <title>Yohannes Tsegaye | Freelance Software Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yohannes Tsegaye",
+    "alternateName": "Jo",
+    "url": "https://yohan-ts.com",
+    "jobTitle": "Freelance Software Developer",
+    "sameAs": ["https://github.com/yohantse"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="logo.png">
-  <style>  
-  
-    *{  
-      font-family: 'Inter', sans-serif;  
-    }  
-  
-    html{  
-      scroll-behavior:smooth;  
-    }  
-  
-    body{  
-      background:#07111f;  
-      color:white;  
-      overflow-x:hidden;  
-    }  
-  
-    .hero-bg{  
-      background:  
-      radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 30%),  
-      radial-gradient(circle at bottom right, rgba(99,102,241,0.14), transparent 35%),  
-      #07111f;  
-    }  
-  
-    .glass{  
-      background: rgba(255,255,255,0.04);  
-      backdrop-filter: blur(16px);  
-      border:1px solid rgba(255,255,255,0.08);  
-    }  
-  
-    .card-hover{  
-      transition:0.3s ease;  
-    }  
-  
-    .card-hover:hover{  
-      transform:translateY(-6px);  
-      border-color:rgba(56,189,248,0.5);  
-    }  
-  
-    .fade-up{  
-      opacity:0;  
-      transform:translateY(30px);  
-      animation:fadeUp 0.8s forwards;  
-    }  
-  
-    @keyframes fadeUp{  
-      to{  
-        opacity:1;  
-        transform:translateY(0);  
-      }  
-    }  
-  
-    .delay-1{  
-      animation-delay:0.2s;  
-    }  
-  
-    .delay-2{  
-      animation-delay:0.4s;  
-    }  
-  
-    .delay-3{  
-      animation-delay:0.6s;  
-    }  
-  
-    .section-title{  
-      font-size:clamp(2rem,5vw,3.5rem);  
-      font-weight:800;  
-      letter-spacing:-2px;  
-    }  
-  
-    .gradient-text{  
-      background:linear-gradient(to right,#38bdf8,#818cf8);  
-      -webkit-background-clip:text;  
-      -webkit-text-fill-color:transparent;  
-    }  
-  
-    #contact-btn{  
-      position:fixed;  
-      bottom:24px;  
-      right:24px;  
-      background:linear-gradient(to right,#38bdf8,#6366f1);  
-      color:white;  
-      padding:14px 22px;  
-      border-radius:999px;  
-      font-weight:600;  
-      z-index:999;  
-      box-shadow:0 10px 30px rgba(56,189,248,0.25);  
-      transition:0.3s ease;  
-    }  
-  
-    #contact-btn:hover{  
-      transform:translateY(-3px);  
-    }  
-  
-  </style>  </head>  <body>    <!-- HERO -->    <section class="hero-bg min-h-screen flex items-center">  <div class="max-w-7xl mx-auto px-6 pt-40 pb-24 grid lg:grid-cols-2 gap-20 items-center">  
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: #07111f; color: white; overflow-x: hidden; }
 
-  <div>  
+    .hero-bg {
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(99,102,241,0.14), transparent 35%),
+        #07111f;
+    }
 
-    <!-- LOGO -->  
+    .glass {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
 
-    <!-- BRAND -->
+    .card-hover { transition: 0.3s ease; }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      border-color: rgba(56,189,248,0.5);
+    }
 
-<div class="flex items-center gap-5 mb-10 fade-up">    <div class="relative">  <div class="absolute inset-0 bg-sky-400/20 blur-2xl rounded-full"></div>  
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s forwards;
+    }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
 
-<img src="logo.png"  
-     alt="Yohannes Tsegaye"  
-     class="relative w-16 h-16 object-contain">
+    .section-title {
+      font-size: clamp(2rem,5vw,3.5rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
 
-  </div>  </div>  <p class="uppercase tracking-[4px] text-sky-400 mb-6 fade-up delay-1">  
-      Systems Engineer • Full Stack Developer • AI Builder  
-    </p>  
+    .gradient-text {
+      background: linear-gradient(to right, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-    <h1 class="text-6xl md:text-7xl font-black tracking-tight leading-none mb-8 fade-up delay-1">  
+    #contact-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 20px rgba(56,189,248,0.35);
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+    #contact-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(56,189,248,0.5); }
 
-      Yohannes Tsegaye  
-      <span class="gradient-text">(Jo)</span>  
+    .available-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.3);
+      color: #4ade80;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .available-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
 
-    </h1>  
+    .pricing-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 32px;
+      transition: 0.3s ease;
+    }
+    .pricing-card:hover {
+      border-color: rgba(56,189,248,0.4);
+      background: rgba(56,189,248,0.04);
+    }
+    .pricing-card.featured {
+      border-color: rgba(56,189,248,0.5);
+      background: rgba(56,189,248,0.06);
+      position: relative;
+    }
+    .pricing-card.featured::before {
+      content: "Most Popular";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
 
-    <p class="text-slate-300 text-xl leading-relaxed max-w-2xl mb-10 fade-up delay-2">  
+    .tag {
+      display: inline-block;
+      background: rgba(56,189,248,0.1);
+      border: 1px solid rgba(56,189,248,0.2);
+      color: #7dd3fc;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
 
-      I design and build operational software systems businesses depend on daily.  
-      From real-time infrastructure and offline-first applications to AI-powered  
-      platforms, my focus is reliability, scalability, and practical engineering.  
+    nav a { transition: color 0.2s; }
+    nav a:hover { color: #38bdf8; }
+  </style>
+</head>
+<body>
 
-    </p>  
+<!-- Fixed CTA -->
+<a href="#contact" id="contact-btn">Let's Work Together</a>
 
-    <div class="flex flex-wrap gap-4 fade-up delay-3">  
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 glass">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <img src="logo.png" alt="Jo" class="w-8 h-8 rounded-full">
+      <span class="font-bold text-white">Jo</span>
+    </a>
+    <div class="flex items-center gap-6 text-sm text-gray-400">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="text-white bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-lg font-semibold transition">Hire Me</a>
+    </div>
+  </div>
+</nav>
 
-      <a href="#projects"  
-         class="px-7 py-4 rounded-2xl bg-sky-400 text-slate-900 font-semibold hover:scale-[1.02] transition">  
-
-        View Projects  
-
-      </a>  
-
-      <a href="#contact"  
-         class="px-7 py-4 rounded-2xl glass font-semibold">  
-
-        Contact Me  
-
-      </a>  
-
-    </div>  
-
-  </div>  
-
-  <!-- RIGHT SIDE -->  
-
-  <div class="relative fade-up delay-2">  
-
-    <div class="glass rounded-[32px] p-8">  
-
-      <div class="space-y-8">  
-
-        <!-- HEADSHOT -->
-        <div class="flex justify-center">
-          <img src="275A7335(1).jpg"
-               alt="Yohannes Tsegaye"
-               class="w-56 h-56 rounded-full object-cover border-2 border-sky-400/40 shadow-lg">
+<!-- HERO -->
+<section class="hero-bg min-h-screen flex items-center pt-24 pb-20 px-6">
+  <div class="max-w-6xl mx-auto w-full">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="fade-up">
+        <div class="available-badge mb-6">
+          <span class="available-dot"></span>
+          Taking on 2 new clients
         </div>
-
-        <div>  
-          <p class="text-slate-400 text-sm mb-2">Specialization</p>  
-          <h3 class="text-2xl font-bold">  
-            Infrastructure-grade software systems  
-          </h3>  
-        </div>  
-
-        <div class="grid grid-cols-2 gap-5">  
-
-          <div class="glass rounded-2xl p-5">  
-            <h4 class="text-4xl font-black gradient-text">7+</h4>  
-            <p class="text-slate-300 mt-2">Years Programming</p>  
-          </div>  
-
-          <div class="glass rounded-2xl p-5">  
-            <h4 class="text-4xl font-black gradient-text">10+</h4>  
-            <p class="text-slate-300 mt-2">Systems Built</p>  
-          </div>  
-
-          <div class="glass rounded-2xl p-5">  
-            <h4 class="text-4xl font-black gradient-text">AI</h4>  
-            <p class="text-slate-300 mt-2">Automation & Agents</p>  
-          </div>  
-
-          <div class="glass rounded-2xl p-5">  
-            <h4 class="text-4xl font-black gradient-text">RT</h4>  
-            <p class="text-slate-300 mt-2">Real-time Systems</p>  
-          </div>  
-
-        </div>  
-
-      </div>  
-
-    </div>  
-
-  </div>  
-
-</div>
-
-  </section>    <!-- SERVICES -->    <section class="py-28 px-6">  <div class="max-w-7xl mx-auto">  
-
-  <h2 class="section-title mb-6">  
-    What I Build  
-  </h2>  
-
-  <p class="text-slate-400 max-w-3xl text-lg mb-16">  
-    I focus on building software systems that solve operational problems,  
-    improve workflow efficiency, and remain reliable under real-world usage.  
-  </p>  
-
-  <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">  
-
-    <div class="glass rounded-3xl p-8 card-hover">  
-      <h3 class="text-2xl font-bold mb-4">Operational Systems</h3>  
-      <p class="text-slate-300">  
-        Inventory platforms, multi-device coordination systems,  
-        restaurant infrastructure, and business-critical software.  
-      </p>  
-    </div>  
-
-    <div class="glass rounded-3xl p-8 card-hover">  
-      <h3 class="text-2xl font-bold mb-4">AI & Automation</h3>  
-      <p class="text-slate-300">  
-        AI-powered assistants, workflow automation, scraping systems,  
-        intelligent data handling, and process optimization.  
-      </p>  
-    </div>  
-
-    <div class="glass rounded-3xl p-8 card-hover">  
-      <h3 class="text-2xl font-bold mb-4">Mobile & Web Apps</h3>  
-      <p class="text-slate-300">  
-        Modern cross-platform applications with scalable backend systems,  
-        real-time synchronization, and responsive UI architecture.  
-      </p>  
-    </div>  
-
-  </div>  
-
-</div>
-
-  </section>    <!-- PROJECTS -->    <section id="projects" class="py-28 px-6">  <div class="max-w-7xl mx-auto">  
-
-  <h2 class="section-title mb-6">  
-    Selected Projects  
-  </h2>  
-
-  <p class="text-slate-400 max-w-3xl text-lg mb-16">  
-    A selection of systems and platforms focused on reliability,  
-    operational efficiency, and scalable engineering.  
-  </p>  
-
-  <div class="grid lg:grid-cols-2 gap-10">  
-
-    <!-- VERISTOCK -->  
-
-    <div class="glass rounded-[32px] p-8 card-hover">  
-
-      <div class="flex justify-between items-start mb-6">  
-        <div>  
-          <h3 class="text-3xl font-bold mb-2">Veristock</h3>  
-          <p class="text-slate-400">  
-            Hotel Inventory Infrastructure  
-          </p>  
-        </div>  
-
-        <span class="text-sky-400 font-semibold">  
-          React + Node.js  
-        </span>  
-      </div>  
-
-      <p class="text-slate-300 mb-6 leading-relaxed">  
-        Centralized inventory management platform designed to replace fragmented  
-        spreadsheet workflows with reliable real-time stock operations and  
-        scalable reporting infrastructure.  
-      </p>  
-
-      <div class="grid grid-cols-2 gap-4">  
-  <img src="veristock 1.png"  
-       class="rounded-2xl border border-white/10">  
-
-  <img src="veristock 2.png"  
-       class="rounded-2xl border border-white/10">  
-</div>  
-
-<a href="http://178.104.235.110:8080/login"  
-   class="inline-block mt-6 px-6 py-3 rounded-xl bg-sky-400 text-slate-900 font-semibold">  
-  Link  
-</a>
-
-    </div>  
-
-    <!-- SERVEFLOW -->  
-
-    <div class="glass rounded-[32px] p-8 card-hover">  
-
-      <div class="flex justify-between items-start mb-6">  
-        <div>  
-          <h3 class="text-3xl font-bold mb-2">Serveflow</h3>  
-          <p class="text-slate-400">  
-            Real-Time Restaurant Coordination System  
-          </p>  
-        </div>  
-
-        <span class="text-sky-400 font-semibold">  
-          Flutter + WebSockets  
-        </span>  
-      </div>  
-
-      <p class="text-slate-300 mb-6 leading-relaxed">  
-        Multi-device restaurant infrastructure enabling instant order  
-        synchronization, table coordination, and real-time communication  
-        across local networks without dependence on external servers.  
-      </p>  
-
-      <div class="glass rounded-2xl p-5">  
-
-        <p class="text-slate-400 text-sm mb-3">  
-          Architecture Focus  
-        </p>  
-
-        <ul class="space-y-2 text-slate-200">  
-
-          <li>• Real-time device synchronization</li>  
-          <li>• Offline reliability</li>  
-          <li>• Local network coordination</li>  
-          <li>• Operational fault tolerance</li>  
-
-        </ul>  
-
-      </div>  
-
-    </div>  
-
-    <!-- SOUQNOTE -->  
-
-    <div class="glass rounded-[32px] p-8 card-hover">  
-
-      <h3 class="text-3xl font-bold mb-3">  
-        SouqNote  
-      </h3>  
-
-      <p class="text-slate-300 mb-6">  
-        Offline-first inventory application designed for environments  
-        with unreliable connectivity while maintaining seamless cloud  
-        synchronization when internet becomes available.  
-      </p>  
-
-      <a href="https://play.google.com/store/apps/details?id=com.yohantse.souqnote&pcampaignid=web_share"  
-         class="inline-block px-6 py-3 rounded-xl bg-sky-400 text-slate-900 font-semibold">  
-
-        Play Store  
-
-      </a>  
-
+        <h1 class="section-title text-white mb-4 leading-tight">
+          I build software<br>
+          <span class="gradient-text">your business runs on.</span>
+        </h1>
+        <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
+          Custom inventory systems, restaurant platforms, mobile apps, and AI-powered tools — built to work reliably in the real world, not just in demos.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#services" class="bg-sky-500 hover:bg-sky-400 text-white font-semibold px-6 py-3 rounded-xl transition">See What I Build</a>
+          <a href="#projects" class="glass text-white font-semibold px-6 py-3 rounded-xl hover:border-sky-400 transition">View Projects</a>
+        </div>
+        <div class="mt-10 flex items-center gap-6 text-sm text-gray-500">
+          <span>✓ 7+ years experience</span>
+          <span>✓ 10+ systems shipped</span>
+          <span>✓ Real-world deployments</span>
+        </div>
+      </div>
+      <div class="fade-up delay-1 flex justify-center">
+        <div class="relative">
+          <div class="w-72 h-72 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+            <img src="275A7335(1).jpg" alt="Yohannes Tsegaye" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-4 -right-4 glass rounded-2xl px-4 py-3 text-sm">
+            <div class="text-white font-semibold">Yohannes (Jo)</div>
+            <div class="text-gray-400 text-xs">Addis Ababa, Ethiopia</div>
+          </div>
+        </div>
+      </div>
     </div>
-<!-- ARIFGET -->
+  </div>
+</section>
 
-<div class="glass rounded-[32px] p-8 card-hover">
-
-  <div class="flex justify-between items-start mb-6">
-
-    <div>
-      <h3 class="text-3xl font-bold mb-2">
-        Arifget
-      </h3>
-
-      <p class="text-slate-400">
-        Mobile Commerce Platform
-      </p>
+<!-- SERVICES / PRICING -->
+<section id="services" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-14">
+      <p class="text-sky-400 font-semibold text-sm uppercase tracking-widest mb-3">Services & Pricing</p>
+      <h2 class="section-title text-white">What you get<br><span class="gradient-text">when we work together.</span></h2>
+      <p class="text-gray-400 mt-4 max-w-xl">Clear scope, fixed starting prices, no surprises. Most projects are delivered within 2–6 weeks.</p>
     </div>
 
-    <span class="text-sky-400 font-semibold">
-      Flutter + FastAPI
-    </span>
+    <div class="grid md:grid-cols-3 gap-6">
 
+      <div class="pricing-card">
+        <div class="text-2xl mb-4">📱</div>
+        <h3 class="text-white font-bold text-xl mb-1">Mobile App</h3>
+        <div class="text-sky-400 font-bold text-2xl mb-4">From $1,200</div>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Cross-platform Flutter app with backend. Good for commerce, operations, or customer-facing tools.</p>
+        <ul class="space-y-2 text-sm text-gray-300 mb-8">
+          <li>✓ iOS + Android (Flutter)</li>
+          <li>✓ FastAPI or Node.js backend</li>
+          <li>✓ Offline-first if needed</li>
+          <li>✓ Play Store deployment</li>
+        </ul>
+        <a href="#contact" class="block text-center border border-sky-500/40 text-sky-400 hover:bg-sky-500/10 px-4 py-3 rounded-xl text-sm font-semibold transition">Get a Quote</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="text-2xl mb-4">🖥️</div>
+        <h3 class="text-white font-bold text-xl mb-1">Web Platform</h3>
+        <div class="text-sky-400 font-bold text-2xl mb-4">From $800</div>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Business web app or internal tool — inventory systems, dashboards, booking platforms, and more.</p>
+        <ul class="space-y-2 text-sm text-gray-300 mb-8">
+          <li>✓ React frontend</li>
+          <li>✓ Node.js / FastAPI backend</li>
+          <li>✓ Real-time features</li>
+          <li>✓ Admin dashboard included</li>
+        </ul>
+        <a href="#contact" class="block text-center bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-4 py-3 rounded-xl text-sm font-semibold transition hover:opacity-90">Get a Quote</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="text-2xl mb-4">🤖</div>
+        <h3 class="text-white font-bold text-xl mb-1">AI Integration</h3>
+        <div class="text-sky-400 font-bold text-2xl mb-4">From $600</div>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Add AI to your existing workflow — document analysis, automated assistants, smart data handling.</p>
+        <ul class="space-y-2 text-sm text-gray-300 mb-8">
+          <li>✓ LLM-powered features</li>
+          <li>✓ Workflow automation</li>
+          <li>✓ Scraping & data pipelines</li>
+          <li>✓ API integration</li>
+        </ul>
+        <a href="#contact" class="block text-center border border-sky-500/40 text-sky-400 hover:bg-sky-500/10 px-4 py-3 rounded-xl text-sm font-semibold transition">Get a Quote</a>
+      </div>
+
+    </div>
+
+    <p class="text-center text-gray-500 text-sm mt-8">Need something ongoing? Monthly retainer plans available from $500/mo. <a href="#contact" class="text-sky-400 hover:underline">Let's talk.</a></p>
   </div>
+</section>
 
-  <p class="text-slate-300 mb-6 leading-relaxed">
-
-    Currently building the official mobile application for Arifget.com,
-    focused on scalable mobile commerce infrastructure, responsive UX,
-    real-time integrations, and modern cross-platform architecture.
-
-  </p>
-
-  <div class="flex gap-3 flex-wrap">
-
-    <span class="px-4 py-2 rounded-full glass text-sm">
-      Flutter
-    </span>
-
-    <span class="px-4 py-2 rounded-full glass text-sm">
-      FastAPI
-    </span>
-
-    <span class="px-4 py-2 rounded-full glass text-sm">
-      Mobile Commerce
-    </span>
-
+<!-- WHAT I BUILD -->
+<section class="py-20 px-6 bg-white/[0.02]">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-14">
+      <p class="text-sky-400 font-semibold text-sm uppercase tracking-widest mb-3">Expertise</p>
+      <h2 class="section-title text-white">Built for businesses<br><span class="gradient-text">that can't afford downtime.</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="glass rounded-2xl p-6 card-hover">
+        <div class="text-3xl mb-4">🏢</div>
+        <h3 class="text-white font-bold text-lg mb-2">Operational Systems</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Inventory platforms, multi-device coordination, restaurant infrastructure, and business-critical software. Built to run daily without failure.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 card-hover">
+        <div class="text-3xl mb-4">⚡</div>
+        <h3 class="text-white font-bold text-lg mb-2">Real-Time & Offline</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">WebSocket-powered systems and offline-first apps for environments with unreliable connectivity. Your business keeps working either way.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 card-hover">
+        <div class="text-3xl mb-4">🧠</div>
+        <h3 class="text-white font-bold text-lg mb-2">AI & Automation</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">AI assistants, document analysis, workflow automation, and data pipelines that save your team hours every week.</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <a href="https://arifget.com"
-     class="inline-block mt-6 px-6 py-3 rounded-xl bg-sky-400 text-slate-900 font-semibold">
+<!-- PROJECTS -->
+<section id="projects" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-14">
+      <p class="text-sky-400 font-semibold text-sm uppercase tracking-widest mb-3">Portfolio</p>
+      <h2 class="section-title text-white">Real systems,<br><span class="gradient-text">real businesses.</span></h2>
+    </div>
 
-    Visit Arifget
+    <div class="grid md:grid-cols-2 gap-6">
 
-  </a>
+      <!-- Veristock -->
+      <div class="glass rounded-2xl overflow-hidden card-hover">
+        <div class="h-48 overflow-hidden">
+          <img src="veristock 1.png" alt="Veristock" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Inventory</span>
+          </div>
+          <h3 class="text-white font-bold text-xl mb-2">Veristock</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Hotel inventory management platform that replaced fragmented spreadsheet workflows with real-time stock operations and reporting infrastructure.</p>
+          <a href="http://178.104.235.110:8080/login" target="_blank" class="text-sky-400 text-sm font-semibold hover:underline">View Live →</a>
+        </div>
+      </div>
 
-</div>
-    <!-- LEGALIGHT -->  
+      <!-- Serveflow -->
+      <div class="glass rounded-2xl overflow-hidden card-hover">
+        <div class="h-48 bg-gradient-to-br from-sky-900/40 to-indigo-900/40 flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-5xl mb-2">🍽️</div>
+            <div class="text-gray-400 text-sm">Restaurant Coordination System</div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="tag">Flutter</span><span class="tag">WebSockets</span><span class="tag">Real-Time</span>
+          </div>
+          <h3 class="text-white font-bold text-xl mb-2">Serveflow</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Multi-device restaurant system with instant order sync, table coordination, and real-time communication across local networks — no external server dependency.</p>
+          <div class="text-gray-600 text-sm">Architecture focus: offline reliability + fault tolerance</div>
+        </div>
+      </div>
 
-    <div class="glass rounded-[32px] p-8 card-hover">  
+      <!-- SouqNote -->
+      <div class="glass rounded-2xl overflow-hidden card-hover">
+        <div class="h-48 bg-gradient-to-br from-emerald-900/40 to-teal-900/40 flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-5xl mb-2">📦</div>
+            <div class="text-gray-400 text-sm">Offline-First Mobile App</div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="tag">Flutter</span><span class="tag">Mobile</span><span class="tag">Offline-First</span>
+          </div>
+          <h3 class="text-white font-bold text-xl mb-2">SouqNote</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Inventory app for businesses in areas with unreliable internet — works fully offline and syncs to the cloud automatically when connectivity returns.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.yohantse.souqnote" target="_blank" class="text-sky-400 text-sm font-semibold hover:underline">View on Play Store →</a>
+        </div>
+      </div>
 
-      <h3 class="text-3xl font-bold mb-3">  
-        Legalight  
-      </h3>  
+      <!-- Arifget -->
+      <div class="glass rounded-2xl overflow-hidden card-hover">
+        <div class="h-48 bg-gradient-to-br from-violet-900/40 to-purple-900/40 flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-5xl mb-2">🛒</div>
+            <div class="text-gray-400 text-sm">Mobile Commerce Platform</div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">Commerce</span>
+          </div>
+          <h3 class="text-white font-bold text-xl mb-2">Arifget</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Official mobile app for Arifget.com — scalable commerce infrastructure, real-time integrations, and modern cross-platform architecture. Currently in production.</p>
+          <a href="https://arifget.com" target="_blank" class="text-sky-400 text-sm font-semibold hover:underline">Visit Arifget →</a>
+        </div>
+      </div>
 
-      <p class="text-slate-300 mb-6">  
-        AI-powered legal assistant platform focused on contextual document  
-        analysis, legal workflow support, and intelligent information retrieval.  
-      </p>  
+    </div>
 
-      <div class="flex gap-3 flex-wrap">  
+    <!-- Legalight row -->
+    <div class="mt-6 glass rounded-2xl p-6 card-hover">
+      <div class="flex items-start gap-6">
+        <div class="text-4xl">⚖️</div>
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">AI Agents</span>
+          </div>
+          <h3 class="text-white font-bold text-xl mb-1">Legalight</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">AI-powered legal assistant platform with contextual document analysis, legal workflow support, and intelligent information retrieval.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <span class="px-4 py-2 rounded-full glass text-sm">  
-          Flutter  
-        </span>  
+<!-- CONTACT -->
+<section id="contact" class="py-24 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="available-badge mx-auto mb-8 w-fit">
+      <span class="available-dot"></span>
+      Currently taking on 2 new projects
+    </div>
+    <h2 class="section-title text-white mb-4">
+      Ready to build<br>
+      <span class="gradient-text">something that works?</span>
+    </h2>
+    <p class="text-gray-400 text-lg mb-12 max-w-xl mx-auto">
+      Tell me what you're building and I'll get back to you within 24 hours with thoughts on scope, timeline, and cost.
+    </p>
 
-        <span class="px-4 py-2 rounded-full glass text-sm">  
-          FastAPI  
-        </span>  
+    <div class="grid sm:grid-cols-3 gap-4 mb-12">
+      <a href="mailto:yohantse121@gmail.com" class="glass rounded-2xl p-5 card-hover flex flex-col items-center gap-2 text-center">
+        <div class="text-2xl">✉️</div>
+        <div class="text-white font-semibold text-sm">Email</div>
+        <div class="text-gray-400 text-xs">yohantse121@gmail.com</div>
+      </a>
+      <a href="https://t.me/apuovia" target="_blank" class="glass rounded-2xl p-5 card-hover flex flex-col items-center gap-2 text-center">
+        <div class="text-2xl">✈️</div>
+        <div class="text-white font-semibold text-sm">Telegram</div>
+        <div class="text-gray-400 text-xs">@apuovia</div>
+      </a>
+      <a href="https://wa.me/251979943992" target="_blank" class="glass rounded-2xl p-5 card-hover flex flex-col items-center gap-2 text-center">
+        <div class="text-2xl">💬</div>
+        <div class="text-white font-semibold text-sm">WhatsApp</div>
+        <div class="text-gray-400 text-xs">+251 979 943 992</div>
+      </a>
+    </div>
 
-        <span class="px-4 py-2 rounded-full glass text-sm">  
-          AI Agents  
-        </span>  
+    <div class="flex justify-center gap-4">
+      <a href="https://github.com/yohantse" target="_blank" class="text-gray-400 hover:text-white text-sm transition">GitHub ↗</a>
+      <a href="https://docs.google.com/document/d/1EVSxD3LQ5Oh7fF1W25OPd19aqL-D6qpn-_hqTEv6djE/edit?usp=sharing" target="_blank" class="text-gray-400 hover:text-white text-sm transition">Resume ↗</a>
+    </div>
+  </div>
+</section>
 
-      </div>  
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-8 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <img src="logo.png" alt="Jo" class="w-6 h-6 rounded-full opacity-60">
+      <span class="text-gray-600 text-sm">© 2026 Yohannes Tsegaye</span>
+    </div>
+    <div class="flex gap-6 text-sm text-gray-600">
+      <a href="#services" class="hover:text-gray-400 transition">Services</a>
+      <a href="#projects" class="hover:text-gray-400 transition">Projects</a>
+      <a href="#contact" class="hover:text-gray-400 transition">Contact</a>
+    </div>
+  </div>
+</footer>
 
-    </div>  
-
-  </div>  
-
-</div>
-
-  </section>    <!-- EXPERIENCE -->    <section class="py-28 px-6">  <div class="max-w-5xl mx-auto text-center">  
-
-  <h2 class="section-title mb-8">  
-    Education & Experience  
-  </h2>  
-
-  <div class="glass rounded-[32px] p-12">  
-
-    <p class="text-2xl font-semibold mb-5">  
-      BSc in Computer Engineering  
-    </p>  
-
-    <p class="text-slate-300 text-lg mb-4">  
-      7+ years programming experience across systems engineering,  
-      backend infrastructure, mobile applications, and AI tooling.  
-    </p>  
-
-    <div class="flex justify-center flex-wrap gap-5 mt-10">  
-
-      <a href="https://github.com/yohantse"  
-         class="glass px-6 py-3 rounded-2xl">  
-
-        GitHub  
-
-      </a>  
-
-      <a href="https://docs.google.com/document/d/1EVSxD3LQ5Oh7fF1W25OPd19aqL-D6qpn-_hqTEv6djE/edit?usp=sharing"  
-         class="glass px-6 py-3 rounded-2xl">  
-
-        Resume  
-
-      </a>  
-
-    </div>  
-
-  </div>  
-
-</div>
-
-  </section>    <!-- CONTACT -->    <section id="contact" class="py-28 px-6">  <div class="max-w-5xl mx-auto">  
-
-  <div class="glass rounded-[40px] p-12 text-center">  
-
-    <h2 class="section-title mb-6">  
-      Let's Build Something Serious  
-    </h2>  
-
-    <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-12">  
-      Open to engineering roles, system architecture work,  
-      AI development, infrastructure projects, and high-impact collaborations.  
-    </p>  
-
-    <div class="space-y-4 text-lg">  
-
-      <p>  
-        Email:  
-        <a href="mailto:yohantse121@gmail.com"  
-           class="text-sky-400">  
-
-          yohantse121@gmail.com  
-
-        </a>  
-      </p>  
-
-      <p>  
-        Telegram:  
-        <a href="https://t.me/apuovia"  
-           class="text-sky-400">  
-
-          @apuovia  
-
-        </a>  
-      </p>  
-
-      <p>  
-        WhatsApp:  
-        <a href="https://wa.me/251979943992"  
-           class="text-sky-400">  
-
-          +251 979 943 992  
-
-        </a>  
-      </p>  
-
-    </div>  
-
-  </div>  
-
-</div>
-
-  </section>    <!-- FOOTER -->    <footer class="py-10 border-t border-white/10">  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-5">  
-
-  <p class="text-slate-500">  
-    © 2026 Yohannes Tsegaye. All rights reserved.  
-  </p>  
-
-  <p class="text-slate-600">  
-    Designed & engineered by Yohannes T.  
-  </p>  
-
-</div>
-
-  </footer>    <!-- STICKY CONTACT -->    <a href="#contact" id="contact-btn">  
-    Contact  
-  </a>  </body>  
-<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-[#07111f]/70 border-b border-white/5">    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">  <div class="flex items-center">  
-
-  <img src="logo.png"  
-       class="w-10 h-10 object-contain">  
-
-</div>  
-
-<div class="hidden md:flex items-center gap-8 text-sm text-slate-300">  
-
-  <a href="#projects" class="hover:text-white transition">  
-    Projects  
-  </a>  
-
-  <a href="#contact" class="hover:text-white transition">  
-    Contact  
-  </a>  
-
-  <a href="https://github.com/yohantse"  
-     class="hover:text-white transition">  
-
-    GitHub  
-
-  </a>  
-
-</div>
-
-  </div>  </nav>  
+</body>
 </html>
