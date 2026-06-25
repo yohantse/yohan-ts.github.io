@@ -99,26 +99,13 @@
 }
 
 .designedLink {
-  display: inline-flex;
-  align-items: center;
-  opacity: 0.75;
-  transition: opacity 0.2s ease;
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: color var(--transition-fast);
 }
 
 .designedLink:hover {
-  opacity: 1;
-}
-
-.designedLogo {
-  height: 28px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(0) invert(0.85);
-  transition: filter 0.2s ease;
-}
-
-.designedLink:hover .designedLogo {
-  filter: brightness(0) invert(1);
+  color: var(--primary);
 }
 
 @media (max-width: 768px) {

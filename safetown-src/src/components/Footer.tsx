@@ -66,13 +66,7 @@ export default function Footer() {
             <p>
               Powered by{" "}
               <a href="https://yohan-ts.com" target="_blank" rel="noopener noreferrer" className={styles.designedLink}>
-                <Image
-                  src="/safetown/yohan-logo.png"
-                  alt="Yohannes Tsegaye"
-                  width={80}
-                  height={28}
-                  className={styles.designedLogo}
-                />
+                Yohannes T.
               </a>
             </p>
           </div>
