@@ -9,7 +9,7 @@ export default function About() {
           <span className={styles.subtitle}>About Us</span>
           <h2 className={styles.title}>Welcome to Safe Town Electromechanical</h2>
           <p className={styles.introText}>
-            Safe Town Electromechanical is established with the vision to satisfy the dreams and desires of customers about service needs. We are keenly committed and passionately tuned to proceed on becoming an internationally competent service provider.
+            Safe Town Electromechanical delivers world-class electro-mechanical installations and engineering services, committed to standard-setting quality, safety, and client satisfaction.
           </p>
         </div>
 
@@ -17,10 +17,10 @@ export default function About() {
         <div className={styles.grid}>
           <div className={styles.descriptionCol}>
             <p>
-              We have progressively evolved as an Electro-Mechanical building installation and consulting firm. We provide services in residential building design and construction of electrical distribution systems, and then gradually grew to industrial electrical services and engineering.
+              Evolving from a consulting firm, we provide expert electrical design and construction for residential, commercial, and industrial sites.
             </p>
             <p>
-              Our projects range across commercial complexes, hospital compounds, street lighting, urban power expansion, and rural electrification. All works are conducted in strict accordance with the Electrical Wiring Rules and Regulations of the Ethiopian Electric Agency, the Ethiopian Electric Power Corporation, and respective international standards.
+              Our diverse projects cover commercial complexes, hospitals, street lighting, and grid expansion. All work strictly complies with Ethiopian Electric Agency, EEPCo, and respective international standards.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function About() {
             </div>
             <h3 className={styles.cardTitle}>Vision</h3>
             <p className={styles.cardDesc}>
-              To contribute to the continuous and sustained development in all works, being customer best partner and good global citizen keeping honesty and fairness in every respect, and to lead the way to a bright prosperous future.
+              To drive sustainable industrial development as the preferred electro-mechanical partner, maintaining honesty, fairness, and excellence in every project.
             </p>
           </div>
 
@@ -70,7 +70,7 @@ export default function About() {
             </div>
             <h3 className={styles.cardTitle}>Mission</h3>
             <p className={styles.cardDesc}>
-              We are dedicated to delivery of world class turnkey solutions to our stakeholders in partnership with our clients, consultants and the government. We achieve this through value engineered proposals and adhering to the highest standards.
+              To deliver world-class turnkey solutions to clients and stakeholders through value-engineered proposals while adhering to the highest global standards.
             </p>
           </div>
 
@@ -83,7 +83,7 @@ export default function About() {
             </div>
             <h3 className={styles.cardTitle}>Quality</h3>
             <p className={styles.cardDesc}>
-              We are obsessed with quality. We insist not only on meeting technical specifications but exceeding them to ensure the best durability and efficiency possible. There are no shortcuts to absolute excellence in our work.
+              We exceed technical specifications to ensure maximum system durability and efficiency, refusing shortcuts to guarantee absolute safety and excellence.
             </p>
           </div>
         </div>

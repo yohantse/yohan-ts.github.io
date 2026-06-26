@@ -1,0 +1,113 @@
+.statsSection {
+  background-color: var(--bg-primary);
+  padding: 3rem 0;
+  position: relative;
+  z-index: 15;
+  margin-top: -3rem; /* Overlap with hero slightly for a layered modern feel */
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.statCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.statCard:hover {
+  background-color: var(--card-hover-bg);
+  border-color: rgba(59, 130, 246, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.statCard:hover::before {
+  opacity: 1;
+}
+
+.iconWrapper {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  padding: 0.75rem;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: all var(--transition-normal);
+}
+
+.statCard:hover .iconWrapper {
+  transform: scale(1.1);
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.statText {
+  display: flex;
+  flex-direction: column;
+}
+
+.value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .statsSection {
+    margin-top: 0;
+    padding: 4rem 0 2rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

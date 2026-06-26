@@ -2,56 +2,56 @@ import styles from "./Services.module.css";
 
 export default function Services() {
   const mechanicalServices = [
-    "Heating, ventilating and central air conditioning for commercial and industrial premises",
-    "Plumbing (drainage and sanitary works, recycling system, piping system, irrigation)",
-    "Fire fighting system",
-    "Swimming pools, Fountains, water features, spas and steam systems",
-    "Odor control system",
-    "Refrigeration system",
-    "Stage equipment system",
-    "Operation and maintenance for all systems",
-    "Pre-engineering building (PEB)",
+    "Commercial & industrial HVAC systems (Heating, Ventilation, Air Conditioning)",
+    "Plumbing systems (drainage, sanitary, recycling, and irrigation)",
+    "Fire fighting & suppression systems",
+    "Swimming pools, fountains, spas, and steam systems",
+    "Odor control and ventilation networks",
+    "Industrial refrigeration and cold storage",
+    "Stage and specialized theatrical equipment installations",
+    "Pre-Engineered Buildings (PEB) construction",
+    "Operations & maintenance for all mechanical systems",
   ];
 
   const electricalServices = [
-    "Installation of complete electrical system for commercial, industrial and residential complexes",
-    "Power distribution construction for rural and urban",
-    "High Mast, street, landscape and decorative lighting",
-    "Supervisory control and monitoring system",
-    "Stand-by power stations (generators and UPS)",
-    "Power control (Smart power control and management system)",
-    "Solar lighting system",
-    "Low Voltage systems (IP TV, fire detection and voice evacuation, security system, parking guidance systems, central clock system, sound system etc ...)",
-    "Navigation and visual aids, Meteorological systems, air traffic control systems",
-    "Audio-Visual (projection system, display system, classroom teaching system, audio-video distribution and recording system)",
-    "Earth networks and lightning protection",
-    "Operation and maintenance for all systems",
+    "Complete electrical systems for commercial, industrial, and residential complexes",
+    "Urban and rural power distribution grid construction",
+    "High mast, street, landscape, and decorative lighting",
+    "Supervisory control and monitoring systems",
+    "Standby power stations (generators and heavy UPS systems)",
+    "Smart power control and load management systems",
+    "Solar power and lighting installations",
+    "Low Voltage systems (IPTV, fire detection, PA, security, and central clock)",
+    "Air traffic control, meteorological, and navigation systems",
+    "Professional audio-visual systems (projection, classroom, and recording)",
+    "Earthing networks and lightning protection",
+    "Operations & maintenance for all electrical systems",
   ];
 
   const companyValues = [
     {
       title: "Customer First",
-      desc: "Service to the customer above all else is our ultimate priority.",
+      desc: "Prioritizing client needs and service satisfaction above all else.",
     },
     {
       title: "Continuous Drive",
-      desc: "Never being satisfied; we continuously innovate and improve.",
+      desc: "Constantly innovating, learning, and refining our technical capabilities.",
     },
     {
-      title: "Excellence in Reputation",
-      desc: "We take immense pride in being part of something special.",
+      title: "Excellence & Pride",
+      desc: "Taking pride in our reputation for quality and high-standard engineering.",
     },
     {
-      title: "Creativity & Ability",
-      desc: "Encouraging individual capacity and innovative thinking.",
+      title: "Creativity",
+      desc: "Fostering individual ability and creative solutions to engineering challenges.",
     },
     {
       title: "Pioneering Spirit",
-      desc: "Being a pioneer, not following others, and making the impossible happen.",
+      desc: "Leading the industry, solving complex problems, and attempting the impossible.",
     },
     {
       title: "Honesty & Integrity",
-      desc: "Maintained in every single client and partner relationship.",
+      desc: "Upholding complete transparency and fairness with clients and partners.",
     },
   ];
 
@@ -63,7 +63,7 @@ export default function Services() {
           <span className={styles.subtitle}>Our Services</span>
           <h2 className={styles.title}>Electro-Mechanical Excellence</h2>
           <p className={styles.intro}>
-            Safe Town Electro-Mechanical Contractor has progressively grown as an industry leader, delivering top-tier turnkey installations in mechanical and electrical projects.
+            Safe Town is a proven industry leader, delivering top-tier turnkey installations in complex mechanical and electrical projects across the region.
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export default function Services() {
             <div className={styles.valuesHeading}>
               <h3>Our Core Values</h3>
               <p>
-                The foundation of our company lies in our unwavering commitment to standards, integrity, and safety.
+                The foundation of our company lies in our unwavering commitment to technical standards, integrity, and safety.
               </p>
             </div>
             <div className={styles.valuesGrid}>

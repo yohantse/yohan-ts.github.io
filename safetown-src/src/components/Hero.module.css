@@ -9,7 +9,7 @@
   overflow: hidden;
   background-color: var(--bg-primary);
   background-image: linear-gradient(
-      rgba(11, 15, 25, 0.85),
+      rgba(11, 15, 25, 0.9),
       rgba(11, 15, 25, 0.85)
     ),
     url('/safetown/show_7.jpg');
@@ -35,8 +35,8 @@
   left: -10%;
   width: 60%;
   height: 60%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-  filter: blur(50px);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  filter: blur(80px);
 }
 
 .glow2 {
@@ -45,8 +45,8 @@
   right: -10%;
   width: 60%;
   height: 60%;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
-  filter: blur(60px);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
 }
 
 .gridOverlay {
@@ -57,22 +57,28 @@
   height: 100%;
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   mask-image: radial-gradient(circle at center, black, transparent 80%);
   -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
   z-index: 2;
   pointer-events: none;
 }
 
-.container {
+.heroContainer {
   position: relative;
   z-index: 10;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.heroContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 900px;
+  align-items: flex-start;
 }
 
 .badgeWrapper {
@@ -81,51 +87,229 @@
 }
 
 .title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
   animation: fadeIn 1s ease-out;
+  text-align: left;
 }
 
 .titleHighlight {
   background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   font-weight: 600;
-  color: var(--text-secondary);
-  line-height: 1.3;
-  margin-bottom: 1.5rem;
-  max-width: 800px;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin-bottom: 1rem;
+  max-width: 620px;
   animation: fadeIn 1.2s ease-out;
+  text-align: left;
 }
 
 .tagline {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   margin-bottom: 2.5rem;
   animation: fadeIn 1.3s ease-out;
+  text-align: left;
 }
 
 .actions {
   display: flex;
   gap: 1.25rem;
-  justify-content: center;
   animation: fadeIn 1.4s ease-out;
 }
 
+/* Visual Collage Styles */
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.collageContainer {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.collageCard {
+  position: absolute;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
+  background-color: var(--bg-secondary);
+}
+
+.collageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cardBack {
+  width: 250px;
+  height: 180px;
+  top: 0;
+  left: 0;
+  transform: rotate(-6deg);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.cardMiddle {
+  width: 250px;
+  height: 180px;
+  bottom: 10px;
+  right: 0;
+  transform: rotate(5deg);
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.cardFront {
+  width: 320px;
+  height: 240px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border: 2px solid rgba(59, 130, 246, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.collageContainer:hover .cardBack {
+  transform: translate(-15px, -10px) rotate(-10deg);
+  opacity: 0.95;
+}
+
+.collageContainer:hover .cardMiddle {
+  transform: translate(15px, 10px) rotate(8deg);
+  opacity: 0.95;
+}
+
+.collageContainer:hover .cardFront {
+  transform: translate(-50%, -50%) scale(1.03);
+  border-color: var(--primary);
+}
+
+.floatingBadge {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: rgba(19, 27, 46, 0.95);
+  border: 1.5px solid var(--accent);
+  border-radius: var(--border-radius-md);
+  padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.25);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  animation: float 4s ease-in-out infinite;
+}
+
+.badgeNumber {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.badgeLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 992px) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .heroContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tagline {
+    text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 600px) {
+  .hero {
+    padding-bottom: 2rem;
+  }
+
   .actions {
     flex-direction: column;
     width: 100%;
     max-width: 320px;
+  }
+
+  .collageContainer {
+    height: 300px;
+    max-width: 360px;
+  }
+
+  .cardBack {
+    width: 190px;
+    height: 140px;
+  }
+
+  .cardMiddle {
+    width: 190px;
+    height: 140px;
+  }
+
+  .cardFront {
+    width: 250px;
+    height: 180px;
   }
 }
