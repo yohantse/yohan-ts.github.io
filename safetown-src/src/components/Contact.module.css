@@ -100,6 +100,42 @@
   color: var(--primary-hover);
 }
 
+.mapLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  margin-top: 0.75rem;
+  text-decoration: none !important;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+}
+
+.mapLink:hover {
+  color: var(--primary-hover) !important;
+  text-decoration: underline !important;
+}
+
+.mapEmbed {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-normal);
+}
+
+.mapEmbed:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.mapIframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
 /* Form Container */
 .formCard {
   background-color: var(--bg-secondary);
