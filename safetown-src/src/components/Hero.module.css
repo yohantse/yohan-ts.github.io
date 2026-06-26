@@ -1,37 +1,30 @@
 .hero {
   position: relative;
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: calc(var(--nav-height) + 2rem);
   padding-bottom: 4rem;
   overflow: hidden;
-
   background-color: var(--bg-primary);
-<<<<<<< HEAD
   background-image: linear-gradient(
       rgba(11, 15, 25, 0.9),
       rgba(11, 15, 25, 0.85)
-=======
-  background-image:
-    linear-gradient(
-      rgba(11, 15, 25, 0.82),
-      rgba(11, 15, 25, 0.88)
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
     ),
     url('/safetown/show_7.jpg');
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Background Effects */
-
+/* Background Gradients & Glows */
 .bgGlow {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   pointer-events: none;
 }
@@ -42,19 +35,8 @@
   left: -10%;
   width: 60%;
   height: 60%;
-<<<<<<< HEAD
   background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
   filter: blur(80px);
-=======
-
-  background: radial-gradient(
-    circle,
-    rgba(59, 130, 246, 0.15) 0%,
-    transparent 70%
-  );
-
-  filter: blur(50px);
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
 }
 
 .glow2 {
@@ -63,52 +45,26 @@
   right: -10%;
   width: 60%;
   height: 60%;
-<<<<<<< HEAD
   background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
   filter: blur(80px);
-=======
-
-  background: radial-gradient(
-    circle,
-    rgba(245, 158, 11, 0.08) 0%,
-    transparent 70%
-  );
-
-  filter: blur(60px);
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
 }
 
 .gridOverlay {
   position: absolute;
-  inset: 0;
-
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: 40px 40px;
-<<<<<<< HEAD
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-=======
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.01) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.01) 1px,
-      transparent 1px
-    );
-
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
   mask-image: radial-gradient(circle at center, black, transparent 80%);
   -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
-
   z-index: 2;
   pointer-events: none;
 }
 
-<<<<<<< HEAD
 .heroContainer {
   position: relative;
   z-index: 10;
@@ -123,21 +79,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-=======
-/* Content */
-
-.container {
-  position: relative;
-  z-index: 10;
-
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  max-width: 900px;
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
 }
 
 .badgeWrapper {
@@ -146,94 +87,47 @@
 }
 
 .title {
-<<<<<<< HEAD
   font-size: clamp(2.8rem, 6.5vw, 4.8rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.05;
   margin-bottom: 1.25rem;
-=======
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
-
-  margin-bottom: 1rem;
-
-  max-width: 900px;
-
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
   animation: fadeIn 1s ease-out;
   text-align: left;
 }
 
 .titleHighlight {
-  background: linear-gradient(
-    135deg,
-    #60a5fa 0%,
-    #3b82f6 50%,
-    #1d4ed8 100%
-  );
-
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-<<<<<<< HEAD
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.35;
   margin-bottom: 1rem;
   max-width: 620px;
-=======
-  font-size: clamp(1.15rem, 2.5vw, 1.6rem);
-  font-weight: 500;
-
-  color: var(--text-secondary);
-
-  line-height: 1.6;
-
-  max-width: 760px;
-
-  margin-bottom: 1.5rem;
-
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
   animation: fadeIn 1.2s ease-out;
   text-align: left;
 }
 
 .tagline {
   font-size: 1rem;
-<<<<<<< HEAD
   font-weight: 500;
-=======
-  font-weight: 600;
-
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
   color: var(--accent);
-
   text-transform: uppercase;
-<<<<<<< HEAD
   letter-spacing: 0.12em;
-=======
-  letter-spacing: 0.18em;
-
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
   margin-bottom: 2.5rem;
-
   animation: fadeIn 1.3s ease-out;
   text-align: left;
 }
 
-/* Buttons */
-
 .actions {
   display: flex;
   gap: 1.25rem;
-<<<<<<< HEAD
   animation: fadeIn 1.4s ease-out;
 }
 
@@ -385,79 +279,6 @@
 
   .actions {
     justify-content: center;
-=======
-  justify-content: center;
-
-  animation: fadeIn 1.4s ease-out;
-}
-
-/* Stats */
-
-.stats {
-  margin-top: 4rem;
-
-  display: flex;
-  gap: 1.25rem;
-
-  justify-content: center;
-  flex-wrap: wrap;
-
-  width: 100%;
-}
-
-.statCard {
-  min-width: 180px;
-
-  padding: 1.2rem 1.5rem;
-
-  background: rgba(255, 255, 255, 0.04);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(10px);
-
-  border-radius: 16px;
-
-  transition: all 0.3s ease;
-}
-
-.statCard:hover {
-  transform: translateY(-4px);
-
-  border-color: rgba(59, 130, 246, 0.4);
-}
-
-.statCard h3 {
-  font-size: 1.8rem;
-  color: #60a5fa;
-
-  margin-bottom: 0.25rem;
-}
-
-.statCard span {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: auto;
-
-    padding-top: calc(var(--nav-height) + 5rem);
-    padding-bottom: 5rem;
-  }
-
-  .stats {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .statCard {
-    width: 100%;
-    max-width: 320px;
->>>>>>> 729e13127de5a47e36ee04767e28d01aec327fc3
   }
 }
 
@@ -468,7 +289,6 @@
 
   .actions {
     flex-direction: column;
-
     width: 100%;
     max-width: 320px;
   }
@@ -491,19 +311,5 @@
   .cardFront {
     width: 250px;
     height: 180px;
-  }
-}
-
-/* Animation */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
