@@ -12,7 +12,7 @@
 }
 
 .scrolled {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(11, 15, 25, 0.85);
   backdrop-filter: var(--blur-nav);
   -webkit-backdrop-filter: var(--blur-nav);
   border-bottom: 1px solid var(--border);
@@ -78,7 +78,7 @@
 }
 
 .navLink:hover {
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .navLink::after {
@@ -103,7 +103,7 @@
   display: none;
   background: none;
   border: none;
-  color: var(--text-primary);
+  color: #ffffff;
   cursor: pointer;
   padding: 0.5rem;
   z-index: 1010;
@@ -144,7 +144,7 @@
   font-weight: 600;
   color: var(--text-secondary);
   padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .drawerLink:hover {
@@ -157,7 +157,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(15, 23, 42, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
   z-index: 1004;
   opacity: 0;
