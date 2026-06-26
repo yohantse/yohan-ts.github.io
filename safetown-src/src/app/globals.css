@@ -6,27 +6,27 @@
   --font-heading: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Color Palette (Theme-dependent) */
-  --bg-primary: #0b0f19; /* Deep, tech Slate Blue-Black */
-  --bg-secondary: #131b2e; /* Slate Navy */
-  --bg-tertiary: #1e2942; /* Medium Slate */
+  --bg-primary: #f8fafc; /* Clean light off-white */
+  --bg-secondary: #ffffff; /* Pure white for cards/sections */
+  --bg-tertiary: #f1f5f9; /* Light slate for inputs/dividers */
   
-  --text-primary: #f8fafc; /* Crisp Off-White */
-  --text-secondary: #cbd5e1; /* Cool Gray */
-  --text-muted: #64748b; /* Slate Gray */
+  --text-primary: #0f172a; /* Deep Slate-Blue/Black */
+  --text-secondary: #334155; /* Slate-700 for paragraphs */
+  --text-muted: #64748b; /* Slate-500 for descriptions */
   
-  --primary: #3b82f6; /* Electric Blue */
-  --primary-hover: #2563eb; 
-  --primary-light: rgba(59, 130, 246, 0.1);
+  --primary: #2563eb; /* Deep Royal Blue */
+  --primary-hover: #1d4ed8; 
+  --primary-light: rgba(37, 99, 235, 0.08);
   
-  --accent: #f59e0b; /* Amber Gold (representing electrical / warning / power) */
-  --accent-hover: #d97706;
-  --accent-light: rgba(245, 158, 11, 0.1);
+  --accent: #d97706; /* Amber Gold (representing electrical / warning / power) */
+  --accent-hover: #b45309;
+  --accent-light: rgba(217, 119, 6, 0.08);
   
-  --border: rgba(255, 255, 255, 0.08);
-  --border-focus: rgba(59, 130, 246, 0.4);
+  --border: rgba(15, 23, 42, 0.08);
+  --border-focus: rgba(37, 99, 235, 0.3);
   
-  --card-bg: rgba(19, 27, 46, 0.6);
-  --card-hover-bg: rgba(30, 41, 66, 0.8);
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-hover-bg: rgba(255, 255, 255, 0.95);
   
   --success: #10b981; /* Delivered status */
   --warning: #f59e0b; /* Ongoing status */
@@ -40,9 +40,9 @@
   
   /* Shadows & Blurs */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.25);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-glow: 0 0 25px rgba(37, 99, 235, 0.08);
   
   --blur-nav: saturate(180%) blur(12px);
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -60,7 +60,7 @@ html {
   height: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.25;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 a {

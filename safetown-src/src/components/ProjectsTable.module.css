@@ -54,7 +54,7 @@
   background-color: var(--bg-tertiary);
   border: 1px solid var(--border);
   border-radius: var(--border-radius-sm);
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 0.95rem;
   transition: all var(--transition-fast);
 }
@@ -62,7 +62,7 @@
 .searchInput:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
 .searchIcon {
@@ -92,8 +92,8 @@
 }
 
 .filterBtn:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  background-color: rgba(15, 23, 42, 0.04);
+  color: var(--text-primary);
 }
 
 .filterActive {
@@ -102,11 +102,16 @@
   color: #ffffff;
 }
 
+.filterActive:hover {
+  background-color: var(--primary-hover);
+  color: #ffffff;
+}
+
 /* Table Card Wrapper */
 .tableWrapper {
   width: 100%;
   overflow-x: auto;
-  background-color: var(--card-bg);
+  background-color: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-sm);
@@ -121,11 +126,11 @@
 }
 
 .table th {
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(15, 23, 42, 0.02);
   padding: 1.25rem 1.5rem;
   font-weight: 600;
   font-family: var(--font-heading);
-  color: #ffffff;
+  color: var(--text-primary);
   border-bottom: 1px solid var(--border);
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -144,13 +149,13 @@
 }
 
 .table tr:hover td {
-  background-color: rgba(255, 255, 255, 0.01);
-  color: #ffffff;
+  background-color: rgba(15, 23, 42, 0.015);
+  color: var(--text-primary);
 }
 
 .clientName {
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .projectName {
