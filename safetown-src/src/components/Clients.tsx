@@ -4,7 +4,7 @@ import styles from "./Clients.module.css";
 export default function Clients() {
   const clients = [
     { name: "Akwos Construction", src: "/safetown/Client_Logos/Akwos.png" },
-    { name: "Belayab Enterprise", src: "/safetown/Client_Logos/Belayab.jpg" },
+    { name: "Belayab Enterprise", src: "/safetown/Client_Logos/Belayab.png" },
     { name: "Kality Metal Products", src: "/safetown/Client_Logos/Kality.jpg" },
     { name: "Mesfin Industrial Engineering", src: "/safetown/Client_Logos/Mesfin.png" },
   ];
