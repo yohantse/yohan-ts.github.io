@@ -21,7 +21,7 @@ export default function Clients() {
                   <Image
                     src={client.src}
                     alt={client.name}
-                    width={140}
+                    width={160}
                     height={50}
                     className={styles.logoImg}
                   />
