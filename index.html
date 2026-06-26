@@ -10,213 +10,207 @@
   <meta property="og:url" content="https://yohan-ts.com">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://yohan-ts.com/">
-  <title>Yohannes Tsegaye | Freelance Software Developer</title>
+  <title>Yohannes Tsegaye — System Architect & Freelance Developer</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Yohannes Tsegaye",
-    "alternateName": "Jo",
-    "url": "https://yohan-ts.com",
-    "jobTitle": "Freelance Software Developer",
-    "sameAs": ["https://github.com/yohantse"]
-  }
-  </script>
+  
+  <!-- Premium Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="logo.png">
+
   <style>
-    * { font-family: 'Inter', sans-serif; }
-    html { scroll-behavior: smooth; }
-    body { background: #07111f; color: white; overflow-x: hidden; }
-
-    .hero-bg {
-      background:
-        radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(99,102,241,0.14), transparent 35%),
-        #07111f;
+    /* Premium Styling Overrides */
+    :root {
+      --color-obsidian: #08090C;
+      --color-slate-dark: #12141C;
+      --color-slate-light: #1A1D27;
+      --color-champagne: #D4C5B3;
+      --color-champagne-dim: rgba(212, 197, 179, 0.6);
+      --color-gold-bright: #E8D8C5;
+      --color-accent-green: #52B788;
     }
 
-    .glass {
-      background: rgba(255,255,255,0.04);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255,255,255,0.08);
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--color-obsidian);
+      color: #E2E8F0;
+      overflow-x: hidden;
     }
 
-    .card-hover { transition: 0.3s ease; }
-    .card-hover:hover {
-      transform: translateY(-6px);
-      border-color: rgba(56,189,248,0.5);
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.02em;
     }
 
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 0.8s forwards;
-    }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.6s; }
-
-    .section-title {
-      font-size: clamp(2rem,5vw,3.5rem);
-      font-weight: 800;
-      letter-spacing: -2px;
+    .font-mono {
+      font-family: 'Space Mono', monospace;
     }
 
-    .gradient-text {
-      background: linear-gradient(to right, #38bdf8, #818cf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    /* Subtle Architectural Grid Pattern Background */
+    .grid-bg {
+      background-size: 80px 80px;
+      background-image: 
+        linear-gradient(to right, rgba(212, 197, 179, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 197, 179, 0.03) 1px, transparent 1px);
     }
 
-    #contact-btn {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 999;
-      background: linear-gradient(135deg, #38bdf8, #818cf8);
-      color: white;
-      padding: 12px 22px;
-      border-radius: 50px;
+    /* Custom high-contrast borders and transitions */
+    .border-premium {
+      border: 1px solid rgba(212, 197, 179, 0.1);
+    }
+    .border-premium-hover {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .border-premium-hover:hover {
+      border-color: var(--color-champagne);
+      background-color: rgba(212, 197, 179, 0.03);
+      transform: translateY(-2px);
+    }
+
+    /* Clean, non-neon custom button styles */
+    .btn-premium {
+      background: var(--color-champagne);
+      color: var(--color-obsidian);
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
-      font-size: 0.9rem;
-      box-shadow: 0 4px 20px rgba(56,189,248,0.35);
-      cursor: pointer;
-      text-decoration: none;
-      transition: 0.2s ease;
+      transition: all 0.3s ease;
     }
-    #contact-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(56,189,248,0.5); }
+    .btn-premium:hover {
+      background: var(--color-gold-bright);
+      transform: translateY(-1px);
+    }
 
-    .available-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(34,197,94,0.12);
-      border: 1px solid rgba(34,197,94,0.3);
-      color: #4ade80;
-      padding: 6px 14px;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+    .btn-secondary {
+      border: 1px solid rgba(212, 197, 179, 0.3);
+      color: var(--color-champagne);
+      transition: all 0.3s ease;
     }
-    .available-dot {
-      width: 7px; height: 7px;
+    .btn-secondary:hover {
+      border-color: var(--color-champagne);
+      background: rgba(212, 197, 179, 0.05);
+      color: var(--color-gold-bright);
+    }
+
+    /* Pulse animation for system availability badge */
+    .live-indicator {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: #4ade80;
+      background: var(--color-accent-green);
+      box-shadow: 0 0 0 0 rgba(82, 183, 136, 0.4);
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
+      0% { box-shadow: 0 0 0 0 rgba(82, 183, 136, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(82, 183, 136, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(82, 183, 136, 0); }
     }
 
-    .pricing-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 32px;
-      transition: 0.3s ease;
-    }
-    .pricing-card:hover {
-      border-color: rgba(56,189,248,0.4);
-      background: rgba(56,189,248,0.04);
-    }
-    .pricing-card.featured {
-      border-color: rgba(56,189,248,0.5);
-      background: rgba(56,189,248,0.06);
-      position: relative;
-    }
-    .pricing-card.featured::before {
-      content: "Most Popular";
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, #38bdf8, #818cf8);
-      color: white;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 50px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      white-space: nowrap;
+    /* Custom subtle glassmorphism overlay */
+    .glass-header {
+      background: rgba(8, 9, 12, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 197, 179, 0.08);
     }
 
-    .tag {
-      display: inline-block;
-      background: rgba(56,189,248,0.1);
-      border: 1px solid rgba(56,189,248,0.2);
-      color: #7dd3fc;
-      padding: 3px 10px;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-
-    nav a { transition: color 0.2s; }
-    nav a:hover { color: #38bdf8; }
+    /* Horizontal custom scroll bar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--color-obsidian); }
+    ::-webkit-scrollbar-thumb { background: rgba(212, 197, 179, 0.2); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--color-champagne); }
   </style>
 </head>
-<body>
+<body class="grid-bg">
 
-<!-- Fixed CTA -->
-<a href="#contact" id="contact-btn">Let's Work Together</a>
-
-<!-- NAV -->
-<nav class="fixed top-0 left-0 right-0 z-50 glass">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-2">
-      <img src="logo.png" alt="Jo" class="w-8 h-8 rounded-full">
-      <span class="font-bold text-white">Jo</span>
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 right-0 z-50 glass-header">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full border-premium bg-zinc-950 flex items-center justify-center font-mono text-sm text-[var(--color-champagne)]">
+        JT
+      </div>
+      <span class="font-display font-medium tracking-tight text-white">Yohannes Tsegaye</span>
     </a>
-    <div class="flex items-center gap-6 text-sm text-gray-400">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="text-white bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-lg font-semibold transition">Contact Me</a>
+    <div class="flex items-center gap-8 text-sm font-mono">
+      <a href="#services" class="text-zinc-400 hover:text-[var(--color-champagne)] transition">_services</a>
+      <a href="#projects" class="text-zinc-400 hover:text-[var(--color-champagne)] transition">_projects</a>
+      <a href="#contact" class="hidden sm:inline-block text-[var(--color-champagne)] border border-[rgba(212,197,179,0.3)] hover:border-[var(--color-champagne)] px-4 py-2 rounded-sm transition">
+        _connect
+      </a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero-bg min-h-screen flex items-center pt-24 pb-20 px-6">
-  <div class="max-w-6xl mx-auto w-full">
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-      <div class="fade-up">
-        <div class="available-badge mb-6">
-          <span class="available-dot"></span>
-          Taking on 2 new clients
+<!-- HERO SECTION -->
+<section class="min-h-screen flex items-center pt-32 pb-24 px-6 relative">
+  <!-- Subtle gold background wash to add depth -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(212,197,179,0.04),transparent_50%)] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-16 items-center relative z-10">
+    <div class="lg:col-span-7">
+      <div class="inline-flex items-center gap-2 border border-emerald-900/40 bg-emerald-950/20 px-3 py-1.5 rounded-sm text-xs font-mono text-emerald-400 mb-8">
+        <span class="live-indicator"></span>
+        Currently accepting select projects for Q3-Q4 2026
+      </div>
+      
+      <h1 class="text-4xl sm:text-6xl font-semibold tracking-tight text-white leading-[1.05] mb-6">
+        I engineer software systems your <span class="text-[var(--color-champagne)]">business operates on.</span>
+      </h1>
+      
+      <p class="text-zinc-400 text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-2xl">
+        Custom inventory infrastructures, high-availability restaurant systems, offline-first mobile utilities, and customized AI pipelines built for real-world resilience, not just impressive demos.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 font-mono text-sm">
+        <a href="#services" class="btn-premium px-8 py-4 rounded-sm flex items-center gap-2">
+          View Capabilities <span class="text-xs">→</span>
+        </a>
+        <a href="#projects" class="btn-secondary px-8 py-4 rounded-sm">
+          Browse Folio
+        </a>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-3 gap-6 border-t border-[rgba(212,197,179,0.1)] pt-8 max-w-lg font-mono text-xs text-zinc-500">
+        <div>
+          <span class="block text-[var(--color-champagne)] text-base font-semibold font-display mb-1">07+ Years</span>
+          Active Engineering
         </div>
-        <h1 class="section-title text-white mb-4 leading-tight">
-          I build software<br>
-          <span class="gradient-text">your business runs on.</span>
-        </h1>
-        <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
-          Custom inventory systems, restaurant platforms, mobile apps, and AI-powered tools built to work reliably in the real world, not just in demos.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#services" class="bg-sky-500 hover:bg-sky-400 text-white font-semibold px-6 py-3 rounded-xl transition">See What I Build</a>
-          <a href="#projects" class="glass text-white font-semibold px-6 py-3 rounded-xl hover:border-sky-400 transition">View Projects</a>
+        <div>
+          <span class="block text-[var(--color-champagne)] text-base font-semibold font-display mb-1">10+ Shipped</span>
+          Full Scale Ecosystems
         </div>
-        <div class="mt-10 flex items-center gap-6 text-sm text-gray-500">
-          <span>✓ 7+ years experience</span>
-          <span>✓ 10+ systems shipped</span>
-          <span>✓ Real-world deployments</span>
+        <div>
+          <span class="block text-[var(--color-champagne)] text-base font-semibold font-display mb-1">Resilient</span>
+          Offline-First Deployments
         </div>
       </div>
-      <div class="fade-up delay-1 flex justify-center">
-        <div class="relative">
-          <div class="w-72 h-72 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+    </div>
+
+    <!-- Architectural Portrait Box -->
+    <div class="lg:col-span-5 flex justify-center lg:justify-end">
+      <div class="relative group max-w-[360px] w-full">
+        <!-- Structural outer border -->
+        <div class="absolute -inset-4 border border-[rgba(212,197,179,0.15)] rounded-sm pointer-events-none group-hover:border-[var(--color-champagne)] transition-colors duration-500"></div>
+        <div class="absolute -bottom-8 -left-8 text-6xl font-mono text-[rgba(212,197,179,0.05)] pointer-events-none font-bold">JO</div>
+        
+        <div class="border border-[rgba(212,197,179,0.3)] bg-zinc-950 p-3 rounded-sm relative z-10 shadow-2xl">
+          <div class="aspect-[4/5] overflow-hidden grayscale contrast-[1.1] hover:grayscale-0 transition-all duration-700 ease-in-out">
             <img src="275A7335(1).jpg" alt="Yohannes Tsegaye" class="w-full h-full object-cover">
           </div>
-          <div class="absolute -bottom-4 -right-4 glass rounded-2xl px-4 py-3 text-sm">
-            <div class="text-white font-semibold">Yohannes (Jo)</div>
-            <div class="text-gray-400 text-xs">Addis Ababa, Ethiopia</div>
+          
+          <div class="mt-4 pt-4 border-t border-[rgba(212,197,179,0.15)] flex justify-between items-end">
+            <div>
+              <p class="font-display font-medium text-white text-base">Yohannes (Jo) Tsegaye</p>
+              <p class="font-mono text-zinc-500 text-xs mt-0.5">8.9806° N, 38.7578° E (Addis Ababa)</p>
+            </div>
+            <div class="text-right">
+              <span class="inline-block text-[var(--color-champagne)] font-mono text-xs border border-[rgba(212,197,179,0.3)] px-2 py-0.5 rounded-sm">
+                LEAD DEVEL
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -224,240 +218,335 @@
   </div>
 </section>
 
-<!-- SERVICES / PRICING -->
-<section id="services" class="py-24 px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="mb-14">
-      <p class="text-sky-400 font-semibold text-sm uppercase tracking-widest mb-3">Services & Pricing</p>
-      <h2 class="section-title text-white">What you get<br><span class="gradient-text">when we work together.</span></h2>
-      <p class="text-gray-400 mt-4 max-w-xl">Clear scope, fixed starting prices, no surprises. Most projects are delivered within 2–6 weeks.</p>
+<!-- SERVICES & CAPABILITIES -->
+<section id="services" class="py-28 px-6 border-t border-[rgba(212,197,179,0.08)] relative">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(212,197,179,0.02),transparent_50%)] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="max-w-3xl mb-20">
+      <p class="font-mono text-[var(--color-champagne)] text-sm tracking-widest uppercase mb-3">[ 01 / STATIONS OF EXPERTISE ]</p>
+      <h2 class="text-3xl sm:text-5xl font-semibold tracking-tight text-white">
+        Architecting workflows designed to minimize friction.
+      </h2>
+      <p class="text-zinc-400 mt-4 text-lg font-light">
+        No generic packages. No bloated features. Every build is scoped meticulously, priced transparently, and engineered from the metal up.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="pricing-card">
-        <div class="text-2xl mb-4">📱</div>
-        <h3 class="text-white font-bold text-xl mb-1">Mobile App</h3>
-        <div class="text-sky-400 font-bold text-2xl mb-4">From $1,200</div>
-        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Cross-platform Flutter app with backend. Good for commerce, operations, or customer-facing tools.</p>
-        <ul class="space-y-2 text-sm text-gray-300 mb-8">
-          <li>✓ iOS + Android (Flutter)</li>
-          <li>✓ FastAPI or Node.js backend</li>
-          <li>✓ Offline-first if needed</li>
-          <li>✓ Play Store deployment</li>
-        </ul>
-        <a href="#contact" class="block text-center border border-sky-500/40 text-sky-400 hover:bg-sky-500/10 px-4 py-3 rounded-xl text-sm font-semibold transition">Get a Quote</a>
-      </div>
-
-      <div class="pricing-card featured">
-        <div class="text-2xl mb-4">🖥️</div>
-        <h3 class="text-white font-bold text-xl mb-1">Web Platform</h3>
-        <div class="text-sky-400 font-bold text-2xl mb-4">From $800</div>
-        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Business web app or internal tool; inventory systems, dashboards, booking platforms, and more.</p>
-        <ul class="space-y-2 text-sm text-gray-300 mb-8">
-          <li>✓ React frontend</li>
-          <li>✓ Node.js / FastAPI backend</li>
-          <li>✓ Real-time features</li>
-          <li>✓ Admin dashboard included</li>
-        </ul>
-        <a href="#contact" class="block text-center bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-4 py-3 rounded-xl text-sm font-semibold transition hover:opacity-90">Get a Quote</a>
-      </div>
-
-      <div class="pricing-card">
-        <div class="text-2xl mb-4">🤖</div>
-        <h3 class="text-white font-bold text-xl mb-1">AI Integration</h3>
-        <div class="text-sky-400 font-bold text-2xl mb-4">From $600</div>
-        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Add AI to your existing workflow; document analysis, automated assistants, smart data handling.</p>
-        <ul class="space-y-2 text-sm text-gray-300 mb-8">
-          <li>✓ LLM-powered features</li>
-          <li>✓ Workflow automation</li>
-          <li>✓ Scraping & data pipelines</li>
-          <li>✓ API integration</li>
-        </ul>
-        <a href="#contact" class="block text-center border border-sky-500/40 text-sky-400 hover:bg-sky-500/10 px-4 py-3 rounded-xl text-sm font-semibold transition">Get a Quote</a>
-      </div>
-
-    </div>
-
-    <p class="text-center text-gray-500 text-sm mt-8">Need something ongoing? Monthly retainer plans available from $500/mo. <a href="#contact" class="text-sky-400 hover:underline">Let's talk.</a></p>
-  </div>
-</section>
-
-<!-- WHAT I BUILD -->
-<section class="py-20 px-6 bg-white/[0.02]">
-  <div class="max-w-6xl mx-auto">
-    <div class="mb-14">
-      <p class="text-sky-400 font-semibold text-sm uppercase tracking-widest mb-3">Expertise</p>
-      <h2 class="section-title text-white">Built for businesses<br><span class="gradient-text">that can't afford downtime.</span></h2>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="glass rounded-2xl p-6 card-hover">
-        <div class="text-3xl mb-4">🏢</div>
-        <h3 class="text-white font-bold text-lg mb-2">Operational Systems</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">Inventory platforms, multi-device coordination, restaurant infrastructure, and business-critical software. Built to run daily without failure.</p>
-      </div>
-      <div class="glass rounded-2xl p-6 card-hover">
-        <div class="text-3xl mb-4">⚡</div>
-        <h3 class="text-white font-bold text-lg mb-2">Real-Time & Offline</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">WebSocket-powered systems and offline-first apps for environments with unreliable connectivity. Your business keeps working either way.</p>
-      </div>
-      <div class="glass rounded-2xl p-6 card-hover">
-        <div class="text-3xl mb-4">🧠</div>
-        <h3 class="text-white font-bold text-lg mb-2">AI & Automation</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">AI assistants, document analysis, workflow automation, and data pipelines that save your team hours every week.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="py-24 px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="mb-14">
-      <p class="text-sky-400 font-semibold text-sm uppercase tracking-widest mb-3">Portfolio</p>
-      <h2 class="section-title text-white">Real systems,<br><span class="gradient-text">real businesses.</span></h2>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <!-- Veristock -->
-      <div class="glass rounded-2xl overflow-hidden card-hover">
-        <div class="h-48 overflow-hidden">
-          <img src="veristock 1.png" alt="Veristock" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Inventory</span>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">Veristock</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-4">Hotel inventory management platform that replaced fragmented spreadsheet workflows with real-time stock operations and reporting infrastructure.</p>
-          <a href="http://178.104.235.110:8080/login" target="_blank" class="text-sky-400 text-sm font-semibold hover:underline">View Live →</a>
-        </div>
-      </div>
-
-      <!-- Serveflow -->
-      <div class="glass rounded-2xl overflow-hidden card-hover">
-        <div class="h-48 bg-gradient-to-br from-sky-900/40 to-indigo-900/40 flex items-center justify-center">
-          <div class="text-center">
-            <div class="text-5xl mb-2">🍽️</div>
-            <div class="text-gray-400 text-sm">Restaurant Coordination System</div>
-          </div>
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="tag">Flutter</span><span class="tag">WebSockets</span><span class="tag">Real-Time</span>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">Serveflow</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-4">Multi-device restaurant system with instant order sync, table coordination, and real-time communication across local networks — no external server dependency.</p>
-          <div class="text-gray-600 text-sm">Architecture focus: offline reliability + fault tolerance</div>
-        </div>
-      </div>
-
-      <!-- SouqNote -->
-      <div class="glass rounded-2xl overflow-hidden card-hover">
-        <div class="h-48 bg-gradient-to-br from-emerald-900/40 to-teal-900/40 flex items-center justify-center">
-          <div class="text-center">
-            <div class="text-5xl mb-2">📦</div>
-            <div class="text-gray-400 text-sm">Offline-First Mobile App</div>
-          </div>
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="tag">Flutter</span><span class="tag">Mobile</span><span class="tag">Offline-First</span>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">SouqNote</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-4">Inventory app for businesses in areas with unreliable internet — works fully offline and syncs to the cloud automatically when connectivity returns.</p>
-          <a href="https://play.google.com/store/apps/details?id=com.yohantse.souqnote" target="_blank" class="text-sky-400 text-sm font-semibold hover:underline">View on Play Store →</a>
-        </div>
-      </div>
-
-      <!-- Arifget -->
-      <div class="glass rounded-2xl overflow-hidden card-hover">
-        <div class="h-48 bg-gradient-to-br from-violet-900/40 to-purple-900/40 flex items-center justify-center">
-          <div class="text-center">
-            <div class="text-5xl mb-2">🛒</div>
-            <div class="text-gray-400 text-sm">Mobile Commerce Platform</div>
-          </div>
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">Commerce</span>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">Arifget</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-4">Official mobile app for Arifget.com — scalable commerce infrastructure, real-time integrations, and modern cross-platform architecture. Currently in production.</p>
-          <a href="https://arifget.com" target="_blank" class="text-sky-400 text-sm font-semibold hover:underline">Visit Arifget →</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Legalight row -->
-    <div class="mt-6 glass rounded-2xl p-6 card-hover">
-      <div class="flex items-start gap-6">
-        <div class="text-4xl">⚖️</div>
+    <!-- Structured Capability Matrix -->
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Mobile Platform -->
+      <div class="border-premium bg-zinc-950/40 p-8 rounded-sm border-premium-hover flex flex-col justify-between h-[420px]">
         <div>
-          <div class="flex items-center gap-2 mb-2">
-            <span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">AI Agents</span>
+          <div class="font-mono text-[var(--color-champagne-dim)] text-sm mb-6">01 // CROSS-PLATFORM MOBILE</div>
+          <h3 class="text-white font-display font-medium text-2xl mb-4">Native Execution</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
+            Performance-optimized, beautifully tailored mobile experiences engineered with Flutter. Features robust architectures built to run offline in challenging connectivity situations.
+          </p>
+        </div>
+        <div>
+          <div class="font-mono text-xs text-zinc-500 mb-4 uppercase tracking-wider">Starting from $1,200</div>
+          <div class="pt-4 border-t border-[rgba(212,197,179,0.1)] flex justify-between items-center">
+            <span class="font-mono text-xs text-zinc-400">iOS + Android + Sync Layer</span>
+            <a href="#contact" class="text-[var(--color-champagne)] hover:text-white font-mono text-xs">Configure →</a>
           </div>
-          <h3 class="text-white font-bold text-xl mb-1">Legalight</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">AI-powered legal assistant platform with contextual document analysis, legal workflow support, and intelligent information retrieval.</p>
+        </div>
+      </div>
+
+      <!-- Web Platform -->
+      <div class="border-premium bg-zinc-950/40 p-8 rounded-sm border-premium-hover flex flex-col justify-between h-[420px]">
+        <div>
+          <div class="font-mono text-[var(--color-champagne-dim)] text-sm mb-6">02 // WEB ECOSYSTEMS</div>
+          <h3 class="text-white font-display font-medium text-2xl mb-4">Enterprise Backbones</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
+            Custom reactive web platforms, admin dashboards, and robust operational portals built with React, Node.js, and high-performance database infrastructures.
+          </p>
+        </div>
+        <div>
+          <div class="font-mono text-xs text-zinc-500 mb-4 uppercase tracking-wider">Starting from $800</div>
+          <div class="pt-4 border-t border-[rgba(212,197,179,0.1)] flex justify-between items-center">
+            <span class="font-mono text-xs text-zinc-400">Custom Admin Panels + API</span>
+            <a href="#contact" class="text-[var(--color-champagne)] hover:text-white font-mono text-xs">Configure →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Integration -->
+      <div class="border-premium bg-zinc-950/40 p-8 rounded-sm border-premium-hover flex flex-col justify-between h-[420px]">
+        <div>
+          <div class="font-mono text-[var(--color-champagne-dim)] text-sm mb-6">03 // AUTOMATION & AI</div>
+          <h3 class="text-white font-display font-medium text-2xl mb-4">Workflow Automation</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
+            Incorporate advanced LLM operations, reliable document parser engines, automated scrapers, and smart pipelines directly into your operational processes to reclaim production hours.
+          </p>
+        </div>
+        <div>
+          <div class="font-mono text-xs text-zinc-500 mb-4 uppercase tracking-wider">Starting from $600</div>
+          <div class="pt-4 border-t border-[rgba(212,197,179,0.1)] flex justify-between items-center">
+            <span class="font-mono text-xs text-zinc-400">LLM Integrations + Pipelines</span>
+            <a href="#contact" class="text-[var(--color-champagne)] hover:text-white font-mono text-xs">Configure →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CORE CORE PHILOSOPHY / SYSTEM ATTRIBUTES -->
+<section class="py-24 px-6 bg-[#0B0D13]/60 border-t border-[rgba(212,197,179,0.06)]">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-4">
+        <p class="font-mono text-[var(--color-champagne)] text-xs uppercase tracking-widest mb-2">[ ARCHITECTURAL STANDARD ]</p>
+        <h3 class="text-3xl font-display font-semibold text-white tracking-tight leading-tight">
+          Systems designed to withstand friction.
+        </h3>
+        <p class="text-zinc-400 mt-4 text-sm font-light leading-relaxed">
+          Operational software should not fail when the internet flickers or local network nodes drop out. I approach systems with a physical-world, engineering-first mentality.
+        </p>
+      </div>
+      
+      <div class="lg:col-span-8 grid sm:grid-cols-3 gap-6">
+        <div class="border border-[rgba(212,197,179,0.08)] p-6 rounded-sm">
+          <div class="font-mono text-[var(--color-champagne)] text-lg mb-4">01 //</div>
+          <h4 class="text-white font-display font-medium text-base mb-2">High-Fidelity Operations</h4>
+          <p class="text-zinc-500 text-xs leading-relaxed font-light">
+            Inventory engines and coordination nodes designed with complete transactional integrity, keeping live data accurate, reliable, and instantly auditable.
+          </p>
+        </div>
+        <div class="border border-[rgba(212,197,179,0.08)] p-6 rounded-sm">
+          <div class="font-mono text-[var(--color-champagne)] text-lg mb-4">02 //</div>
+          <h4 class="text-white font-display font-medium text-base mb-2">Resilient Synchronization</h4>
+          <p class="text-zinc-500 text-xs leading-relaxed font-light">
+            Peer-to-peer mechanisms, WebSockets, and database sync configurations structured for volatile contexts with spotty, unreliable online networks.
+          </p>
+        </div>
+        <div class="border border-[rgba(212,197,179,0.08)] p-6 rounded-sm">
+          <div class="font-mono text-[var(--color-champagne)] text-lg mb-4">03 //</div>
+          <h4 class="text-white font-display font-medium text-base mb-2">Contextual Intelligent Logic</h4>
+          <p class="text-zinc-500 text-xs leading-relaxed font-light">
+            Practical AI integrations with deterministic guarantees, parsing complex business documents, summarizing data with safety checks, and processing analytics smoothly.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-24 px-6">
-  <div class="max-w-3xl mx-auto text-center">
-    <div class="available-badge mx-auto mb-8 w-fit">
-      <span class="available-dot"></span>
-      Currently taking on 2 new projects
+<!-- PORTFOLIO SECTION -->
+<section id="projects" class="py-28 px-6 border-t border-[rgba(212,197,179,0.08)]">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 gap-4">
+      <div>
+        <p class="font-mono text-[var(--color-champagne)] text-sm tracking-widest uppercase mb-3">[ 02 / SELECTED REPOS & SHIPPED CODE ]</p>
+        <h2 class="text-3xl sm:text-5xl font-semibold tracking-tight text-white">Proven, live platforms.</h2>
+      </div>
+      <div class="font-mono text-zinc-500 text-xs text-right">
+        // INDEXED_PROJ_COUNT: 05_SYSTEMS
+      </div>
     </div>
-    <h2 class="section-title text-white mb-4">
-      Ready to build<br>
-      <span class="gradient-text">something that works?</span>
+
+    <!-- Clean, Editorial Layout Grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Case 01: Veristock -->
+      <div class="border border-[rgba(212,197,179,0.12)] bg-zinc-950/20 p-6 rounded-sm flex flex-col justify-between group hover:border-[var(--color-champagne)] transition-all duration-400">
+        <div>
+          <div class="aspect-video w-full overflow-hidden border border-[rgba(212,197,179,0.08)] mb-6 grayscale hover:grayscale-0 transition-all duration-500">
+            <img src="veristock 1.png" alt="Veristock Terminal UI" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-wrap gap-2 mb-4 font-mono text-[10px]">
+            <span class="border border-[var(--color-champagne-dim)] px-2.5 py-0.5 text-[var(--color-champagne)]">REACT.JS</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">NODE.JS</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">INVENTORY_ENG</span>
+          </div>
+          <h3 class="text-white font-display font-medium text-2xl mb-2 flex justify-between items-center">
+            Veristock
+            <span class="text-xs font-mono text-zinc-500 font-light">SYSTEM_01</span>
+          </h3>
+          <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">
+            Complete luxury-tier hotel inventory terminal. Restructured highly complex spreadsheet data patterns into clean relational engines featuring automated tracking systems and accurate cost control.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-dashed border-[rgba(212,197,179,0.1)] flex justify-between items-center font-mono text-xs">
+          <span class="text-emerald-400 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Active Production
+          </span>
+          <a href="http://178.104.235.110:8080/login" target="_blank" class="text-[var(--color-champagne)] hover:text-white transition">Explore System →</a>
+        </div>
+      </div>
+
+      <!-- Case 02: Serveflow -->
+      <div class="border border-[rgba(212,197,179,0.12)] bg-zinc-950/20 p-6 rounded-sm flex flex-col justify-between group hover:border-[var(--color-champagne)] transition-all duration-400">
+        <div>
+          <div class="aspect-video w-full bg-[#12141C] border border-[rgba(212,197,179,0.08)] mb-6 flex flex-col justify-center items-center p-6 text-center">
+            <div class="font-mono text-[rgba(212,197,179,0.15)] text-7xl font-bold tracking-tighter mb-2">02</div>
+            <p class="font-mono text-zinc-500 text-xs">REAL-TIME WORKSTATION ARCHITECTURE</p>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-4 font-mono text-[10px]">
+            <span class="border border-[var(--color-champagne-dim)] px-2.5 py-0.5 text-[var(--color-champagne)]">FLUTTER</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">WEBSOCKETS</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">FAULT_TOLERANT</span>
+          </div>
+          <h3 class="text-white font-display font-medium text-2xl mb-2 flex justify-between items-center">
+            Serveflow
+            <span class="text-xs font-mono text-zinc-500 font-light">SYSTEM_02</span>
+          </h3>
+          <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">
+            Multi-node dynamic kitchen coordination system. Facilitates automatic offline device routing protocols to sync tickets smoothly across regional subnets, eliminating single-point cloud system failures.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-dashed border-[rgba(212,197,179,0.1)] flex justify-between items-center font-mono text-xs">
+          <span class="text-zinc-500">Offline architecture priority</span>
+          <span class="text-zinc-400">Status: Private Deployment</span>
+        </div>
+      </div>
+
+      <!-- Case 03: SouqNote -->
+      <div class="border border-[rgba(212,197,179,0.12)] bg-zinc-950/20 p-6 rounded-sm flex flex-col justify-between group hover:border-[var(--color-champagne)] transition-all duration-400">
+        <div>
+          <div class="aspect-video w-full bg-[#0E1311] border border-[rgba(212,197,179,0.08)] mb-6 flex flex-col justify-center items-center p-6 text-center">
+            <div class="font-mono text-[rgba(212,197,179,0.15)] text-7xl font-bold tracking-tighter mb-2">03</div>
+            <p class="font-mono text-zinc-500 text-xs">OFFLINE-FIRST SYNCHRONIZED APP</p>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-4 font-mono text-[10px]">
+            <span class="border border-[var(--color-champagne-dim)] px-2.5 py-0.5 text-[var(--color-champagne)]">FLUTTER</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">LOCAL_DATABASE</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">SYNC_LAYER</span>
+          </div>
+          <h3 class="text-white font-display font-medium text-2xl mb-2 flex justify-between items-center">
+            SouqNote
+            <span class="text-xs font-mono text-zinc-500 font-light">SYSTEM_03</span>
+          </h3>
+          <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">
+            Ultra-light weight store bookkeeping app engineered to process high transactions offline, batching and reconciling background queries securely when mobile connection resumes.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-dashed border-[rgba(212,197,179,0.1)] flex justify-between items-center font-mono text-xs">
+          <span class="text-emerald-400 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Live on Play Store
+          </span>
+          <a href="https://play.google.com/store/apps/details?id=com.yohantse.souqnote" target="_blank" class="text-[var(--color-champagne)] hover:text-white transition">Store Listing →</a>
+        </div>
+      </div>
+
+      <!-- Case 04: Arifget -->
+      <div class="border border-[rgba(212,197,179,0.12)] bg-zinc-950/20 p-6 rounded-sm flex flex-col justify-between group hover:border-[var(--color-champagne)] transition-all duration-400">
+        <div>
+          <div class="aspect-video w-full bg-[#17131B] border border-[rgba(212,197,179,0.08)] mb-6 flex flex-col justify-center items-center p-6 text-center">
+            <div class="font-mono text-[rgba(212,197,179,0.15)] text-7xl font-bold tracking-tighter mb-2">04</div>
+            <p class="font-mono text-zinc-500 text-xs">COMMERCE PLATFORM WORKSTATION</p>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-4 font-mono text-[10px]">
+            <span class="border border-[var(--color-champagne-dim)] px-2.5 py-0.5 text-[var(--color-champagne)]">FLUTTER</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">FASTAPI</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">SCALABLE_API</span>
+          </div>
+          <h3 class="text-white font-display font-medium text-2xl mb-2 flex justify-between items-center">
+            Arifget
+            <span class="text-xs font-mono text-zinc-500 font-light">SYSTEM_04</span>
+          </h3>
+          <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">
+            Production core of Arifget.com. Built a reliable and highly scalable API layer utilizing FastAPI, supporting thousands of customer purchase journeys with optimized payload transfers and robust caching structures.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-dashed border-[rgba(212,197,179,0.1)] flex justify-between items-center font-mono text-xs">
+          <span class="text-emerald-400 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Active Platform
+          </span>
+          <a href="https://arifget.com" target="_blank" class="text-[var(--color-champagne)] hover:text-white transition">Visit Platform →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Case 05: Legalight Full Width Slate -->
+    <div class="mt-8 border border-[rgba(212,197,179,0.12)] bg-zinc-950/20 p-8 rounded-sm group hover:border-[var(--color-champagne)] transition-all duration-400">
+      <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-8">
+          <div class="flex flex-wrap gap-2 mb-4 font-mono text-[10px]">
+            <span class="border border-[var(--color-champagne-dim)] px-2.5 py-0.5 text-[var(--color-champagne)]">FLUTTER</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">FASTAPI</span>
+            <span class="border border-zinc-700 px-2.5 py-0.5 text-zinc-400">AI_AGENTS</span>
+          </div>
+          <h3 class="text-white font-display font-medium text-2xl mb-2">Legalight</h3>
+          <p class="text-zinc-400 text-sm font-light leading-relaxed">
+            AI-augmented legal processing architecture. Engineered secure system capabilities using proprietary FastAPI routines to parse long-context judicial briefs, extracting semantic entities and delivering contextual legal query outputs instantly.
+          </p>
+        </div>
+        <div class="md:col-span-4 md:text-right border-t md:border-t-0 md:border-l border-[rgba(212,197,179,0.1)] pt-6 md:pt-0 md:pl-8">
+          <div class="font-mono text-xs text-zinc-500 mb-2">INTELLIGENT DOCUMENTATION AGENTS</div>
+          <span class="text-zinc-400 font-mono text-xs block">Internal Workflow Integration</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-32 px-6 border-t border-[rgba(212,197,179,0.08)] relative">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,197,179,0.03),transparent_50%)] pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="inline-flex items-center gap-2 border border-emerald-900/40 bg-emerald-950/20 px-3 py-1 text-xs font-mono text-emerald-400 mb-8">
+      <span class="live-indicator"></span> 02 Open Capacity Slots Remain
+    </div>
+    
+    <h2 class="text-4xl sm:text-6xl font-semibold tracking-tight text-white mb-6">
+      Let's map out your project stability.
     </h2>
-    <p class="text-gray-400 text-lg mb-12 max-w-xl mx-auto">
-      Tell me what you're building and I'll get back to you within 24 hours with thoughts on scope, timeline, and cost.
+    <p class="text-zinc-400 text-lg sm:text-xl font-light mb-16 max-w-xl mx-auto">
+      Tell me about your product requirements. I respond with detailed feedback on scope feasibility, timeline structure, and flat deployment costs within 24 hours.
     </p>
 
-    <div class="grid sm:grid-cols-3 gap-4 mb-12">
-      <a href="mailto:yohantse121@gmail.com" class="glass rounded-2xl p-5 card-hover flex flex-col items-center gap-2 text-center">
-        <div class="text-2xl">✉️</div>
-        <div class="text-white font-semibold text-sm">Email</div>
-        <div class="text-gray-400 text-xs">yohantse121@gmail.com</div>
+    <!-- Structural Contact Grid -->
+    <div class="grid sm:grid-cols-3 gap-4 mb-16 font-mono text-sm">
+      
+      <!-- Mail Link -->
+      <a href="mailto:yohantse121@gmail.com" class="border border-[rgba(212,197,179,0.15)] bg-zinc-950 p-6 rounded-sm hover:border-[var(--color-champagne)] hover:bg-[rgba(212,197,179,0.02)] transition duration-300 flex flex-col items-center gap-3">
+        <span class="text-zinc-500 text-xs">// EMAIL</span>
+        <span class="text-white font-medium text-sm">yohantse121@gmail.com</span>
       </a>
-      <a href="https://t.me/apuovia" target="_blank" class="glass rounded-2xl p-5 card-hover flex flex-col items-center gap-2 text-center">
-        <div class="text-2xl">✈️</div>
-        <div class="text-white font-semibold text-sm">Telegram</div>
-        <div class="text-gray-400 text-xs">@apuovia</div>
+
+      <!-- Telegram Link -->
+      <a href="https://t.me/apuovia" target="_blank" class="border border-[rgba(212,197,179,0.15)] bg-zinc-950 p-6 rounded-sm hover:border-[var(--color-champagne)] hover:bg-[rgba(212,197,179,0.02)] transition duration-300 flex flex-col items-center gap-3">
+        <span class="text-zinc-500 text-xs">// TELEGRAM</span>
+        <span class="text-white font-medium text-sm">@apuovia</span>
       </a>
-      <a href="https://wa.me/251979943992" target="_blank" class="glass rounded-2xl p-5 card-hover flex flex-col items-center gap-2 text-center">
-        <div class="text-2xl">💬</div>
-        <div class="text-white font-semibold text-sm">WhatsApp</div>
-        <div class="text-gray-400 text-xs">+251 979 943 992</div>
+
+      <!-- WhatsApp Link -->
+      <a href="https://wa.me/251979943992" target="_blank" class="border border-[rgba(212,197,179,0.15)] bg-zinc-950 p-6 rounded-sm hover:border-[var(--color-champagne)] hover:bg-[rgba(212,197,179,0.02)] transition duration-300 flex flex-col items-center gap-3">
+        <span class="text-zinc-500 text-xs">// TELEPHONE & WA</span>
+        <span class="text-white font-medium text-sm">+251 979 943 992</span>
       </a>
+
     </div>
 
-    <div class="flex justify-center gap-4">
-      <a href="https://github.com/yohantse" target="_blank" class="text-gray-400 hover:text-white text-sm transition">GitHub ↗</a>
-      <a href="https://docs.google.com/document/d/1EVSxD3LQ5Oh7fF1W25OPd19aqL-D6qpn-_hqTEv6djE/edit?usp=sharing" target="_blank" class="text-gray-400 hover:text-white text-sm transition">Resume ↗</a>
+    <!-- Extra Links -->
+    <div class="flex justify-center items-center gap-6 font-mono text-xs text-zinc-500">
+      <a href="https://github.com/yohantse" target="_blank" class="hover:text-[var(--color-champagne)] transition">GITHUB_REPOS ↗</a>
+      <span class="text-zinc-800">|</span>
+      <a href="https://docs.google.com/document/d/1EVSxD3LQ5Oh7fF1W25OPd19aqL-D6qpn-_hqTEv6djE/edit?usp=sharing" target="_blank" class="hover:text-[var(--color-champagne)] transition">FULL_RESUME_DOC ↗</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="border-t border-white/5 py-8 px-6">
-  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-    <div class="flex items-center gap-2">
-      <img src="logo.png" alt="Jo" class="w-6 h-6 rounded-full opacity-60">
-      <span class="text-gray-600 text-sm">© 2026 Yohannes Tsegaye</span>
+<footer class="border-t border-[rgba(212,197,179,0.06)] bg-[#07080B] py-12 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 font-mono text-xs text-zinc-600">
+    <div class="flex items-center gap-3">
+      <div class="w-5 h-5 rounded-full border border-zinc-800 bg-zinc-950 flex items-center justify-center text-[10px] text-zinc-500">
+        J
+      </div>
+      <span>© 2026 Yohannes Tsegaye. Architectural Execution.</span>
     </div>
-    <div class="flex gap-6 text-sm text-gray-600">
-      <a href="#services" class="hover:text-gray-400 transition">Services</a>
-      <a href="#projects" class="hover:text-gray-400 transition">Projects</a>
-      <a href="#contact" class="hover:text-gray-400 transition">Contact</a>
+    <div class="flex gap-6">
+      <a href="#services" class="hover:text-zinc-400 transition">_capabilities</a>
+      <a href="#projects" class="hover:text-zinc-400 transition">_systems</a>
+      <a href="#contact" class="hover:text-zinc-400 transition">_connect</a>
     </div>
   </div>
 </footer>
