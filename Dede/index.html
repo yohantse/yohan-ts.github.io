@@ -1,483 +1,2643 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEDE Glass Factory | Premium Glass Packaging Manufacturer</title>
-    <style>
-        /* === CSS VARIABLES & RESET === */
-        :root {
-            --primary-color: #0A2540; /* Deep industrial blue */
-            --secondary-color: #D4AF37; /* Amber/gold representing glass */
-            --accent-color: #4A90E2;
-            --text-dark: #333333;
-            --text-light: #F4F7F6;
-            --bg-light: #FFFFFF;
-            --bg-gray: #F8F9FA;
-            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-            --transition: all 0.3s ease;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>DEDE Bottle Factory PLC | Premium Glass Packaging</title>
 
-        body {
-            font-family: var(--font-main);
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--bg-light);
-            overflow-x: hidden;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        /* === TYPOGRAPHY === */
-        h1, h2, h3 {
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--primary-color);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        h2 { font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; }
-        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        p { margin-bottom: 1rem; color: #555; }
-        
-        .section-subtitle {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 3rem auto;
-            color: #666;
-            font-size: 1.1rem;
-        }
+<style>
 
-        /* === BUTTONS & LINKS === */
-        a { text-decoration: none; color: inherit; }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            cursor: pointer;
-            transition: var(--transition);
-            border: 2px solid transparent;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        .btn-primary {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-        }
+html{
+scroll-behavior:smooth;
+}
 
-        .btn-primary:hover {
-            background-color: transparent;
-            border-color: var(--secondary-color);
-            color: var(--secondary-color);
-        }
+:root{
 
-        .btn-outline {
-            background-color: transparent;
-            border-color: var(--text-light);
-            color: var(--text-light);
-        }
+--gold:#d4b56a;
+--gold2:#f7d993;
 
-        .btn-outline:hover {
-            background-color: var(--text-light);
-            color: var(--primary-color);
-        }
+--dark:#05070a;
+--dark2:#0c1117;
+--dark3:#131a22;
 
-        /* === HEADER & NAVIGATION === */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+--white:#ffffff;
+--text:#dfe5ec;
+--muted:#8d98a8;
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo span { color: var(--secondary-color); }
+--border:rgba(255,255,255,.08);
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+--shadow:0 25px 60px rgba(0,0,0,.35);
 
-        nav a {
-            font-weight: 500;
-            color: var(--primary-color);
-            transition: var(--transition);
-        }
+}
 
-        nav a:hover { color: var(--secondary-color); }
+body{
 
-        /* === HERO SECTION === */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.7)), url('https://images.unsplash.com/photo-1596541603704-5188f615f5c9?q=80&w=2070&auto=format&fit=crop') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--text-light);
-            padding: 0 5%;
-            margin-top: 60px;
-        }
+font-family:'Manrope',sans-serif;
 
-        .hero-content { max-width: 800px; }
-        
-        .hero h1 {
-            color: var(--text-light);
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-        }
+background:
 
-        .hero p {
-            color: #E0E0E0;
-            font-size: 1.25rem;
-            margin-bottom: 2.5rem;
-        }
+linear-gradient(180deg,#05070a,#0b1017 40%,#10161e);
 
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 3rem;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            padding-top: 2rem;
-        }
+color:white;
 
-        .stat-item h4 {
-            font-size: 2rem;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
+overflow-x:hidden;
 
-        /* === SECTION LAYOUTS === */
-        section { padding: 6rem 5%; }
-        .bg-gray { background-color: var(--bg-gray); }
+}
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
+a{
 
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+text-decoration:none;
 
-        .grid-4 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
+color:inherit;
 
-        /* === CARDS (Products & Values) === */
-        .card {
-            background: var(--bg-light);
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: var(--transition);
-            border-top: 4px solid transparent;
-        }
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-top-color: var(--secondary-color);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
+img{
 
-        .icon-box {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
+display:block;
 
-        .product-card {
-            padding: 0;
-            overflow: hidden;
-            text-align: center;
-        }
+max-width:100%;
 
-        .product-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-bottom: 4px solid var(--secondary-color);
-        }
-        
-        .product-info { padding: 2rem; }
+}
 
-        /* === FACILITY SECTION === */
-        .facility-img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
+section{
 
-        .facility-list { list-style: none; }
-        
-        .facility-list li {
-            margin-bottom: 1.5rem;
-            padding-left: 2rem;
-            position: relative;
-        }
+padding:110px 8%;
 
-        .facility-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
+position:relative;
 
-        /* === CONTACT SECTION === */
-        .contact-section { background-color: var(--primary-color); color: var(--text-light); }
-        .contact-section h2 { color: var(--text-light); }
-        .contact-section p { color: #ccc; }
+}
 
-        .contact-info {
-            background: rgba(255,255,255,0.05);
-            padding: 3rem;
-            border-radius: 8px;
-            height: 100%;
-        }
+.container{
 
-        .contact-item { margin-bottom: 2rem; }
-        .contact-item h4 { color: var(--secondary-color); margin-bottom: 0.5rem; }
+max-width:1400px;
 
-        form {
-            background: var(--bg-light);
-            padding: 3rem;
-            border-radius: 8px;
-        }
+margin:auto;
 
-        .form-group { margin-bottom: 1.5rem; }
-        
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-            transition: var(--transition);
-        }
+}
 
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(10,37,64,0.1);
-        }
+h1{
 
-        /* === FOOTER === */
-        footer {
-            background: #051320;
-            color: #888;
-            text-align: center;
-            padding: 2rem 5%;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
+font-size:78px;
 
-        /* === RESPONSIVE === */
-        @media (max-width: 900px) {
-            .grid-2 { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.5rem; }
-            nav { display: none; } /* Add mobile menu logic here if needed */
-        }
-    </style>
+font-weight:800;
+
+line-height:1;
+
+letter-spacing:-3px;
+
+}
+
+h2{
+
+font-size:48px;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+color:var(--muted);
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+.subtitle{
+
+max-width:650px;
+
+margin-bottom:70px;
+
+}
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:22px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:1000;
+
+transition:.4s;
+
+background:rgba(5,7,10,.35);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+header.scrolled{
+
+padding:16px 8%;
+
+background:rgba(5,7,10,.92);
+
+}
+
+.logo{
+
+font-size:24px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+}
+
+.logo span{
+
+color:var(--gold);
+
+}
+
+nav{
+
+display:flex;
+
+gap:36px;
+
+}
+
+nav a{
+
+color:#cfd5dd;
+
+font-weight:600;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+nav a:hover{
+
+color:white;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+height:2px;
+
+width:0;
+
+background:var(--gold);
+
+transition:.4s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+.cta{
+
+padding:14px 30px;
+
+border-radius:999px;
+
+background:var(--gold);
+
+color:#111;
+
+font-weight:700;
+
+transition:.4s;
+
+}
+
+.cta:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 40px rgba(212,181,106,.45);
+
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at 80% 20%,rgba(212,181,106,.18),transparent 35%),
+
+radial-gradient(circle at 20% 80%,rgba(255,255,255,.08),transparent 35%);
+
+}
+
+.hero video,
+.hero img{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+opacity:.18;
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:3;
+
+max-width:820px;
+
+}
+
+.tag{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+margin-bottom:30px;
+
+color:var(--gold2);
+
+font-weight:600;
+
+}
+
+.hero h1{
+
+margin-bottom:28px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+max-width:700px;
+
+margin-bottom:45px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:18px;
+
+}
+
+.btn{
+
+padding:18px 34px;
+
+border-radius:999px;
+
+font-weight:700;
+
+transition:.4s;
+
+}
+
+.primary{
+
+background:var(--gold);
+
+color:#111;
+
+}
+
+.primary:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 0 40px rgba(212,181,106,.35);
+
+}
+
+.secondary{
+
+border:1px solid rgba(255,255,255,.12);
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+}
+
+.secondary:hover{
+
+background:white;
+
+color:#111;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+margin-top:90px;
+
+}
+
+.stat{
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+padding:35px;
+
+border-radius:26px;
+
+transition:.45s;
+
+}
+
+.stat:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(212,181,106,.5);
+
+}
+
+.stat h3{
+
+font-size:46px;
+
+color:var(--gold);
+
+margin-bottom:8px;
+
+}
+
+.section-title{
+
+max-width:700px;
+
+margin-bottom:70px;
+
+}
+
+.grid{
+
+display:grid;
+
+gap:30px;
+
+}
+
+.grid-4{
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+}
+
+.grid-3{
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+}
+
+.card{
+
+background:rgba(255,255,255,.03);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+padding:45px;
+
+border-radius:28px;
+
+transition:.45s;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:4px;
+
+background:linear-gradient(90deg,var(--gold),transparent);
+
+transform:scaleX(0);
+
+transform-origin:left;
+
+transition:.5s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+border-color:rgba(212,181,106,.45);
+
+box-shadow:var(--shadow);
+
+}
+
+.card:hover::before{
+
+transform:scaleX(1);
+
+}
+
+.icon{
+
+width:70px;
+
+height:70px;
+
+border-radius:20px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:rgba(212,181,106,.08);
+
+font-size:30px;
+
+margin-bottom:25px;
+
+}
+
+.card h3{
+
+font-size:28px;
+
+margin-bottom:18px;
+
+}
+
+.industries{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:30px;
+
+}
+
+.industry{
+
+padding:40px;
+
+border-radius:26px;
+
+background:linear-gradient(180deg,#121821,#0b1017);
+
+border:1px solid rgba(255,255,255,.06);
+
+transition:.4s;
+
+text-align:center;
+
+}
+
+.industry:hover{
+
+transform:translateY(-10px);
+
+border-color:var(--gold);
+
+}
+
+.industry h4{
+
+margin-top:25px;
+
+font-size:22px;
+
+}
+
+.product{
+
+overflow:hidden;
+
+padding:0;
+
+}
+
+.product img{
+
+height:340px;
+
+width:100%;
+
+object-fit:cover;
+
+transition:1s;
+
+}
+
+.product:hover img{
+
+transform:scale(1.08);
+
+}
+
+.product-content{
+
+padding:35px;
+
+}
+
+.product-content h3{
+
+margin-bottom:15px;
+
+}
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:none;
+
+}
+
+@media(max-width:1000px){
+
+nav{
+
+display:none;
+
+}
+
+h1{
+
+font-size:56px;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+h1{
+
+font-size:42px;
+
+}
+
+h2{
+
+font-size:34px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+section{
+
+padding:90px 6%;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--secondary-color)"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-            DEDE <span>Glass Factory</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#facility">Facility</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header id="header">
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Environmentally Responsible Glass Production</h1>
-            <p>We produce high-quality, sustainable glass packaging for beverage, food, and pharmaceutical markets locally and internationally.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="#contact" class="btn btn-primary">Get a Quote</a>
-                <a href="#products" class="btn btn-outline">View Products</a>
-            </div>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <h4>2018</h4>
-                    <p>Founded</p>
-                </div>
-                <div class="stat-item">
-                    <h4>70,000 m²</h4>
-                    <p>Factory Site</p>
-                </div>
-                <div class="stat-item">
-                    <h4>100%</h4>
-                    <p>Fully Integrated</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="logo">
+DEDE <span>GLASS</span>
+</div>
 
-    <!-- WHY CHOOSE US -->
-    <section id="about" class="bg-gray">
-        <h2>Why Choose DEDE</h2>
-        <p class="section-subtitle">Delivering reliable, high-quality bottles through modern, sustainable production systems aligned with global standards.</p>
-        
-        <div class="grid-4">
-            <div class="card">
-                <div class="icon-box">⚙️</div>
-                <h3>End-to-End Control</h3>
-                <p>We manage the entire production process—from raw material sourcing to melting, forming, and final packaging—ensuring consistent quality.</p>
-            </div>
-            <div class="card">
-                <div class="icon-box">📈</div>
-                <h3>Reliable Supply</h3>
-                <p>Our operations are designed to address market shortages by offering fast startup and dependable production capacity.</p>
-            </div>
-            <div class="card">
-                <div class="icon-box">🔬</div>
-                <h3>Advanced Tech</h3>
-                <p>Operating world-class equipment supplied by leading European manufacturers, ensuring precision and international-grade quality.</p>
-            </div>
-            <div class="card">
-                <div class="icon-box">🌱</div>
-                <h3>Sustainable</h3>
-                <p>We prioritize recycled materials, energy efficiency, and environmentally responsible processes.</p>
-            </div>
-        </div>
-    </section>
+<nav>
 
-    <!-- PRODUCTS -->
-    <section id="products">
-        <h2>Our Products</h2>
-        <p class="section-subtitle">Serving the beverage, pharmaceutical, and cosmetics industries with precision-engineered packaging.</p>
-        
-        <div class="grid-3">
-            <div class="card product-card">
-                <!-- Using placeholder images to simulate product photos -->
-                <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=2070&auto=format&fit=crop" alt="Flint Glass">
-                <div class="product-info">
-                    <h3>Flint (Clear) Glass</h3>
-                    <p>Perfect for spirits, water, and foods requiring high visibility and premium presentation.</p>
-                </div>
-            </div>
-            <div class="card product-card">
-                <img src="https://images.unsplash.com/photo-1605335682855-8321528c1199?q=80&w=2070&auto=format&fit=crop" alt="Amber Glass">
-                <div class="product-info">
-                    <h3>Amber Glass</h3>
-                    <p>Provides excellent UV protection, ideal for beers, pharmaceuticals, and sensitive liquids.</p>
-                </div>
-            </div>
-            <div class="card product-card">
-                <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1780&auto=format&fit=crop" alt="Specialty Glass">
-                <div class="product-info">
-                    <h3>Specialty Glass</h3>
-                    <p>Custom designs and clean-room manufactured bottles for cosmetics and medical applications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<a href="#about">About</a>
 
-    <!-- FACILITY -->
-    <section id="facility" class="bg-gray">
-        <div class="grid-2">
-            <div>
-                <img class="facility-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Industrial Factory Floor">
-            </div>
-            <div>
-                <h2>Our Facility at a Glance</h2>
-                <p>Located in Debre Berhan, our purpose-built plant is designed to support efficient material flow, safe working conditions, and scalable manufacturing.</p>
-                <br>
-                <ul class="facility-list">
-                    <li><strong>Modern Industrial Site:</strong> Established in 2018, strategically located to support efficient logistics.</li>
-                    <li><strong>Integrated Capabilities:</strong> Covering raw material processing, melting, forming, and inspection.</li>
-                    <li><strong>Market-Focused Output:</strong> Serving local demand in Ethiopia with planned regional and export expansion.</li>
-                    <li><strong>Quality First:</strong> Strict production controls and inspections ensure safety and performance.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<a href="#industries">Industries</a>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-        <h2>Looking for a Reliable Partner?</h2>
-        <p class="section-subtitle">Contact our sales team today to discuss your product requirements, customization needs, and supply volumes.</p>
-        
-        <div class="grid-2">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h4>📍 Address</h4>
-                    <p>Addis Ababa, Ethiopia</p>
-                    <p><small>(Factory located in Debre Berhan)</small></p>
-                </div>
-                <div class="contact-item">
-                    <h4>📞 Call Us</h4>
-                    <p>+251-911259546</p>
-                </div>
-                <div class="contact-item">
-                    <h4>✉️ Email Us</h4>
-                    <p>info@dedebottle.com</p>
-                </div>
-            </div>
+<a href="#products">Products</a>
 
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('In a production environment, this would submit to your server.');">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Company / Organization">
-                </div>
-                <div class="form-group">
-                    <textarea rows="5" placeholder="Your Message or Requirements" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-            </form>
-        </div>
-    </section>
+<a href="#manufacturing">Manufacturing</a>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 DEDE Bottle Factory PLC. All Rights Reserved.</p>
-    </footer>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<a href="#contact" class="cta">Request Quote</a>
+
+</header>
+
+<section class="hero">
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=80">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="tag">
+
+Premium Glass Packaging Manufacturer
+
+</div>
+
+<h1>
+
+ENVIRONMENTALLY RESPONSIBLE GLASS PACKAGING
+
+</h1>
+
+<p>
+
+Manufacturing premium glass bottles and containers for the beverage, food, pharmaceutical, and cosmetics industries with world-class quality and sustainable production.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="#products">
+
+Explore Products
+
+</a>
+
+<a class="btn secondary" href="#contact">
+
+Get a Quote
+
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<h3 data-count="2018">2018</h3>
+
+<p>Established</p>
+
+</div>
+
+<div class="stat">
+
+<h3 data-count="70000">70,000m²</h3>
+
+<p>Industrial Site</p>
+
+</div>
+
+<div class="stat">
+
+<h3 data-count="24">24/7</h3>
+
+<p>Production</p>
+
+</div>
+
+<div class="stat">
+
+<h3 data-count="100">100%</h3>
+
+<p>Integrated Facility</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+
+Building the Future of Sustainable Glass Manufacturing
+
+</h2>
+
+<p class="subtitle">
+
+DEDE Bottle Factory PLC combines advanced manufacturing technology, precision engineering, and environmentally responsible production to deliver premium glass packaging solutions for businesses across Ethiopia and international markets.
+
+</p>
+
+</div>
+
+<div class="grid grid-4">
+
+<div class="card reveal">
+
+<div class="icon">⚙</div>
+
+<h3>Integrated Production</h3>
+
+<p>
+
+Complete control from raw materials to finished packaging for unmatched quality consistency.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<div class="icon">🌍</div>
+
+<h3>Sustainability</h3>
+
+<p>
+
+Designed around energy efficiency, recyclable materials and responsible manufacturing.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<div class="icon">🏭</div>
+
+<h3>European Technology</h3>
+
+<p>
+
+Powered by internationally recognized manufacturing equipment delivering exceptional precision.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<div class="icon">✓</div>
+
+<h3>Reliable Supply</h3>
+
+<p>
+
+Supporting beverage, pharmaceutical and food manufacturers with dependable production capacity.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="industries">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+Industries We Serve
+</h2>
+
+<p class="subtitle">
+Our glass packaging solutions support businesses across multiple sectors requiring safety, durability, and premium presentation.
+</p>
+
+</div>
+
+
+<div class="industries">
+
+
+<div class="industry reveal">
+
+<div class="icon">
+🍺
+</div>
+
+<h4>
+Beverage
+</h4>
+
+<p>
+Premium bottles for water, soft drinks, beer, wine, and spirits.
+</p>
+
+</div>
+
+
+
+<div class="industry reveal">
+
+<div class="icon">
+🍯
+</div>
+
+<h4>
+Food
+</h4>
+
+<p>
+Safe and reliable glass containers designed for food preservation.
+</p>
+
+</div>
+
+
+
+<div class="industry reveal">
+
+<div class="icon">
+💊
+</div>
+
+<h4>
+Pharmaceutical
+</h4>
+
+<p>
+High-quality glass packaging meeting strict healthcare requirements.
+</p>
+
+</div>
+
+
+
+<div class="industry reveal">
+
+<div class="icon">
+🧴
+</div>
+
+<h4>
+Cosmetics
+</h4>
+
+<p>
+Premium packaging solutions for beauty and personal care brands.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="products" style="background:#080c12;">
+
+
+<div class="container">
+
+
+<div class="section-title reveal">
+
+
+<h2>
+Our Glass Products
+</h2>
+
+
+<p class="subtitle">
+Engineered packaging solutions designed for performance, protection, and premium brand presentation.
+</p>
+
+
+</div>
+
+
+
+<div class="grid grid-3">
+
+
+
+<div class="card product reveal">
+
+
+<img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=900&q=80">
+
+
+<div class="product-content">
+
+
+<h3>
+Clear Flint Glass
+</h3>
+
+
+<p>
+Crystal-clear bottles designed for premium beverages, food products, and consumer brands requiring visual appeal.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="card product reveal">
+
+
+<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80">
+
+
+<div class="product-content">
+
+
+<h3>
+Amber Glass
+</h3>
+
+
+<p>
+UV-resistant glass packaging ideal for pharmaceuticals, beverages, and sensitive liquid products.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card product reveal">
+
+
+<img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=900&q=80">
+
+
+<div class="product-content">
+
+
+<h3>
+Custom Glass Solutions
+</h3>
+
+
+<p>
+Customized bottle designs and manufacturing capabilities tailored to unique customer requirements.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="manufacturing">
+
+
+<div class="container">
+
+
+<div class="section-title reveal">
+
+
+<h2>
+From Raw Materials To Finished Bottle
+</h2>
+
+
+<p class="subtitle">
+Every bottle passes through a controlled manufacturing process focused on quality, safety, and consistency.
+</p>
+
+
+</div>
+
+
+
+<div class="process">
+
+
+
+<div class="process-item reveal">
+
+
+<div class="number">
+01
+</div>
+
+
+<div>
+
+<h3>
+Raw Materials
+</h3>
+
+<p>
+Carefully selected materials prepared for high-quality glass production.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="process-item reveal">
+
+
+<div class="number">
+02
+</div>
+
+
+<div>
+
+<h3>
+Melting & Forming
+</h3>
+
+<p>
+Advanced furnaces and precision forming systems create consistent glass products.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="process-item reveal">
+
+
+<div class="number">
+03
+</div>
+
+
+<div>
+
+<h3>
+Quality Inspection
+</h3>
+
+<p>
+Automated and manual inspection ensures every product meets required standards.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="process-item reveal">
+
+
+<div class="number">
+04
+</div>
+
+
+<div>
+
+<h3>
+Packaging & Distribution
+</h3>
+
+<p>
+Finished bottles are prepared safely for local and international delivery.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<style>
+
+
+.process{
+
+display:grid;
+
+gap:25px;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+
+.process-item{
+
+display:flex;
+
+gap:30px;
+
+align-items:center;
+
+background:rgba(255,255,255,.03);
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:35px;
+
+border-radius:24px;
+
+transition:.4s;
+
+}
+
+
+.process-item:hover{
+
+transform:translateX(15px);
+
+border-color:var(--gold);
+
+}
+
+
+
+.number{
+
+min-width:80px;
+
+height:80px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:rgba(212,181,106,.12);
+
+color:var(--gold);
+
+font-size:28px;
+
+font-weight:800;
+
+}
+
+
+.process-item h3{
+
+font-size:28px;
+
+margin-bottom:10px;
+
+}
+
+
+
+
+</style>
+
+<section id="sustainability" style="background:#080c12;">
+
+
+<div class="container">
+
+
+<div class="grid sustainability-grid">
+
+
+<div class="reveal">
+
+
+<h2>
+Glass For A Sustainable Future
+</h2>
+
+
+<p>
+Glass is one of the world's most sustainable packaging materials. DEDE Bottle Factory focuses on responsible production practices that reduce environmental impact while delivering durable packaging solutions.
+</p>
+
+
+<div class="sustain-list">
+
+
+<div>
+<span>♻</span>
+<div>
+<h3>
+100% Recyclable Material
+</h3>
+<p>
+Glass can be recycled repeatedly without losing quality or purity.
+</p>
+</div>
+</div>
+
+
+
+<div>
+<span>⚡</span>
+<div>
+<h3>
+Energy Efficient Production
+</h3>
+<p>
+Modern production systems designed to optimize energy consumption.
+</p>
+</div>
+</div>
+
+
+
+
+<div>
+<span>🌱</span>
+<div>
+<h3>
+Responsible Manufacturing
+</h3>
+<p>
+Processes designed with environmental responsibility in mind.
+</p>
+</div>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="sustain-image reveal">
+
+
+<img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1000&q=80">
+
+
+<div class="floating-card">
+
+<h3>
+70,000m²
+</h3>
+
+<p>
+Purpose-built industrial facility</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="gallery">
+
+
+<div class="container">
+
+
+<div class="section-title reveal">
+
+
+<h2>
+Inside Our Manufacturing Facility
+</h2>
+
+
+<p class="subtitle">
+A glimpse into the technology, craftsmanship, and industrial capability behind every DEDE glass product.
+</p>
+
+
+</div>
+
+
+
+<div class="gallery">
+
+
+<div class="gallery-item large reveal">
+
+<img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80">
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80">
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="contact" class="contact">
+
+
+<div class="container">
+
+
+<div class="section-title reveal">
+
+
+<h2>
+Ready To Build Your Next Packaging Solution?
+</h2>
+
+
+<p class="subtitle">
+Contact our team to discuss custom glass requirements, production volumes, and partnership opportunities.
+</p>
+
+
+</div>
+
+
+
+
+<div class="contact-box">
+
+
+
+<div class="contact-info reveal">
+
+
+<h3>
+DEDE Bottle Factory PLC
+</h3>
+
+
+<p>
+Premium glass packaging manufacturer serving beverage, food, pharmaceutical, and industrial markets.
+</p>
+
+
+<div class="contact-detail">
+
+<strong>
+Location
+</strong>
+
+<span>
+Debre Berhan, Ethiopia
+</span>
+
+</div>
+
+
+
+<div class="contact-detail">
+
+<strong>
+Email
+</strong>
+
+<span>
+info@dedebottle.com
+</span>
+
+</div>
+
+
+
+<div class="contact-detail">
+
+<strong>
+Phone
+</strong>
+
+<span>
++251 911 259 546
+</span>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<form class="quote-form reveal">
+
+
+<div class="input-group">
+
+<input type="text" placeholder="Full Name">
+
+</div>
+
+
+
+<div class="input-group">
+
+<input type="email" placeholder="Email Address">
+
+</div>
+
+
+
+<div class="input-group">
+
+<input type="text" placeholder="Company Name">
+
+</div>
+
+
+
+<div class="input-group">
+
+<select>
+
+<option>
+Select Industry
+</option>
+
+<option>
+Beverage
+</option>
+
+<option>
+Food
+</option>
+
+<option>
+Pharmaceutical
+</option>
+
+<option>
+Cosmetics
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="input-group">
+
+<textarea rows="5" placeholder="Tell us about your packaging requirements"></textarea>
+
+</div>
+
+
+<button class="cta submit">
+
+Send Request
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+
+<div class="container footer-grid">
+
+
+<div>
+
+<div class="logo">
+DEDE <span>GLASS</span>
+</div>
+
+
+<p>
+Creating sustainable glass packaging solutions through innovation, quality, and responsible manufacturing.
+</p>
+
+
+</div>
+
+
+
+
+<div>
+
+<h4>
+Company
+</h4>
+
+<a href="#about">
+About
+</a>
+
+<a href="#products">
+Products
+</a>
+
+<a href="#manufacturing">
+Manufacturing
+</a>
+
+
+</div>
+
+
+
+
+<div>
+
+<h4>
+Industries
+</h4>
+
+
+<a>
+Beverage
+</a>
+
+<a>
+Food
+</a>
+
+<a>
+Pharmaceutical
+</a>
+
+<a>
+Cosmetics
+</a>
+
+
+</div>
+
+
+
+
+<div>
+
+<h4>
+Contact
+</h4>
+
+<a>
+info@dedebottle.com
+</a>
+
+<a>
++251 911 259 546
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="copyright">
+
+© 2026 DEDE Bottle Factory PLC. All Rights Reserved.
+
+</div>
+
+
+</footer>
+
+
+
+
+
+<style>
+
+
+.sustainability-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+}
+
+
+
+.sustain-list{
+
+margin-top:40px;
+
+display:grid;
+
+gap:30px;
+
+}
+
+
+
+.sustain-list>div{
+
+display:flex;
+
+gap:20px;
+
+}
+
+
+
+.sustain-list span{
+
+font-size:35px;
+
+}
+
+
+
+.sustain-list h3{
+
+margin-bottom:5px;
+
+}
+
+
+
+.sustain-image{
+
+position:relative;
+
+}
+
+
+
+.sustain-image img{
+
+border-radius:30px;
+
+height:600px;
+
+width:100%;
+
+object-fit:cover;
+
+}
+
+
+
+.floating-card{
+
+position:absolute;
+
+bottom:40px;
+
+left:-40px;
+
+background:#111820;
+
+border:1px solid rgba(255,255,255,.1);
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:var(--shadow);
+
+}
+
+
+
+.floating-card h3{
+
+color:var(--gold);
+
+font-size:40px;
+
+}
+
+
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+grid-template-rows:300px 300px;
+
+gap:25px;
+
+}
+
+
+
+.gallery-item{
+
+overflow:hidden;
+
+border-radius:28px;
+
+}
+
+
+
+.gallery-item.large{
+
+grid-row:span 2;
+
+}
+
+
+
+.gallery img{
+
+height:100%;
+
+width:100%;
+
+object-fit:cover;
+
+transition:1s;
+
+}
+
+
+
+.gallery-item:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+
+.contact{
+
+background:
+
+radial-gradient(circle at top right,rgba(212,181,106,.12),transparent 40%);
+
+}
+
+
+
+.contact-box{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+}
+
+
+
+.contact-info{
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:50px;
+
+border-radius:30px;
+
+}
+
+
+
+.contact-info h3{
+
+font-size:35px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.contact-detail{
+
+margin-top:30px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:5px;
+
+}
+
+
+
+.contact-detail strong{
+
+color:var(--gold);
+
+}
+
+
+
+.quote-form{
+
+background:white;
+
+padding:45px;
+
+border-radius:30px;
+
+}
+
+
+
+.input-group{
+
+margin-bottom:20px;
+
+}
+
+
+
+input,
+textarea,
+select{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+background:#f1f3f5;
+
+border-radius:15px;
+
+font-family:inherit;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+
+
+textarea{
+
+resize:none;
+
+}
+
+
+
+.submit{
+
+border:none;
+
+width:100%;
+
+cursor:pointer;
+
+font-size:17px;
+
+}
+
+
+
+footer{
+
+background:#030508;
+
+padding:70px 8% 30px;
+
+}
+
+
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1fr;
+
+gap:50px;
+
+}
+
+
+
+footer h4{
+
+margin-bottom:20px;
+
+color:white;
+
+}
+
+
+
+footer a{
+
+display:block;
+
+color:#8993a1;
+
+margin-bottom:12px;
+
+}
+
+
+
+footer p{
+
+margin-top:20px;
+
+}
+
+
+
+.copyright{
+
+border-top:1px solid rgba(255,255,255,.08);
+
+margin-top:50px;
+
+padding-top:25px;
+
+text-align:center;
+
+color:#697383;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.sustainability-grid,
+.contact-box,
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.gallery{
+
+display:block;
+
+}
+
+
+.gallery-item{
+
+height:300px;
+
+margin-bottom:20px;
+
+}
+
+
+.floating-card{
+
+left:20px;
+
+}
+
+
+}
+
+
+</style>
+
+<script>
+
+
+/* ===============================
+   STICKY HEADER EFFECT
+================================ */
+
+const header = document.getElementById("header");
+
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY > 50){
+
+header.classList.add("scrolled");
+
+}else{
+
+header.classList.remove("scrolled");
+
+}
+
+});
+
+
+
+
+/* ===============================
+   SCROLL REVEAL ANIMATION
+================================ */
+
+
+const revealElements = document.querySelectorAll(".reveal");
+
+
+const revealObserver = new IntersectionObserver(
+
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("active");
+
+revealObserver.unobserve(entry.target);
+
+}
+
+
+});
+
+
+},
+
+{
+
+threshold:.15
+
+}
+
+);
+
+
+
+revealElements.forEach(element=>{
+
+revealObserver.observe(element);
+
+});
+
+
+
+
+
+/* ===============================
+   NUMBER COUNTER ANIMATION
+================================ */
+
+
+const counters = document.querySelectorAll("[data-count]");
+
+
+const counterObserver = new IntersectionObserver(
+
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+
+const element = entry.target;
+
+const target = parseInt(element.dataset.count);
+
+
+let current = 0;
+
+
+const speed = target / 80;
+
+
+const timer = setInterval(()=>{
+
+
+current += speed;
+
+
+if(current >= target){
+
+
+current = target;
+
+clearInterval(timer);
+
+
+}
+
+
+
+if(target >= 1000){
+
+element.innerText =
+Math.floor(current).toLocaleString() + "m²";
+
+
+}
+
+else if(target === 100){
+
+element.innerText =
+Math.floor(current)+"%";
+
+
+}
+
+else if(target === 24){
+
+element.innerText =
+Math.floor(current)+"/7";
+
+
+}
+
+else{
+
+element.innerText =
+Math.floor(current);
+
+
+}
+
+
+},20);
+
+
+
+counterObserver.unobserve(element);
+
+
+}
+
+
+});
+
+
+},
+
+{
+
+threshold:.7
+
+}
+
+);
+
+
+
+counters.forEach(counter=>{
+
+counterObserver.observe(counter);
+
+});
+
+
+
+
+
+/* ===============================
+   BUTTON RIPPLE EFFECT
+================================ */
+
+
+document.querySelectorAll(".btn,.cta").forEach(button=>{
+
+
+button.addEventListener("mouseenter",()=>{
+
+
+button.style.transform="translateY(-3px)";
+
+
+});
+
+
+
+button.addEventListener("mouseleave",()=>{
+
+
+button.style.transform="translateY(0)";
+
+
+});
+
+
+});
+
+
+
+
+
+/* ===============================
+   PARALLAX HERO EFFECT
+================================ */
+
+
+const heroImage = document.querySelector(".hero img");
+
+
+window.addEventListener("scroll",()=>{
+
+
+let offset = window.scrollY * .25;
+
+
+if(heroImage){
+
+heroImage.style.transform =
+`translateY(${offset}px) scale(1.05)`;
+
+}
+
+
+});
+
+
+
+
+
+/* ===============================
+   MOBILE MENU PREPARATION
+================================ */
+
+
+const nav = document.querySelector("nav");
+
+
+const menuButton = document.createElement("button");
+
+
+menuButton.innerHTML="☰";
+
+
+menuButton.style.display="none";
+
+
+menuButton.style.background="transparent";
+
+
+menuButton.style.color="white";
+
+
+menuButton.style.border="none";
+
+
+menuButton.style.fontSize="28px";
+
+
+menuButton.style.cursor="pointer";
+
+
+header.insertBefore(menuButton,header.children[1]);
+
+
+
+function mobileMenu(){
+
+
+if(window.innerWidth < 1000){
+
+
+menuButton.style.display="block";
+
+
+}else{
+
+
+menuButton.style.display="none";
+
+
+}
+
+
+}
+
+
+
+mobileMenu();
+
+
+window.addEventListener(
+"resize",
+mobileMenu
+);
+
+
+
+menuButton.addEventListener(
+"click",
+()=>{
+
+
+nav.style.display =
+nav.style.display==="flex"
+?
+"none"
+:
+"flex";
+
+
+nav.style.position="absolute";
+
+
+nav.style.top="80px";
+
+
+nav.style.right="8%";
+
+
+nav.style.flexDirection="column";
+
+
+nav.style.background="#080c12";
+
+
+nav.style.padding="30px";
+
+
+nav.style.borderRadius="20px";
+
+
+}
+);
+
+
+
+
+
+/* ===============================
+   FORM DEMO HANDLER
+================================ */
+
+
+const form =
+document.querySelector(".quote-form");
+
+
+
+form.addEventListener("submit",(e)=>{
+
+
+e.preventDefault();
+
+
+alert(
+"Thank you. Your request has been received. DEDE Bottle Factory will contact you shortly."
+);
+
+
+form.reset();
+
+
+});
+
+
+
+
+
+</script>
+
 
 </body>
+
 </html>
