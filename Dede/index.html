@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEDE Glass Factory | Premium Glass Packaging Manufacturer</title>
+    <style>
+        /* === CSS VARIABLES & RESET === */
+        :root {
+            --primary-color: #0A2540; /* Deep industrial blue */
+            --secondary-color: #D4AF37; /* Amber/gold representing glass */
+            --accent-color: #4A90E2;
+            --text-dark: #333333;
+            --text-light: #F4F7F6;
+            --bg-light: #FFFFFF;
+            --bg-gray: #F8F9FA;
+            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        /* === TYPOGRAPHY === */
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary-color);
+        }
+
+        h2 { font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        p { margin-bottom: 1rem; color: #555; }
+        
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* === BUTTONS & LINKS === */
+        a { text-decoration: none; color: inherit; }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--text-light);
+            color: var(--text-light);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-light);
+            color: var(--primary-color);
+        }
+
+        /* === HEADER & NAVIGATION === */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span { color: var(--secondary-color); }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover { color: var(--secondary-color); }
+
+        /* === HERO SECTION === */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.7)), url('https://images.unsplash.com/photo-1596541603704-5188f615f5c9?q=80&w=2070&auto=format&fit=crop') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 5%;
+            margin-top: 60px;
+        }
+
+        .hero-content { max-width: 800px; }
+        
+        .hero h1 {
+            color: var(--text-light);
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            color: #E0E0E0;
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 2rem;
+        }
+
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* === SECTION LAYOUTS === */
+        section { padding: 6rem 5%; }
+        .bg-gray { background-color: var(--bg-gray); }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        /* === CARDS (Products & Values) === */
+        .card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--secondary-color);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .icon-box {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card {
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+        
+        .product-info { padding: 2rem; }
+
+        /* === FACILITY SECTION === */
+        .facility-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .facility-list { list-style: none; }
+        
+        .facility-list li {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .facility-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* === CONTACT SECTION === */
+        .contact-section { background-color: var(--primary-color); color: var(--text-light); }
+        .contact-section h2 { color: var(--text-light); }
+        .contact-section p { color: #ccc; }
+
+        .contact-info {
+            background: rgba(255,255,255,0.05);
+            padding: 3rem;
+            border-radius: 8px;
+            height: 100%;
+        }
+
+        .contact-item { margin-bottom: 2rem; }
+        .contact-item h4 { color: var(--secondary-color); margin-bottom: 0.5rem; }
+
+        form {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 8px;
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(10,37,64,0.1);
+        }
+
+        /* === FOOTER === */
+        footer {
+            background: #051320;
+            color: #888;
+            text-align: center;
+            padding: 2rem 5%;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 900px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            nav { display: none; } /* Add mobile menu logic here if needed */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--secondary-color)"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            DEDE <span>Glass Factory</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#facility">Facility</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Environmentally Responsible Glass Production</h1>
+            <p>We produce high-quality, sustainable glass packaging for beverage, food, and pharmaceutical markets locally and internationally.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="#contact" class="btn btn-primary">Get a Quote</a>
+                <a href="#products" class="btn btn-outline">View Products</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h4>2018</h4>
+                    <p>Founded</p>
+                </div>
+                <div class="stat-item">
+                    <h4>70,000 m²</h4>
+                    <p>Factory Site</p>
+                </div>
+                <div class="stat-item">
+                    <h4>100%</h4>
+                    <p>Fully Integrated</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="about" class="bg-gray">
+        <h2>Why Choose DEDE</h2>
+        <p class="section-subtitle">Delivering reliable, high-quality bottles through modern, sustainable production systems aligned with global standards.</p>
+        
+        <div class="grid-4">
+            <div class="card">
+                <div class="icon-box">⚙️</div>
+                <h3>End-to-End Control</h3>
+                <p>We manage the entire production process—from raw material sourcing to melting, forming, and final packaging—ensuring consistent quality.</p>
+            </div>
+            <div class="card">
+                <div class="icon-box">📈</div>
+                <h3>Reliable Supply</h3>
+                <p>Our operations are designed to address market shortages by offering fast startup and dependable production capacity.</p>
+            </div>
+            <div class="card">
+                <div class="icon-box">🔬</div>
+                <h3>Advanced Tech</h3>
+                <p>Operating world-class equipment supplied by leading European manufacturers, ensuring precision and international-grade quality.</p>
+            </div>
+            <div class="card">
+                <div class="icon-box">🌱</div>
+                <h3>Sustainable</h3>
+                <p>We prioritize recycled materials, energy efficiency, and environmentally responsible processes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <p class="section-subtitle">Serving the beverage, pharmaceutical, and cosmetics industries with precision-engineered packaging.</p>
+        
+        <div class="grid-3">
+            <div class="card product-card">
+                <!-- Using placeholder images to simulate product photos -->
+                <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=2070&auto=format&fit=crop" alt="Flint Glass">
+                <div class="product-info">
+                    <h3>Flint (Clear) Glass</h3>
+                    <p>Perfect for spirits, water, and foods requiring high visibility and premium presentation.</p>
+                </div>
+            </div>
+            <div class="card product-card">
+                <img src="https://images.unsplash.com/photo-1605335682855-8321528c1199?q=80&w=2070&auto=format&fit=crop" alt="Amber Glass">
+                <div class="product-info">
+                    <h3>Amber Glass</h3>
+                    <p>Provides excellent UV protection, ideal for beers, pharmaceuticals, and sensitive liquids.</p>
+                </div>
+            </div>
+            <div class="card product-card">
+                <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1780&auto=format&fit=crop" alt="Specialty Glass">
+                <div class="product-info">
+                    <h3>Specialty Glass</h3>
+                    <p>Custom designs and clean-room manufactured bottles for cosmetics and medical applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITY -->
+    <section id="facility" class="bg-gray">
+        <div class="grid-2">
+            <div>
+                <img class="facility-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Industrial Factory Floor">
+            </div>
+            <div>
+                <h2>Our Facility at a Glance</h2>
+                <p>Located in Debre Berhan, our purpose-built plant is designed to support efficient material flow, safe working conditions, and scalable manufacturing.</p>
+                <br>
+                <ul class="facility-list">
+                    <li><strong>Modern Industrial Site:</strong> Established in 2018, strategically located to support efficient logistics.</li>
+                    <li><strong>Integrated Capabilities:</strong> Covering raw material processing, melting, forming, and inspection.</li>
+                    <li><strong>Market-Focused Output:</strong> Serving local demand in Ethiopia with planned regional and export expansion.</li>
+                    <li><strong>Quality First:</strong> Strict production controls and inspections ensure safety and performance.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <h2>Looking for a Reliable Partner?</h2>
+        <p class="section-subtitle">Contact our sales team today to discuss your product requirements, customization needs, and supply volumes.</p>
+        
+        <div class="grid-2">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>📍 Address</h4>
+                    <p>Addis Ababa, Ethiopia</p>
+                    <p><small>(Factory located in Debre Berhan)</small></p>
+                </div>
+                <div class="contact-item">
+                    <h4>📞 Call Us</h4>
+                    <p>+251-911259546</p>
+                </div>
+                <div class="contact-item">
+                    <h4>✉️ Email Us</h4>
+                    <p>info@dedebottle.com</p>
+                </div>
+            </div>
+
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('In a production environment, this would submit to your server.');">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Company / Organization">
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Your Message or Requirements" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 DEDE Bottle Factory PLC. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
