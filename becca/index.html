@@ -1,223 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Becca Bloom | Private Journal Concept</title>
-    <meta name="description" content="A luxury digital experience concept for Becca Bloom.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Becca Bloom | Private Digital Experience</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header class="nav">
-    <div class="logo">BECCA BLOOM</div>
 
-    <nav>
-        <a href="#journal">Journal</a>
-        <a href="#collections">Collections</a>
-        <a href="#places">Places</a>
-        <a href="#circle">Private Circle</a>
-    </nav>
+<div class="particles"></div>
+
+
+<header>
+
+<div class="logo">
+BECCA BLOOM
+</div>
+
+
+<nav>
+<a href="#journal">Journal</a>
+<a href="#circle">Private Circle</a>
+<a href="#app">Experience</a>
+</nav>
+
 </header>
+
 
 
 <section class="hero">
 
-    <div class="hero-overlay"></div>
 
-    <div class="hero-content">
-        <p class="eyebrow">A DIGITAL PRIVATE JOURNAL</p>
-
-        <h1>
-            The Art of<br>
-            Living Beautifully
-        </h1>
-
-        <p>
-            A curated world of fashion, travel, elegance,
-            and intentional living.
-        </p>
-
-        <button>
-            Explore the Journal
-        </button>
-
-        <small>
-            Concept experience
-        </small>
-    </div>
-
-</section>
+<img src="assets/becca.jpg" class="hero-image">
 
 
-<section class="intro">
-
-    <div>
-        <p class="eyebrow">WELCOME</p>
-
-        <h2>
-            Beyond social media.
-            A world of its own.
-        </h2>
-    </div>
-
-    <p>
-        A private digital destination where inspiration,
-        experiences, and personal stories come together.
-        Designed as an editorial space for a modern luxury lifestyle.
-    </p>
-
-</section>
+<div class="hero-overlay"></div>
 
 
+<div class="hero-content reveal">
 
-<section id="journal" class="section">
-
-    <div class="heading">
-        <p class="eyebrow">THE JOURNAL</p>
-        <h2>Stories & Inspirations</h2>
-    </div>
+<p class="small">
+PRIVATE DIGITAL EXPERIENCE
+</p>
 
 
-    <div class="cards">
-
-        <article>
-            <div class="image fashion"></div>
-            <h3>Style Notes</h3>
-            <p>
-                Exploring timeless pieces, craftsmanship,
-                and personal expression.
-            </p>
-        </article>
+<h1>
+Becca<br>
+Bloom
+</h1>
 
 
-        <article>
-            <div class="image travel"></div>
-            <h3>Travel Diaries</h3>
-            <p>
-                Moments from remarkable places around the world.
-            </p>
-        </article>
+<h2>
+The Art of Living Beautifully
+</h2>
 
 
-        <article>
-            <div class="image beauty"></div>
-            <h3>Beauty & Rituals</h3>
-            <p>
-                The details that create everyday elegance.
-            </p>
-        </article>
+<button onclick="scrollToJournal()">
+Enter The Journal
+</button>
 
-    </div>
+
+<p class="concept">
+Concept Experience
+</p>
+
+
+</div>
+
 
 </section>
 
 
 
 
-<section id="collections" class="dark-section">
+<section class="intro reveal">
 
-    <p class="eyebrow">CURATED COLLECTIONS</p>
 
-    <h2>
-        Objects with stories.
-        Experiences with meaning.
-    </h2>
+<div>
 
-    <div class="collection-grid">
+<p class="small">
+A NEW DIGITAL CHAPTER
+</p>
 
-        <div>
-            <span>01</span>
-            <h3>Jewelry</h3>
-            <p>
-                Pieces chosen for craftsmanship and heritage.
-            </p>
-        </div>
 
-        <div>
-            <span>02</span>
-            <h3>Fashion</h3>
-            <p>
-                Timeless designs beyond seasons.
-            </p>
-        </div>
+<h2>
+Beyond social media.
+A world of its own.
+</h2>
 
-        <div>
-            <span>03</span>
-            <h3>Lifestyle</h3>
-            <p>
-                Homes, travel, and experiences.
-            </p>
-        </div>
 
-    </div>
+</div>
+
+
+<p>
+A private destination where elegance,
+fashion, travel and personal stories
+come together into one immersive experience.
+
+Designed as a digital home for a modern
+luxury lifestyle.
+</p>
+
 
 </section>
 
 
 
 
-<section id="places" class="places">
 
-    <p class="eyebrow">PLACES</p>
 
-    <h2>
-        Destinations worth remembering
-    </h2>
+<section id="journal" class="journal">
 
-    <div class="locations">
 
-        <div>Paris</div>
-        <div>Monaco</div>
-        <div>Lake Como</div>
-        <div>Tokyo</div>
+<div class="title reveal">
 
-    </div>
+<p class="small">
+THE JOURNAL
+</p>
+
+<h2>
+Stories & Inspirations
+</h2>
+
+</div>
+
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+<img src="assets/fashion.jpg">
+
+<h3>
+Style Notes
+</h3>
+
+<p>
+Timeless fashion, craftsmanship,
+and personal expression.
+</p>
+
+</div>
+
+
+
+<div class="card reveal">
+
+<img src="assets/travel.jpg">
+
+<h3>
+Travel Diaries
+</h3>
+
+<p>
+Exploring remarkable places
+around the world.
+</p>
+
+</div>
+
+
+
+
+<div class="card reveal">
+
+<img src="assets/jewelry.jpg">
+
+<h3>
+Objects With Stories
+</h3>
+
+<p>
+Jewelry and pieces chosen
+for their heritage.
+</p>
+
+</div>
+
+
+</div>
+
 
 </section>
+
+
+
+
+
+
+<section class="timeline">
+
+
+<p class="small">
+THE JOURNEY
+</p>
+
+
+<h2>
+A story in motion
+</h2>
+
+
+<div class="steps">
+
+
+<div>
+<span>2020</span>
+<h3>The Beginning</h3>
+<p>
+Building a unique digital identity.
+</p>
+</div>
+
+
+<div>
+<span>2023</span>
+<h3>Global Community</h3>
+<p>
+Connecting with millions worldwide.
+</p>
+</div>
+
+
+
+<div>
+<span>2026</span>
+<h3>Digital Evolution</h3>
+<p>
+A new way to experience luxury.
+</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
 
 
 
 
 <section id="circle" class="circle">
 
-    <p class="eyebrow">
-        PRIVATE CIRCLE
-    </p>
 
-    <h2>
-        An invitation-only experience
-    </h2>
+<p class="small">
+PRIVATE CIRCLE
+</p>
 
-    <p>
-        A future space for exclusive stories,
-        curated recommendations, and closer connection.
-    </p>
 
-    <button>
-        Request Access
-    </button>
+<h2>
+An invitation-only experience
+</h2>
+
+
+<p>
+A future membership space featuring
+exclusive stories, recommendations,
+events and closer connection.
+</p>
+
+
+
+<div class="membership">
+
+
+<div>
+01
+<br>
+Exclusive Journal
+</div>
+
+
+<div>
+02
+<br>
+Travel Guides
+</div>
+
+
+<div>
+03
+<br>
+Private Events
+</div>
+
+
+</div>
+
 
 </section>
 
 
 
 
+
+
+<section id="app" class="app">
+
+
+<div class="phone">
+
+
+<div class="screen">
+
+<p>
+BECCA BLOOM
+</p>
+
+<h3>
+Private Circle
+</h3>
+
+<div class="fake-card">
+Monthly Journal
+</div>
+
+<div class="fake-card">
+Luxury Collections
+</div>
+
+<div class="fake-card">
+Travel Diaries
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<div class="app-text">
+
+
+<p class="small">
+COMING SOON
+</p>
+
+
+<h2>
+A luxury experience
+in your pocket.
+</h2>
+
+
+<p>
+A dedicated app connecting
+the Becca Bloom world with
+its closest audience.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
 <footer>
 
-    <h3>BECCA BLOOM</h3>
+<h3>
+BECCA BLOOM
+</h3>
 
-    <p>
-        Luxury digital experience concept by Yohan T.
-    </p>
+<p>
+Digital experience concept created by Yohan T.
+</p>
+
 
 </footer>
+
 
 
 <script src="script.js"></script>
