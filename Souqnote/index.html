@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>SouqNote | Smart Business Management</title>
+
+<meta name="description" content="Manage inventory, sales, customer credit and business reports with SouqNote. Built for modern businesses.">
+
+<meta name="keywords" content="inventory, sales, POS, business management, stock management, retail app">
+
+<meta name="author" content="SouqNote">
+
+<meta property="og:title" content="SouqNote">
+
+<meta property="og:description" content="Run your business smarter with SouqNote.">
+
+<meta property="og:image" content="cover.jpg">
+
+<meta property="og:type" content="website">
+
+<meta name="theme-color" content="#0B1220">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+
+background:#08111d;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+img{
+display:block;
+max-width:100%;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+
+width:min(1180px,92%);
+margin:auto;
+
+}
+
+section{
+
+padding:100px 0;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+right:0;
+
+height:76px;
+
+display:flex;
+
+align-items:center;
+
+background:rgba(8,17,29,.82);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.07);
+
+z-index:1000;
+
+}
+
+.nav-content{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+font-weight:700;
+
+font-size:22px;
+
+}
+
+.logo img{
+
+width:48px;
+
+height:48px;
+
+border-radius:14px;
+
+}
+
+.download{
+
+padding:14px 28px;
+
+background:#22c55e;
+
+border-radius:12px;
+
+font-weight:600;
+
+transition:.25s;
+
+}
+
+.download:hover{
+
+transform:translateY(-2px);
+
+background:#16a34a;
+
+}
+
+.hero{
+
+padding-top:180px;
+
+padding-bottom:120px;
+
+background:
+
+radial-gradient(circle at top right,#16a34a22,transparent 40%),
+
+radial-gradient(circle at bottom left,#2563eb22,transparent 35%),
+
+#08111d;
+
+}
+
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:1.15fr .85fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.badge{
+
+display:inline-flex;
+
+padding:10px 18px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:999px;
+
+font-size:14px;
+
+margin-bottom:24px;
+
+}
+
+.hero h1{
+
+font-size:64px;
+
+line-height:1.05;
+
+margin-bottom:26px;
+
+font-weight:800;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+margin-bottom:40px;
+
+max-width:640px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.play{
+
+background:#22c55e;
+
+padding:18px 34px;
+
+border-radius:14px;
+
+font-size:18px;
+
+font-weight:700;
+
+transition:.25s;
+
+}
+
+.play:hover{
+
+background:#16a34a;
+
+transform:translateY(-3px);
+
+}
+
+.secondary{
+
+padding:18px 34px;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,.12);
+
+background:rgba(255,255,255,.03);
+
+}
+
+.phone{
+
+padding:18px;
+
+background:#0f172a;
+
+border-radius:34px;
+
+box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+.phone img{
+
+border-radius:22px;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:24px;
+
+margin-top:80px;
+
+}
+
+.stat{
+
+background:#111827;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,.06);
+
+}
+
+.stat h2{
+
+color:#22c55e;
+
+font-size:40px;
+
+margin-bottom:8px;
+
+}
+
+.stat p{
+
+color:#94a3b8;
+
+}
+
+@media(max-width:950px){
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.hero{
+
+padding-top:150px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="container nav-content">
+
+<div class="logo">
+
+<img src="1761301896696.jpg">
+
+<span>SouqNote</span>
+
+</div>
+
+<a class="download"
+
+href="https://play.google.com/store/apps/details?id=com.yohantse.souqnote">
+
+Download
+
+</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+
+🌍 Smart Business Management
+
+</div>
+
+<h1>
+
+Run Your Business Smarter.
+Every Day.
+
+</h1>
+
+<p>
+
+SouqNote helps retailers, wholesalers, restaurants, pharmacies, and growing businesses manage inventory, sales, customer credit, expenses, and profits from one beautifully designed mobile app.
+
+</p>
+
+<div class="hero-buttons">
+
+<a class="play"
+
+href="https://play.google.com/store/apps/details?id=com.yohantse.souqnote">
+
+Download on Google Play
+
+</a>
+
+<a class="secondary"
+
+href="#features">
+
+Explore Features
+
+</a>
+
+</div>
+
+</div>
+
+<div class="phone">
+
+<img src="screens/dashboard.png" alt="SouqNote Dashboard">
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<p>Offline Ready</p>
+
+</div>
+
+<div class="stat">
+
+<h2>6+</h2>
+
+<p>Business Modules</p>
+
+</div>
+
+<div class="stat">
+
+<h2>Fast</h2>
+
+<p>Optimized Performance</p>
+
+</div>
+
+<div class="stat">
+
+<h2>Simple</h2>
+
+<p>Easy To Use</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="py-24 px-6 bg-zinc-950">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-5">
+        Everything you need to run your sales
+      </h2>
+      <p class="text-zinc-400 max-w-2xl mx-auto text-lg">
+        SouqNote replaces notebooks, spreadsheets, and scattered records with one simple business management app.
+      </p>
+    </div>
+
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition">
+        <div class="text-3xl mb-5">📦</div>
+        <h3 class="text-xl font-semibold text-white mb-3">
+          Inventory Management
+        </h3>
+        <p class="text-zinc-400">
+          Know what you have, track products, manage stock levels, and avoid losing sales because of missing records.
+        </p>
+      </div>
+
+
+      <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition">
+        <div class="text-3xl mb-5">💰</div>
+        <h3 class="text-xl font-semibold text-white mb-3">
+          Sales Tracking
+        </h3>
+        <p class="text-zinc-400">
+          Record every sale quickly and understand your daily business activity.
+        </p>
+      </div>
+
+
+      <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition">
+        <div class="text-3xl mb-5">📊</div>
+        <h3 class="text-xl font-semibold text-white mb-3">
+          Profit & Loss Reports
+        </h3>
+        <p class="text-zinc-400">
+          Stop guessing. See how your business is performing with clear reports.
+        </p>
+      </div>
+
+
+      <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition">
+        <div class="text-3xl mb-5">🤝</div>
+        <h3 class="text-xl font-semibold text-white mb-3">
+          Credit Management
+        </h3>
+        <p class="text-zinc-400">
+          Keep track of customers who owe you money and never forget a payment.
+        </p>
+      </div>
+
+
+      <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition">
+        <div class="text-3xl mb-5">⚡</div>
+        <h3 class="text-xl font-semibold text-white mb-3">
+          Fast & Simple
+        </h3>
+        <p class="text-zinc-400">
+          Designed for real business owners. Add products, make sales, and manage your store in seconds.
+        </p>
+      </div>
+
+
+      <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition">
+        <div class="text-3xl mb-5">🌍</div>
+        <h3 class="text-xl font-semibold text-white mb-3">
+          Built for Everyone
+        </h3>
+        <p class="text-zinc-400">
+          English-first design for merchants and businesses anywhere in the world.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- PROBLEM / SOLUTION -->
+<section class="py-24 px-6 bg-black">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+
+    <div>
+      <h2 class="text-4xl font-bold text-white mb-6">
+        Still managing your business with a notebook?
+      </h2>
+
+      <p class="text-zinc-400 text-lg mb-8">
+        Many small businesses lose money because they cannot easily answer simple questions:
+      </p>
+
+      <ul class="space-y-4 text-zinc-300">
+
+        <li class="flex gap-3">
+          <span class="text-red-400">✕</span>
+          How much stock do I have left?
+        </li>
+
+        <li class="flex gap-3">
+          <span class="text-red-400">✕</span>
+          How much profit did I make this month?
+        </li>
+
+        <li class="flex gap-3">
+          <span class="text-red-400">✕</span>
+          Who still owes me money?
+        </li>
+
+      </ul>
+
+    </div>
+
+
+
+    <div class="border border-white/10 rounded-3xl p-10 bg-white/[0.04]">
+
+      <h3 class="text-3xl font-bold text-white mb-5">
+        Meet SouqNote
+      </h3>
+
+      <p class="text-zinc-400 text-lg mb-8">
+        A lightweight business assistant that helps you organize sales, inventory, customers, and profits from your phone.
+      </p>
+
+
+      <div class="space-y-5">
+
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+            ✓
+          </div>
+          <span class="text-white">
+            Replace paper records
+          </span>
+        </div>
+
+
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+            ✓
+          </div>
+          <span class="text-white">
+            Understand your numbers
+          </span>
+        </div>
+
+
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+            ✓
+          </div>
+          <span class="text-white">
+            Make smarter decisions
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- APP SCREENSHOTS -->
+<section class="py-24 px-6 bg-zinc-950">
+
+  <div class="max-w-6xl mx-auto text-center">
+
+    <h2 class="text-4xl md:text-5xl font-bold text-white mb-5">
+      Your business, organized
+    </h2>
+
+    <p class="text-zinc-400 mb-14">
+      Everything you need is available from one simple dashboard.
+    </p>
+
+
+    <div class="grid md:grid-cols-4 gap-6">
+
+      <div class="rounded-3xl overflow-hidden border border-white/10">
+        <img src="screens/dashboard.png" 
+             alt="SouqNote Dashboard"
+             class="w-full">
+      </div>
+
+
+      <div class="rounded-3xl overflow-hidden border border-white/10">
+        <img src="screens/products.png"
+             alt="SouqNote Products"
+             class="w-full">
+      </div>
+
+
+      <div class="rounded-3xl overflow-hidden border border-white/10">
+        <img src="screens/sales.png"
+             alt="SouqNote Sales"
+             class="w-full">
+      </div>
+
+
+      <div class="rounded-3xl overflow-hidden border border-white/10">
+        <img src="screens/credits.png"
+             alt="SouqNote Credit"
+             class="w-full">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ==============================
+     WHY SOUQNOTE SECTION
+================================ -->
+
+<section class="py-24 px-6 bg-black">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-16">
+      <p class="text-sm tracking-widest uppercase text-amber-300 mb-4">
+        Built for real businesses
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold text-white">
+        Stop guessing. Start knowing.
+      </h2>
+
+      <p class="mt-6 text-zinc-400 max-w-2xl mx-auto text-lg">
+        SouqNote gives small business owners the tools they need to understand
+        sales, inventory, profit, and customer credit in one simple app.
+      </p>
+    </div>
+
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+
+      <!-- Card 1 -->
+      <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.03]">
+
+        <div class="text-3xl mb-6">
+          📦
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mb-3">
+          Manage Inventory
+        </h3>
+
+        <p class="text-zinc-400">
+          Know what you have, what is selling,
+          and when it is time to restock.
+        </p>
+
+      </div>
+
+
+
+      <!-- Card 2 -->
+      <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.03]">
+
+        <div class="text-3xl mb-6">
+          📈
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mb-3">
+          Track Real Profit
+        </h3>
+
+        <p class="text-zinc-400">
+          Understand your business performance
+          instead of relying on guesswork.
+        </p>
+
+      </div>
+
+
+
+      <!-- Card 3 -->
+      <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.03]">
+
+        <div class="text-3xl mb-6">
+          🤝
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mb-3">
+          Manage Customer Credit
+        </h3>
+
+        <p class="text-zinc-400">
+          Keep track of who owes you and never
+          lose money from forgotten payments.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ==============================
+     HOW IT WORKS
+================================ -->
+
+<section class="py-24 px-6 bg-zinc-950">
+
+<div class="max-w-5xl mx-auto">
+
+
+<div class="text-center mb-16">
+
+<h2 class="text-4xl font-bold text-white">
+Start managing your business in minutes
+</h2>
+
+</div>
+
+
+
+<div class="grid md:grid-cols-3 gap-10">
+
+
+<div class="text-center">
+
+<div class="w-14 h-14 mx-auto rounded-full bg-amber-400 text-black flex items-center justify-center text-xl font-bold">
+1
+</div>
+
+<h3 class="text-white font-semibold text-xl mt-6">
+Download SouqNote
+</h3>
+
+<p class="text-zinc-400 mt-3">
+Install the app and create your business profile.
+</p>
+
+</div>
+
+
+
+<div class="text-center">
+
+<div class="w-14 h-14 mx-auto rounded-full bg-amber-400 text-black flex items-center justify-center text-xl font-bold">
+2
+</div>
+
+<h3 class="text-white font-semibold text-xl mt-6">
+Add your products
+</h3>
+
+<p class="text-zinc-400 mt-3">
+Enter your inventory and start recording sales.
+</p>
+
+</div>
+
+
+
+<div class="text-center">
+
+<div class="w-14 h-14 mx-auto rounded-full bg-amber-400 text-black flex items-center justify-center text-xl font-bold">
+3
+</div>
+
+<h3 class="text-white font-semibold text-xl mt-6">
+Grow smarter
+</h3>
+
+<p class="text-zinc-400 mt-3">
+Use your business data to make better decisions.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==============================
+     PRICING CTA
+================================ -->
+
+<section class="py-24 px-6">
+
+<div class="max-w-4xl mx-auto text-center">
+
+
+<h2 class="text-4xl md:text-5xl font-bold text-white">
+Your business deserves better tools.
+</h2>
+
+
+<p class="mt-6 text-zinc-400 text-lg">
+Start free. Upgrade when you are ready.
+</p>
+
+
+
+<div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+
+
+<a href="#download"
+class="px-8 py-4 bg-amber-400 text-black rounded-xl font-semibold hover:bg-amber-300 transition">
+
+Download SouqNote
+
+</a>
+
+
+<a href="#features"
+class="px-8 py-4 border border-white/20 text-white rounded-xl hover:bg-white/5 transition">
+
+Explore Features
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+  <!-- ==============================
+     APP PREVIEW SECTION
+================================ -->
+
+<section class="py-24 px-6 bg-black" id="features">
+
+<div class="max-w-6xl mx-auto">
+
+<div class="text-center mb-16">
+
+<p class="uppercase tracking-widest text-sm text-amber-300">
+Simple. Powerful. Practical.
+</p>
+
+<h2 class="text-4xl md:text-5xl font-bold text-white mt-4">
+Everything your business needs in one app
+</h2>
+
+</div>
+
+
+
+<div class="grid md:grid-cols-3 gap-8">
+
+
+<div class="rounded-3xl overflow-hidden border border-white/10 bg-zinc-900">
+
+<div class="aspect-[9/16] bg-zinc-800 flex items-center justify-center">
+
+<img src="screens/dashboard.png"
+alt="SouqNote Dashboard"
+class="w-full h-full object-cover">
+
+</div>
+
+
+<div class="p-6">
+
+<h3 class="text-white text-xl font-semibold">
+Business Dashboard
+</h3>
+
+<p class="text-zinc-400 mt-2">
+See your sales, profit and business activity at a glance.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="rounded-3xl overflow-hidden border border-white/10 bg-zinc-900">
+
+<div class="aspect-[9/16] bg-zinc-800 flex items-center justify-center">
+
+<img src="screens/products.png"
+alt="SouqNote Inventory"
+class="w-full h-full object-cover">
+
+</div>
+
+
+<div class="p-6">
+
+<h3 class="text-white text-xl font-semibold">
+Inventory Management
+</h3>
+
+<p class="text-zinc-400 mt-2">
+Keep products organized and know your stock instantly.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="rounded-3xl overflow-hidden border border-white/10 bg-zinc-900">
+
+<div class="aspect-[9/16] bg-zinc-800 flex items-center justify-center">
+
+<img src="screens/credits.png"
+alt="SouqNote Credit"
+class="w-full h-full object-cover">
+
+</div>
+
+
+<div class="p-6">
+
+<h3 class="text-white text-xl font-semibold">
+Customer Credit Tracking
+</h3>
+
+<p class="text-zinc-400 mt-2">
+Never forget payments or lose track of customer balances.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ==============================
+     TRUST SECTION
+================================ -->
+
+<section class="py-20 px-6 bg-zinc-950">
+
+<div class="max-w-5xl mx-auto text-center">
+
+
+<h2 class="text-3xl md:text-4xl font-bold text-white">
+Designed for entrepreneurs everywhere
+</h2>
+
+
+<p class="text-zinc-400 mt-5 text-lg">
+Whether you run a shop, online business, market stall,
+or growing company, SouqNote helps you stay organized.
+</p>
+
+
+
+<div class="grid md:grid-cols-3 gap-6 mt-12">
+
+
+<div class="border border-white/10 rounded-xl p-6">
+
+<div class="text-3xl">
+⭐
+</div>
+
+<h3 class="text-white font-semibold mt-4">
+Easy to Use
+</h3>
+
+<p class="text-zinc-400 mt-2">
+Built for business owners, not accountants.
+</p>
+
+</div>
+
+
+
+<div class="border border-white/10 rounded-xl p-6">
+
+<div class="text-3xl">
+🔒
+</div>
+
+<h3 class="text-white font-semibold mt-4">
+Your Data Stays Yours
+</h3>
+
+<p class="text-zinc-400 mt-2">
+Your business information is private and secure.
+</p>
+
+</div>
+
+
+
+<div class="border border-white/10 rounded-xl p-6">
+
+<div class="text-3xl">
+🚀
+</div>
+
+<h3 class="text-white font-semibold mt-4">
+Built To Grow
+</h3>
+
+<p class="text-zinc-400 mt-2">
+Start small and manage more as your business grows.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- ==============================
+     FAQ
+================================ -->
+
+<section class="py-24 px-6 bg-black">
+
+<div class="max-w-4xl mx-auto">
+
+
+<h2 class="text-4xl font-bold text-white text-center mb-12">
+Frequently Asked Questions
+</h2>
+
+
+
+<div class="space-y-6">
+
+
+<div class="border border-white/10 rounded-xl p-6">
+
+<h3 class="text-white font-semibold text-lg">
+Is SouqNote only for shops?
+</h3>
+
+<p class="text-zinc-400 mt-3">
+No. SouqNote is designed for anyone who sells products
+and wants better control over their business.
+</p>
+
+</div>
+
+
+
+<div class="border border-white/10 rounded-xl p-6">
+
+<h3 class="text-white font-semibold text-lg">
+Do I need accounting knowledge?
+</h3>
+
+<p class="text-zinc-400 mt-3">
+No. SouqNote keeps business management simple.
+</p>
+
+</div>
+
+
+
+<div class="border border-white/10 rounded-xl p-6">
+
+<h3 class="text-white font-semibold text-lg">
+Can I use it for free?
+</h3>
+
+<p class="text-zinc-400 mt-3">
+Yes. You can start using SouqNote and upgrade when needed.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- ==============================
+     FINAL CTA
+================================ -->
+
+<section id="download"
+class="py-28 px-6 bg-gradient-to-b from-zinc-900 to-black">
+
+
+<div class="max-w-4xl mx-auto text-center">
+
+
+<h2 class="text-5xl md:text-6xl font-bold text-white">
+
+Run your business smarter today.
+
+</h2>
+
+
+<p class="text-zinc-400 text-lg mt-6">
+
+Download SouqNote and take control of your sales,
+inventory and profits.
+
+</p>
+
+
+
+<div class="mt-10 flex justify-center">
+
+<a href="https://play.google.com/store/apps/details?id=com.yohantse.souqnote"
+class="px-10 py-5 rounded-2xl bg-amber-400 text-black font-bold text-lg">
+
+Download on Google Play
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
+
+<footer class="border-t border-white/10 py-10 px-6">
+
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row
+justify-between items-center gap-5">
+
+
+<p class="text-zinc-500">
+© 2026 SouqNote. All rights reserved.
+</p>
+
+
+<div class="flex gap-6 text-zinc-400">
+
+<a href="#">
+Privacy Policy
+</a>
+
+<a href="#">
+Terms
+</a>
+
+<a href="#">
+Contact
+</a>
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<!-- ==============================
+ META PIXEL
+================================ -->
+
+<script>
+
+!function(f,b,e,v,n,t,s)
+{
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?
+n.callMethod.apply(n,arguments):
+n.queue.push(arguments)
+};
+
+if(!f._fbq)f._fbq=n;
+
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+
+n.queue=[];
+
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+
+fbq('init','YOUR_PIXEL_ID');
+
+fbq('track','PageView');
+
+
+</script>
+
+</body>
+</html>
