@@ -15,11 +15,51 @@
 
   <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "url":"https://yohan-ts.com",
-  "name":"Yohannes Tsegaye",
-  "description":"Freelance software developer building Flutter, React, Node.js and AI-powered business systems."
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://yohan-ts.com/#person",
+      "name": "Yohannes Tsegaye",
+      "alternateName": "Jo",
+      "url": "https://yohan-ts.com/",
+      "jobTitle": "System Architect & Freelance Software Developer",
+      "description": "Independent software engineer building custom business software, mobile applications, web platforms, and AI-powered workflows.",
+      "email": "jo@yohan-ts.com",
+      "image": "https://yohan-ts.com/275A7335(1).jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Addis Ababa",
+        "addressCountry": "ET"
+      },
+      "knowsAbout": [
+        "Software Architecture",
+        "Flutter",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Python",
+        "Artificial Intelligence",
+        "Business Process Automation",
+        "Offline-First Software"
+      ],
+      "sameAs": [
+        "https://github.com/yohantse"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://yohan-ts.com/#website",
+      "url": "https://yohan-ts.com/",
+      "name": "Yohannes Tsegaye",
+      "alternateName": "Jo",
+      "description": "Freelance software developer building custom business software, mobile applications, and AI-powered systems.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://yohan-ts.com/#person"
+      }
+    }
+  ]
 }
 </script>
   
